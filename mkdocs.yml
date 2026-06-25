@@ -20,7 +20,8 @@ nav:
   - Strona główna: index.md
   - O klubie: o-klubie.md
   - Trenerzy: trenerzy.md
-  - Harmonogram: harmonogram.md
+  - Harmonogram treningów: harmonogram.md
+  - Turnieje: turnieje.md
   - Kontakt: kontakt.md
   - Dołącz do nas: dolacz.md
   - Zostań sponsorem: sponsor.md
@@ -33,3 +34,9 @@ extra:
 plugins:
   - search:
       lang: pl
+
+markdown_extensions:
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
