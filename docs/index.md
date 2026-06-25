@@ -263,7 +263,7 @@ hide:
 <div class="hero">
   <img src="assets/logo.png" alt="ŁKS Basket Łódź" />
   <div class="hero-slogan">Graj. <span>Rozwijaj się.</span> Wygrywaj.</div>
-  <div class="hero-sub">Łódzki Klub Sportowy Basket — Łódź</div>
+  <div class="hero-sub">Łódzki Klub Sportowy Koszykówka Męska - Drużyny Młodzieżowe</div>
   <div class="hero-buttons">
     <a href="dolacz/" class="btn-primary">Dołącz do nas</a>
     <a href="kontakt/" class="btn-secondary">Kontakt</a>
