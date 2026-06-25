@@ -8,7 +8,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U11 I
 
     **Trener:** Jan Kowalski  
-    **Kontakt:** jan.kowalski@uksbasket.pl
+    **Kontakt:** jan.kowalski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -21,7 +21,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U11 II
 
     **Trener:** Anna Nowak  
-    **Kontakt:** anna.nowak@uksbasket.pl
+    **Kontakt:** anna.nowak@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -34,7 +34,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U12 I
 
     **Trener:** Jan Kowalski  
-    **Kontakt:** jan.kowalski@uksbasket.pl
+    **Kontakt:** jan.kowalski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -47,7 +47,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U12 II
 
     **Trener:** Anna Nowak  
-    **Kontakt:** anna.nowak@uksbasket.pl
+    **Kontakt:** anna.nowak@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -60,7 +60,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U13 I
 
     **Trener:** Piotr Wiśniewski  
-    **Kontakt:** piotr.wisniewski@uksbasket.pl
+    **Kontakt:** piotr.wisniewski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -73,7 +73,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U13 II
 
     **Trener:** Marek Zając  
-    **Kontakt:** marek.zajac@uksbasket.pl
+    **Kontakt:** marek.zajac@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -86,7 +86,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U14 I
 
     **Trener:** Piotr Wiśniewski  
-    **Kontakt:** piotr.wisniewski@uksbasket.pl
+    **Kontakt:** piotr.wisniewski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -99,7 +99,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U15 I
 
     **Trener:** Marek Zając  
-    **Kontakt:** marek.zajac@uksbasket.pl
+    **Kontakt:** marek.zajac@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -112,7 +112,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U15 II
 
     **Trener:** Anna Nowak  
-    **Kontakt:** anna.nowak@uksbasket.pl
+    **Kontakt:** anna.nowak@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -125,7 +125,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U17 I
 
     **Trener:** Piotr Wiśniewski  
-    **Kontakt:** piotr.wisniewski@uksbasket.pl
+    **Kontakt:** piotr.wisniewski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -138,7 +138,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U17 II
 
     **Trener:** Marek Zając  
-    **Kontakt:** marek.zajac@uksbasket.pl
+    **Kontakt:** marek.zajac@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|
@@ -151,7 +151,7 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     ## U19
 
     **Trener:** Jan Kowalski  
-    **Kontakt:** jan.kowalski@uksbasket.pl
+    **Kontakt:** jan.kowalski@lkskm.pl
 
     | Dzień | Godzina | Obiekt |
     |-------|---------|--------|

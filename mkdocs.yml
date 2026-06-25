@@ -9,12 +9,18 @@ theme:
   logo: assets/logo.png
   favicon: assets/logo.png
   palette:
-    primary: orange
-    accent: deep orange
-  features:
-    - navigation.tabs
-    - navigation.top
-    - search.highlight
+    - scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Tryb ciemny
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Tryb jasny
 
 nav:
   - Strona główna: index.md
