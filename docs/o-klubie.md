@@ -1,6 +1,6 @@
 # O klubie
 
-UKS Basket Łódź został założony w ... roku. Naszym celem jest
+ŁKS KM Junior został założony w ... roku. Naszym celem jest
 rozwijanie pasji do koszykówki wśród dzieci i młodzieży z Łodzi.
 
 ## Historia

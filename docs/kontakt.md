@@ -1,6 +1,6 @@
 # Kontakt
 
-**Klub:** UKS Basket Łódź  
+**Klub:** ŁKS KM Junior  
 **Adres:** ul. Przykładowa 1, 90-000 Łódź  
 **E-mail:** kontakt@uksbasket.pl  
 **Telefon:** +48 123 456 789  

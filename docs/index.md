@@ -1,4 +1,4 @@
-# Witaj w UKS Basket Łódź!
+# Witaj w ŁKS KM Junior!
 
 Jesteśmy uczniowskim klubem koszykówki działającym w Łodzi.
 Zapraszamy dzieci i młodzież w wieku 8–18 lat do wspólnej gry!
