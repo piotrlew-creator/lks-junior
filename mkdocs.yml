@@ -1,0 +1,35 @@
+site_name: ŁKS KM Junior
+site_url: https://piotrlew-creator.github.io/lks-junior/
+site_description: Oficjalna strona poświęcona sekcjom młodzieżowym w klubie ŁKS KM
+site_author: ŁKS KM Junior
+
+theme:
+  name: material
+  language: pl
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    primary: orange
+    accent: deep orange
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+
+nav:
+  - Strona główna: index.md
+  - O klubie: o-klubie.md
+  - Trenerzy: trenerzy.md
+  - Harmonogram: harmonogram.md
+  - Kontakt: kontakt.md
+  - Dołącz do nas: dolacz.md
+  - Zostań sponsorem: sponsor.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/TWOJA-STRONA-FB
+
+plugins:
+  - search:
+      lang: pl
