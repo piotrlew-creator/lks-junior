@@ -28,16 +28,16 @@ pierwszym treningiem. Nie znalazłeś odpowiedzi? Napisz do nas —
     zabrać, ale nie jest to konieczne — klub zapewnia sprzęt na
     treningi.
 
-    📝 **Uzupełnij:** jeśli klub ma szczegółowe wymagania dot. stroju
+    :material-pencil-outline: **Uzupełnij:** jeśli klub ma szczegółowe wymagania dot. stroju
     klubowego, dopisz je tutaj.
 
 ??? question "Ile kosztuje trening / miesięczna składka?"
-    📝 **Uzupełnij:** aktualną wysokość składki miesięcznej, ewentualne
+    :material-pencil-outline: **Uzupełnij:** aktualną wysokość składki miesięcznej, ewentualne
     zniżki rodzinne oraz co składka obejmuje (np. udział w treningach,
     opiekę trenerską, ubezpieczenie, udział w wybranych turniejach).
 
 ??? question "Czy zawodnicy są ubezpieczeni?"
-    📝 **Uzupełnij:** informacje o ubezpieczeniu NNW — czy jest
+    :material-pencil-outline: **Uzupełnij:** informacje o ubezpieczeniu NNW — czy jest
     wliczone w składkę, czy trzeba je wykupić osobno, i jak to zrobić.
 
 ??? question "Czy trzeba mieć wcześniejsze doświadczenie z koszykówką?"
@@ -54,14 +54,14 @@ pierwszym treningiem. Nie znalazłeś odpowiedzi? Napisz do nas —
     stronie [Turnieje i wydarzenia](turnieje.md).
 
 ??? question "Czy klub organizuje obozy sportowe lub wyjazdy?"
-    📝 **Uzupełnij:** informacje o obozach letnich/zimowych,
+    :material-pencil-outline: **Uzupełnij:** informacje o obozach letnich/zimowych,
     zgrupowaniach lub wyjazdach integracyjnych, jeśli klub je organizuje.
 
 ??? question "Jak dojechać na treningi w różnych halach?"
     Adresy hal są podane przy każdej grupie na stronie
     [harmonogramu](harmonogram.md). Każde wydarzenie możesz też dodać
     bezpośrednio do swojego kalendarza (Google/Apple/Outlook) przyciskiem
-    📅 obok terminu — ułatwia to planowanie dojazdów.
+    :material-calendar-plus: obok terminu — ułatwia to planowanie dojazdów.
 
 ??? question "Co zrobić, jeśli trening się nie odbędzie (np. z powodu wakacji hali)?"
     Wszelkie zmiany w harmonogramie zgłasza trener danej grupy —

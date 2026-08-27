@@ -24,53 +24,13 @@ większego niż tylko gra w piłkę.
 
 ## Dlaczego warto grać w ŁKS?
 
-### 🏀 Trenerzy z licencjami PZKosz
-Nasi trenerzy posiadają licencje Polskiego Związku Koszykówki i wieloletnie
-doświadczenie w pracy z młodzieżą. Nie uczymy tylko techniki — uczymy
-myślenia o grze, pracy zespołowej i charakteru sportowca.
+- :material-whistle-outline: **Trenerzy z licencjami PZKosz** — uczymy nie tylko techniki, ale myślenia o grze i pracy zespołowej.
+- :material-trophy-outline: **Prawdziwa rywalizacja** — rozgrywki ligowe i turnieje na szczeblu wojewódzkim i ogólnopolskim.
+- :material-trending-up: **Indywidualny rozwój** — program dopasowany do wieku i poziomu każdego zawodnika.
+- :material-handshake-outline: **Więcej niż sport** — wspólne wyjazdy na turnieje i przyjaźnie na lata.
+- :material-school-outline: **Sport i nauka w parze** — treningi popołudniami i w weekendy, bez kolizji ze szkołą.
 
-### 🏆 Prawdziwa rywalizacja
-Uczestniczymy w rozgrywkach ligowych i turniejach na szczeblu
-wojewódzkim i ogólnopolskim. Gramy po to, żeby wygrywać — ale przede
-wszystkim po to, żeby się rozwijać. Każdy sezon to nowe wyzwania,
-nowe mecze i nowe cele do zdobycia.
-
-### 📈 Indywidualny rozwój zawodnika
-Każdy zawodnik jest inny. Dostosowujemy program treningowy do wieku,
-poziomu zaawansowania i potencjału. Niezależnie od tego, czy dopiero
-zaczynasz przygodę z koszykówką, czy masz już za sobą kilka sezonów —
-znajdziesz tu miejsce dla siebie.
-
-### 🤝 Zespół to więcej niż sport
-W ŁKS KM Junior budujesz przyjaźnie, które wychodzą poza parkiet.
-Wspólne wyjazdy na turnieje, obozy sportowe, treningi — to wszystko
-tworzy więź, która zostaje na lata. Nasi byli zawodnicy wracają do nas
-jako trenerzy, wolontariusze i rodzice kolejnego pokolenia koszykarzy.
-
-### 🏟️ Dobra infrastruktura
-Trenujemy w halach sportowych w całej Łodzi — dobrze wyposażonych,
-bezpiecznych i dostępnych komunikacyjnie. Dbamy o to, żeby warunki
-treningowe wspierały postęp naszych zawodników.
-
-### 🎓 Sport i nauka idą w parze
-Rozumiemy, że szkoła jest na pierwszym miejscu. Harmonogram treningów
-układamy z myślą o uczniach — popołudniami i w weekendy, tak żeby
-sport uzupełniał codzienność, a nie z nią kolidował.
-
----
-
-## Nasze osiągnięcia
-
-<div class="fill-me">
-  <strong>Uzupełnij:</strong> poniższe osiągnięcia są przykładowe —
-  zastąp je realnymi wynikami z ostatnich sezonów.
-</div>
-
-- 🥇 Mistrzostwo województwa łódzkiego U15 — sezon 2024/25
-- 🥈 Wicemistrzostwo województwa U17 — sezon 2023/24
-- 🏅 Top 8 ogólnopolskich rozgrywek U13 — sezon 2024/25
-- 📊 Ponad 120 zawodników we wszystkich kategoriach wiekowych
-- 🗓️ Ponad 15 lat działalności w Łodzi
+Pełną listę osiągnięć klubu znajdziesz na stronie [O Akademii](o-klubie.md).
 
 ---
 
@@ -80,45 +40,21 @@ sport uzupełniał codzienność, a nie z nią kolidował.
 
 -   **Krok 1 — Napisz lub zadzwoń**
 
-    Skontaktuj się z nami telefonicznie lub mailowo. Odpiszemy
-    w ciągu 24 godzin i umówimy Cię na pierwsze zajęcia próbne.
+    Odpiszemy w ciągu 24 godzin i umówimy pierwsze zajęcia próbne.
 
 -   **Krok 2 — Przyjdź na trening próbny**
 
-    Pierwsze zajęcia są całkowicie bezpłatne i bez zobowiązań.
-    Sprawdzisz atmosferę, poznasz trenera i drużynę.
+    Bezpłatnie i bez zobowiązań — poznasz trenera i drużynę.
 
 -   **Krok 3 — Dołącz do drużyny**
 
-    Jeśli decydujesz się zostać — pomagamy z formalnościami
-    i przypisujemy Cię do odpowiedniej drużyny wiekowej.
+    Pomagamy z formalnościami i przypisujemy odpowiednią grupę wiekową.
 
 -   **Krok 4 — Graj i rozwijaj się**
 
     Od pierwszego treningu jesteś częścią ŁKS KM Junior.
-    Witamy w drużynie.
 
 </div>
-
----
-
-## Co mówią nasi zawodnicy?
-
-<div class="fill-me">
-  <strong>Uzupełnij:</strong> poniższe opinie są przykładowe — zastąp
-  je prawdziwymi wypowiedziami zawodników/rodziców (za ich zgodą).
-</div>
-
-> „Przyszedłem na próbny trening bez żadnych oczekiwań. Zostałem na
-> trzy sezony. Koszykówka nauczyła mnie więcej o sobie niż cokolwiek
-> innego."
->
-> — zawodnik U17
-
-> „Trenerzy naprawdę wiedzą, co robią. Widać postęp po każdym
-> miesiącu, nie tylko w grze, ale też w głowie."
->
-> — zawodnik U19
 
 ---
 

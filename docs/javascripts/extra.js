@@ -191,11 +191,35 @@
     return clone.textContent.replace(/—.*$/, "").trim();
   }
 
+  // -- Ikony SVG (Material Design Icons, ten sam styl co :material-x:
+  //    w treści Markdown) — używane w elementach budowanych przez JS,
+  //    gdzie shortcode ikon nie jest dostępny.
+  var ICON_PATHS = {
+    "calendar-plus": "M13 13h3v2h-3v3h-2v-3H8v-2h3v-3h2zm8-8v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2M5 5v2h14V5zm14 14V9H5v10z",
+    "download": "M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z",
+    "magnify": "M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"
+  };
+
+  function svgIcon(name, sizePx) {
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("width", sizePx || 16);
+    svg.setAttribute("height", sizePx || 16);
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    svg.classList.add("lks-icon");
+    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", ICON_PATHS[name] || "");
+    svg.appendChild(path);
+    return svg;
+  }
+
   function makeButton(label, href, opts) {
     opts = opts || {};
     var el = document.createElement(opts.button ? "button" : "a");
     el.className = "lks-cal-btn" + (opts.ghost ? " lks-cal-btn--ghost" : "");
-    el.textContent = label;
+    if (opts.icon) el.appendChild(svgIcon(opts.icon, 16));
+    el.appendChild(document.createTextNode(label));
     if (opts.button) {
       el.type = "button";
       el.addEventListener("click", opts.onClick);
@@ -215,7 +239,7 @@
     a.rel = "noopener";
     a.title = label;
     a.setAttribute("aria-label", label);
-    a.textContent = "📅";
+    a.appendChild(svgIcon("calendar-plus", 16));
     return a;
   }
 
@@ -255,8 +279,9 @@
       });
 
       if (events.length) {
-        var dl = makeButton("⬇️ Pobierz cały plan „" + team + "” (.ics)", null, {
+        var dl = makeButton("Pobierz cały plan „" + team + "” (.ics)", null, {
           button: true,
+          icon: "download",
           onClick: function () {
             downloadICS("lks-km-junior-trening-" + slugify(team) + ".ics", events);
           }
@@ -305,8 +330,9 @@
       });
 
       if (events.length) {
-        var dl = makeButton("⬇️ Pobierz kalendarz turniejów „" + team + "” (.ics)", null, {
+        var dl = makeButton("Pobierz kalendarz turniejów „" + team + "” (.ics)", null, {
           button: true,
+          icon: "download",
           onClick: function () {
             downloadICS("lks-km-junior-turnieje-" + slugify(team) + ".ics", events);
           }
@@ -332,7 +358,8 @@
       var selectId = "lks-team-filter-" + Math.random().toString(36).slice(2, 8);
       var label = document.createElement("label");
       label.setAttribute("for", selectId);
-      label.textContent = "🔎 Wybierz drużynę / rocznik:";
+      label.appendChild(svgIcon("magnify", 16));
+      label.appendChild(document.createTextNode("Wybierz drużynę / rocznik:"));
 
       var select = document.createElement("select");
       select.id = selectId;

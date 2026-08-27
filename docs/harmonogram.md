@@ -7,11 +7,10 @@ description: >-
 
 # Harmonogram treningów
 
-Wybierz drużynę z rozwijanej listy lub z zakładek poniżej, aby zobaczyć
-plan treningów. Przy każdym terminie znajdziesz przycisk 📅 do dodania
-go w Google Calendar, a pod tabelą — przycisk pobierający cały plan
-drużyny jako plik **.ics** (działa w Kalendarzu Google, Apple, Outlook
-i innych).
+Wybierz drużynę z listy lub zakładek, aby zobaczyć plan treningów.
+Przy terminie znajdziesz przycisk :material-calendar-plus: do dodania
+go do Google Calendar, a pod tabelą — pobranie całego planu jako plik
+**.ics** (Kalendarz Google, Apple, Outlook).
 
 !!! note "Aktualność danych"
     Godziny i obiekty mogą ulec zmianie w trakcie sezonu — zawsze
