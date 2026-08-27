@@ -1,11 +1,19 @@
+---
+title: Dołącz do nas
+description: >-
+  Jak zapisać dziecko do ŁKS KM Junior — krok po kroku. Pierwszy
+  trening jest bezpłatny i bez zobowiązań.
+---
+
 # Dołącz do ŁKS KM Junior
 
 ## Twoje miasto. Twój klub. Twoja gra.
 
 ŁKS KM Junior to jeden z najbardziej rozpoznawalnych klubów koszykówki
 młodzieżowej w województwie łódzkim. Szukamy zawodników i zawodniczek
-w wieku 13–18 lat, którzy chcą rozwijać się sportowo, rywalizować na
-wysokim poziomie i być częścią czegoś większego niż tylko gra w piłkę.
+w wieku **10–19 lat** (grupy U11–U19), którzy chcą rozwijać się
+sportowo, rywalizować na wysokim poziomie i być częścią czegoś
+większego niż tylko gra w piłkę.
 
 **Pierwsze zajęcia są bezpłatne. Przychodź i sprawdź nas.**
 
@@ -34,7 +42,7 @@ zaczynasz przygodę z koszykówką, czy masz już za sobą kilka sezonów —
 znajdziesz tu miejsce dla siebie.
 
 ### 🤝 Zespół to więcej niż sport
-W ŁKS Basket budujesz przyjaźnie, które wychodzą poza parkiet.
+W ŁKS KM Junior budujesz przyjaźnie, które wychodzą poza parkiet.
 Wspólne wyjazdy na turnieje, obozy sportowe, treningi — to wszystko
 tworzy więź, która zostaje na lata. Nasi byli zawodnicy wracają do nas
 jako trenerzy, wolontariusze i rodzice kolejnego pokolenia koszykarzy.
@@ -53,7 +61,10 @@ sport uzupełniał codzienność, a nie z nią kolidował.
 
 ## Nasze osiągnięcia
 
-> Przykładowe dane — zastąp własnymi.
+<div class="fill-me">
+  <strong>Uzupełnij:</strong> poniższe osiągnięcia są przykładowe —
+  zastąp je realnymi wynikami z ostatnich sezonów.
+</div>
 
 - 🥇 Mistrzostwo województwa łódzkiego U15 — sezon 2024/25
 - 🥈 Wicemistrzostwo województwa U17 — sezon 2023/24
@@ -93,21 +104,29 @@ sport uzupełniał codzienność, a nie z nią kolidował.
 
 ## Co mówią nasi zawodnicy?
 
+<div class="fill-me">
+  <strong>Uzupełnij:</strong> poniższe opinie są przykładowe — zastąp
+  je prawdziwymi wypowiedziami zawodników/rodziców (za ich zgodą).
+</div>
+
 > „Przyszedłem na próbny trening bez żadnych oczekiwań. Zostałem na
 > trzy sezony. Koszykówka nauczyła mnie więcej o sobie niż cokolwiek
 > innego."
 >
-> — Michał, zawodnik U17
+> — zawodnik U17
 
 > „Trenerzy naprawdę wiedzą, co robią. Widać postęp po każdym
 > miesiącu, nie tylko w grze, ale też w głowie."
 >
-> — Kacper, zawodnik U19
+> — zawodnik U19
 
 ---
 
 ## Masz pytania?
 
-Nie czekaj — napisz do nas już dziś. Odpowiadamy szybko.
+Zajrzyj do [najczęściej zadawanych pytań](faq.md) — odpowiadamy tam
+m.in. na pytania o sprzęt, opłaty i pierwszy trening. Możesz też
+napisać do nas bezpośrednio — odpowiadamy szybko.
 
+[Zobacz FAQ](faq.md){ .md-button }
 [Przejdź do strony kontaktowej](kontakt.md){ .md-button .md-button--primary }

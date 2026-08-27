@@ -1,8 +1,23 @@
-# Turnieje
+---
+title: Turnieje i wydarzenia
+description: >-
+  Kalendarz turniejów i rozgrywek ligowych ŁKS KM Junior w sezonie
+  2026/27 — z możliwością dodania każdego wydarzenia do kalendarza.
+---
 
-Poniżej znajdziesz kalendarz nadchodzących turniejów dla każdej drużyny.
-Kliknij w nazwę turnieju, aby przejść do strony organizatora.
-Daty i miejsca mogą ulec zmianie — śledź aktualizacje u trenera drużyny.
+# Turnieje i wydarzenia
+
+Wybierz drużynę z listy lub z zakładek, aby zobaczyć kalendarz
+nadchodzących turniejów i meczów ligowych. Kliknij nazwę turnieju, aby
+przejść do strony organizatora, albo ikonę 📅, aby dodać wydarzenie do
+Google Calendar. Pod tabelą znajdziesz też przycisk do pobrania całego
+kalendarza turniejów danej drużyny jako plik **.ics**.
+
+!!! note "Aktualność danych"
+    Daty, miejsca i godziny mogą ulec zmianie — śledź aktualizacje
+    u trenera drużyny przed wyjazdem na turniej.
+
+<div id="turnieje-widget" markdown>
 
 === "U11 I"
 
@@ -173,3 +188,9 @@ Daty i miejsca mogą ulec zmianie — śledź aktualizacje u trenera drużyny.
     | 25.04.2027 | Łódź | Liga Łódź U19 — kolejka 5 | [🔗 Więcej](https://przykład.pl) |
     | 16.05.2027 | Łódź | Turniej Wiosenny U19 | [🔗 Więcej](https://przykład.pl) |
     | 07.06.2027 | Łódź | Turniej Zakończenia Sezonu | [🔗 Więcej](https://przykład.pl) |
+
+</div>
+
+## Chcesz wesprzeć nasze turnieje?
+
+[Zostań sponsorem turnieju →](sponsor.md){ .md-button .md-button--primary }

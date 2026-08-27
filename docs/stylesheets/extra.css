@@ -1,0 +1,827 @@
+/* ═══════════════════════════════════════════════════════════════
+   ŁKS KM JUNIOR — SYSTEM WIZUALNY
+   Paleta klubowa: biały / czerwień ŁKS / czerń — spójna w całej witrynie.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* -- Barwy klubowe (źródło prawdy) -------------------------- */
+  --lks-red: #c8102e;
+  --lks-red-dark: #8b0000;
+  --lks-red-darker: #3a0000;
+  --lks-red-light: #ffcdd2;
+  --lks-red-tint: #fff1f1;
+  --lks-black: #0d0d0d;
+  --lks-ink: #1a1a1a;
+  --lks-white: #ffffff;
+  --lks-gray-50: #fafafa;
+  --lks-gray-100: #f2f2f2;
+  --lks-gray-200: #e6e6e6;
+  --lks-gray-400: #999999;
+  --lks-gray-600: #666666;
+
+  /* -- Podłączenie do zmiennych Material for MkDocs ------------ */
+  --md-primary-fg-color: var(--lks-red);
+  --md-primary-fg-color--light: #e5566e;
+  --md-primary-fg-color--dark: var(--lks-red-dark);
+  --md-accent-fg-color: var(--lks-red);
+  --md-typeset-a-color: var(--lks-red);
+
+  /* -- Wspólne tokeny komponentów -------------------------------*/
+  --lks-radius-sm: 8px;
+  --lks-radius: 14px;
+  --lks-radius-lg: 20px;
+  --lks-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  --lks-shadow-hover: 0 10px 28px rgba(200, 16, 46, 0.18);
+  --lks-transition: 180ms cubic-bezier(0.2, 0.6, 0.3, 1);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--lks-red);
+  --md-primary-fg-color--dark: var(--lks-red-dark);
+  --md-accent-fg-color: #ff5f6d;
+  --lks-surface: #1a1a1a;
+  --lks-surface-2: #212121;
+  --lks-border: #2b2b2b;
+  --lks-text-muted: #a6a6a6;
+}
+
+:root,
+[data-md-color-scheme="default"] {
+  --lks-surface: #ffffff;
+  --lks-surface-2: #fafafa;
+  --lks-border: #efefef;
+  --lks-text-muted: #666666;
+}
+
+/* -- Dostępność: widoczny fokus na całej stronie ----------------*/
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+.md-nav__link:focus-visible {
+  outline: 3px solid var(--lks-red);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* -- Nagłówek/topbar w barwach klubowych ------------------------*/
+.md-header {
+  background: linear-gradient(120deg, var(--lks-black) 0%, var(--lks-red-darker) 140%);
+}
+.md-tabs {
+  background: var(--lks-black);
+}
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background: #0a0a0a;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO (strona główna)
+   ═══════════════════════════════════════════════════════════════ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  padding: 40px 20px 36px;
+  background: linear-gradient(180deg, var(--lks-surface) 0%, var(--lks-surface-2) 100%);
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-radius-lg);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* pasek w barwach klubowych — subtelne nawiązanie do herbu */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--lks-black) 0 28px,
+    var(--lks-red) 28px 56px,
+    var(--lks-gray-200) 56px 84px
+  );
+}
+
+/* delikatna czerwona poświata za herbem — głębia bez ciężaru */
+.hero-badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-badge::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background: radial-gradient(circle, var(--lks-red-tint) 0%, transparent 72%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+[data-md-color-scheme="slate"] .hero-badge::before {
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.22) 0%, transparent 72%);
+}
+
+.hero img {
+  position: relative;
+  z-index: 1;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px;
+}
+
+.hero-slogan {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--md-default-fg-color);
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.hero-slogan span {
+  color: var(--lks-red);
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--lks-text-muted);
+  margin-bottom: 26px;
+  max-width: 46ch;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 44px 48px;
+    text-align: left;
+  }
+  .hero-text { align-items: flex-start; }
+  .hero-slogan { font-size: 2.1rem; }
+  .hero-sub { font-size: 1.02rem; margin-bottom: 28px; }
+  .hero-buttons { justify-content: flex-start; }
+  .hero img { width: 168px; height: 168px; }
+}
+
+.hero-buttons a {
+  padding: 13px 26px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: transform var(--lks-transition), box-shadow var(--lks-transition);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-buttons a:hover,
+.hero-buttons a:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+.btn-primary {
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--lks-red-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
+  border: 2px solid var(--lks-border);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: var(--lks-ink);
+  background: var(--lks-gray-100);
+}
+
+[data-md-color-scheme="slate"] .btn-secondary:hover,
+[data-md-color-scheme="slate"] .btn-secondary:focus-visible {
+  border-color: var(--lks-gray-400);
+  background: var(--lks-surface-2);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STATYSTYKI
+   ═══════════════════════════════════════════════════════════════ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 44px;
+}
+
+@media (min-width: 600px) {
+  .stats { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+}
+
+.stat-box {
+  background: var(--lks-surface);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  box-shadow: var(--lks-shadow);
+  border-top: 4px solid var(--lks-red);
+}
+
+.stat-number {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--lks-red);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--lks-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAGŁÓWEK SEKCJI
+   ═══════════════════════════════════════════════════════════════ */
+.section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--lks-red);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.section-lead {
+  text-align: center;
+  max-width: 60ch;
+  margin: -14px auto 28px;
+  color: var(--lks-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KAFELKI / KARTY (używane w wielu miejscach: nawigacja, trenerzy,
+   grupy wiekowe, misja/wizja/wartości)
+   ═══════════════════════════════════════════════════════════════ */
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+@media (min-width: 600px) {
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .tiles { grid-template-columns: repeat(3, 1fr); }
+}
+
+.tile {
+  background: var(--lks-surface);
+  border-radius: var(--lks-radius);
+  padding: 24px 20px;
+  text-decoration: none !important;
+  box-shadow: var(--lks-shadow);
+  border: 1px solid var(--lks-border);
+  transition: transform var(--lks-transition), box-shadow var(--lks-transition),
+    border-color var(--lks-transition);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tile:hover,
+.tile:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--lks-shadow-hover);
+  border-color: var(--lks-red);
+}
+
+.tile-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.tile-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.tile-desc {
+  font-size: 0.83rem;
+  color: var(--lks-text-muted);
+  line-height: 1.5;
+}
+
+.tile-arrow {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--lks-red);
+  font-weight: 600;
+}
+
+/* -- Karty informacyjne (misja / wizja / wartości / grupy) ------*/
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0 36px;
+}
+
+@media (min-width: 700px) {
+  .info-cards.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 600px) {
+  .info-cards.cols-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.info-card {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  border-radius: var(--lks-radius-sm);
+  padding: 20px 18px;
+  box-shadow: var(--lks-shadow);
+}
+
+.info-card h3 {
+  margin-top: 0 !important;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-card p:last-child { margin-bottom: 0; }
+
+/* -- Karty trenerów ---------------------------------------------*/
+.coach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 24px 0 36px;
+}
+
+@media (min-width: 640px) {
+  .coach-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.coach-card {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-radius);
+  overflow: hidden;
+  box-shadow: var(--lks-shadow);
+  transition: box-shadow var(--lks-transition), transform var(--lks-transition);
+}
+
+.coach-card:hover { box-shadow: var(--lks-shadow-hover); transform: translateY(-3px); }
+
+.coach-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(140deg, var(--lks-black), var(--lks-red-darker));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.coach-body { padding: 18px 20px 20px; }
+
+.coach-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 2px;
+}
+
+.coach-role {
+  color: var(--lks-red);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.coach-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--lks-red-tint);
+  color: var(--lks-red-dark);
+}
+
+[data-md-color-scheme="slate"] .badge {
+  background: rgba(200, 16, 46, 0.18);
+  color: #ff8a94;
+}
+
+.coach-desc {
+  font-size: 0.88rem;
+  color: var(--lks-text-muted);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.coach-contact {
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.coach-contact a { font-weight: 600; }
+
+/* -- Puste miejsce do uzupełnienia (placeholder callout) --------*/
+.fill-me {
+  border: 2px dashed var(--lks-red-light);
+  background: var(--lks-red-tint);
+  border-radius: var(--lks-radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--lks-red-dark);
+  margin: 10px 0;
+}
+[data-md-color-scheme="slate"] .fill-me {
+  background: rgba(200, 16, 46, 0.12);
+  border-color: rgba(200, 16, 46, 0.4);
+  color: #ff9aa2;
+}
+.fill-me strong { font-weight: 800; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════════════════════════ */
+.cta {
+  background: linear-gradient(135deg, var(--lks-black) 0%, var(--lks-red-darker) 100%);
+  border-radius: var(--lks-radius-lg);
+  padding: 40px 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.cta h2 {
+  color: var(--lks-white);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+  font-size: 0.98rem;
+}
+
+.cta a,
+.md-typeset .cta a {
+  display: inline-block;
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  padding: 13px 30px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none !important;
+  transition: background var(--lks-transition), transform var(--lks-transition);
+  min-height: 44px;
+}
+
+.cta a:hover,
+.cta a:focus-visible {
+  background: #e53935;
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FILTR GRUPY / ROCZNIKA (harmonogram, turnieje)
+   ═══════════════════════════════════════════════════════════════ */
+.lks-filter-bar {
+  position: sticky;
+  top: 3.2rem;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  box-shadow: var(--lks-shadow);
+}
+
+.lks-filter-bar label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.lks-filter-bar select {
+  flex: 1 1 200px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--lks-border);
+  background: var(--lks-surface-2);
+  color: var(--md-default-fg-color);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.lks-filter-bar select:focus-visible {
+  border-color: var(--lks-red);
+}
+
+.lks-filter-hint {
+  font-size: 0.78rem;
+  color: var(--lks-text-muted);
+  flex-basis: 100%;
+}
+
+/* Ukryj natywny pasek zakładek Material, gdy filtr JS przejął stery
+   (klasa dodawana przez extra.js po zbudowaniu selecta) */
+.tabbed-set.lks-has-filter > .tabbed-labels {
+  scroll-snap-type: x mandatory;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRZYCISKI KALENDARZA
+   ═══════════════════════════════════════════════════════════════ */
+.lks-cal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 24px;
+}
+
+.lks-cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 9px 16px;
+  border-radius: 24px;
+  border: 1.5px solid var(--lks-red);
+  color: var(--lks-red) !important;
+  background: transparent;
+  text-decoration: none !important;
+  cursor: pointer;
+  appearance: none;
+  transition: background var(--lks-transition), color var(--lks-transition), transform var(--lks-transition);
+  min-height: 40px;
+}
+
+.lks-cal-btn:hover,
+.lks-cal-btn:focus-visible {
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  transform: translateY(-1px);
+}
+
+.lks-cal-btn.lks-cal-btn--ghost {
+  border-color: var(--lks-border);
+  color: var(--md-default-fg-color) !important;
+}
+.lks-cal-btn.lks-cal-btn--ghost:hover,
+.lks-cal-btn.lks-cal-btn--ghost:focus-visible {
+  background: var(--lks-gray-100);
+  color: var(--md-default-fg-color) !important;
+}
+[data-md-color-scheme="slate"] .lks-cal-btn.lks-cal-btn--ghost:hover {
+  background: var(--lks-surface-2);
+}
+
+.lks-cal-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--lks-red-tint);
+  color: var(--lks-red-dark) !important;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  transition: background var(--lks-transition), transform var(--lks-transition);
+}
+.lks-cal-icon-btn:hover,
+.lks-cal-icon-btn:focus-visible {
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  transform: scale(1.08);
+}
+[data-md-color-scheme="slate"] .lks-cal-icon-btn {
+  background: rgba(200, 16, 46, 0.18);
+  color: #ff8a94 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORMULARZ KONTAKTOWY
+   ═══════════════════════════════════════════════════════════════ */
+.lks-contact-form {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0 32px;
+}
+
+.lks-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lks-form-row label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lks-form-row input,
+.lks-form-row textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--lks-border);
+  background: var(--lks-surface-2);
+  color: var(--md-default-fg-color);
+  min-height: 44px;
+  resize: vertical;
+}
+
+.lks-form-row input:focus-visible,
+.lks-form-row textarea:focus-visible {
+  border-color: var(--lks-red);
+  outline: none;
+}
+
+.lks-contact-form button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FAQ (pymdownx.details / admonition ??? — natywne <details>)
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .faq .admonition,
+.md-typeset .faq details {
+  border-radius: var(--lks-radius-sm);
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  box-shadow: none;
+  margin: 0 0 12px;
+}
+
+.md-typeset .faq .admonition-title,
+.md-typeset .faq summary {
+  font-weight: 700;
+  background: var(--lks-surface-2);
+}
+
+.md-typeset .faq .admonition-title::before,
+.md-typeset .faq summary::before {
+  background-color: var(--lks-red) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABELE — czytelniej na telefonie
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset table:not([class]) {
+  display: block;
+  overflow-x: auto;
+  border-radius: var(--lks-radius-sm);
+  font-size: 0.85rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--lks-black);
+  color: var(--lks-white);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRZYCISKI MD (.md-button) — dopasowanie do palety klubowej
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .md-button {
+  border-radius: 28px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border-color: var(--lks-red);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--lks-red);
+  border-color: var(--lks-red);
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus-visible {
+  background-color: var(--lks-red-dark);
+  border-color: var(--lks-red-dark);
+}
+
+.md-typeset .md-button:not(.md-button--primary):hover {
+  color: var(--lks-red);
+  border-color: var(--lks-red);
+}
+
+/* -- Karty ".grid.cards" (mkdocs-material) -----------------------*/
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-radius: var(--lks-radius-sm);
+  border: 1px solid var(--lks-border);
+}
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  border-color: var(--lks-red);
+  box-shadow: var(--lks-shadow-hover);
+}
+
+/* -- Drobne animacje wejścia (micro-interactions) -----------------*/
+@media (prefers-reduced-motion: no-preference) {
+  .hero, .stat-box, .tile, .info-card, .coach-card {
+    animation: lks-fade-up 480ms ease both;
+  }
+  .stats .stat-box:nth-child(2) { animation-delay: 60ms; }
+  .stats .stat-box:nth-child(3) { animation-delay: 120ms; }
+  .stats .stat-box:nth-child(4) { animation-delay: 180ms; }
+}
+
+@keyframes lks-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -- Stopka: dopisek o placeholderach (jeśli dodany) -------------*/
+.lks-footnote-disclaimer {
+  font-size: 0.78rem;
+  color: var(--lks-text-muted);
+  text-align: center;
+  margin-top: 8px;
+}

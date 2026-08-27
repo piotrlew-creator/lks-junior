@@ -1,7 +1,23 @@
+---
+title: Harmonogram treningów
+description: >-
+  Dni, godziny i hale treningowe dla wszystkich grup wiekowych ŁKS KM
+  Junior. Wybierz drużynę i dodaj trening do swojego kalendarza.
+---
+
 # Harmonogram treningów
 
-Wybierz drużynę, aby zobaczyć plan treningów. Godziny i obiekty
-mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
+Wybierz drużynę z rozwijanej listy lub z zakładek poniżej, aby zobaczyć
+plan treningów. Przy każdym terminie znajdziesz przycisk 📅 do dodania
+go w Google Calendar, a pod tabelą — przycisk pobierający cały plan
+drużyny jako plik **.ics** (działa w Kalendarzu Google, Apple, Outlook
+i innych).
+
+!!! note "Aktualność danych"
+    Godziny i obiekty mogą ulec zmianie w trakcie sezonu — zawsze
+    potwierdzaj je u trenera swojej drużyny.
+
+<div id="harmonogram-widget" markdown>
 
 === "U11 I"
 
@@ -158,3 +174,10 @@ mogą ulec zmianie — aktualne informacje zawsze u trenera drużyny.
     | Wtorek | 19:30–21:30 | Hala OSiR, ul. Olimpijska 2 |
     | Czwartek | 19:30–21:30 | Hala OSiR, ul. Olimpijska 2 |
     | Niedziela | 11:00–13:00 | Hala OSiR, ul. Olimpijska 2 |
+
+</div>
+
+## Nie wiesz, do której grupy zapisać dziecko?
+
+[Sprawdź grupy wiekowe →](grupy-wiekowe.md){ .md-button }
+[Zapisz się na trening próbny →](dolacz.md){ .md-button .md-button--primary }

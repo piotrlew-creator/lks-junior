@@ -1,3 +1,10 @@
+---
+title: Strefa sponsora
+description: >-
+  Oferta współpracy sponsorskiej z ŁKS KM Junior — pakiety Partner
+  Drużyny, Partner Klubu i Sponsor Główny. Dotrzyj do rodzin z Łodzi.
+---
+
 # Zostań sponsorem ŁKS KM Junior
 
 ## Inwestycja w młodych ludzi. Widoczność dla Twojej marki.
@@ -148,17 +155,33 @@ dokładnie tak jak w pakietach finansowych.
 
 ## Nasi zawodnicy w liczbach
 
-| | |
-|---|---|
-| 👦 Zawodników w klubie | ponad 120 |
-| 🏀 Drużyn w sezonie 2026/27 | 12 |
-| 🗓️ Turniejów i meczów w sezonie | ponad 40 |
-| 📍 Lat działalności w Łodzi | ponad 15 |
-| 👨‍👩‍👧 Obserwujących w mediach społecznościowych | rosnąca baza |
+<div class="stats">
+  <div class="stat-box">
+    <div class="stat-number">120+</div>
+    <div class="stat-label">Zawodników w klubie</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">12</div>
+    <div class="stat-label">Drużyn w sezonie 2026/27</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">40+</div>
+    <div class="stat-label">Turniejów i meczów</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">15+</div>
+    <div class="stat-label">Lat działalności w Łodzi</div>
+  </div>
+</div>
 
 ---
 
 ## Co mówią nasi partnerzy?
+
+<div class="fill-me">
+  <strong>Uzupełnij:</strong> poniższe opinie są przykładowe — zastąp
+  je prawdziwymi wypowiedziami sponsorów (za ich zgodą).
+</div>
 
 > „Zdecydowaliśmy się wesprzeć drużynę U15, bo właściciel sam grał
 > w koszykówkę w młodości. To był łatwy wybór — i świetna decyzja

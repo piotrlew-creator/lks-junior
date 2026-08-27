@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% set meta_title = page.meta.title if (page and page.meta and page.meta.title) else (page.title if (page and page.title and not page.is_homepage) else None) %}
+  {% set page_title = (meta_title ~ " - " ~ config.site_name) if meta_title else config.site_name %}
+  {% set page_description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
+  {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
+  {% set og_image = config.site_url ~ 'assets/logo.png' %}
+
+  <meta name="description" content="{{ page_description }}">
+  <meta name="theme-color" content="#C8102E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:locale" content="pl_PL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "ŁKS KM Junior",
+    "alternateName": "ŁKS KM Koszykówka Męska – Akademia Młodzieżowa",
+    "sport": "Koszykówka",
+    "url": "{{ config.site_url }}",
+    "logo": "{{ og_image }}",
+    "image": "{{ og_image }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "UZUPEŁNIJ – ulica i numer",
+      "addressLocality": "Łódź",
+      "postalCode": "UZUPEŁNIJ",
+      "addressCountry": "PL"
+    },
+    "sameAs": [
+      "https://facebook.com/UZUPEŁNIJ-LINK-FB",
+      "https://instagram.com/UZUPEŁNIJ-LINK-IG"
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}
