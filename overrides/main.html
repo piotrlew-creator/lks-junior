@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 
+{% block announce %}
+  <a href="{{ 'dolacz/' | url }}" class="lks-announce">
+    Nabór do grup najmłodszych — zapytaj biuro o wolne miejsca
+  </a>
+{% endblock %}
+
 {% block extrahead %}
+  {# Barlow Condensed do nagłówków — Barlow zwykły ładuje już motyw #}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap">
+
   {% set meta_title = page.meta.title if (page and page.meta and page.meta.title) else (page.title if (page and page.title and not page.is_homepage) else None) %}
   {% set page_title = (meta_title ~ " - " ~ config.site_name) if meta_title else config.site_name %}
   {% set page_description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
   {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
-  {% set og_image = config.site_url ~ 'assets/logo.png' %}
+  {% set og_image = config.site_url ~ 'assets/hero.jpg' %}
 
   <meta name="description" content="{{ page_description }}">
   <meta name="theme-color" content="#C8102E">
@@ -20,7 +31,7 @@
   <meta property="og:locale" content="pl_PL">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
   <meta name="twitter:image" content="{{ og_image }}">
@@ -30,11 +41,11 @@
   {
     "@context": "https://schema.org",
     "@type": "SportsOrganization",
-    "name": "ŁKS KM Junior",
-    "alternateName": "ŁKS KM Koszykówka Męska – Akademia Młodzieżowa",
+    "name": "ŁKS KM Szkoła Gortata",
+    "alternateName": "ŁKS KM Koszykówka Męska — sekcje młodzieżowe",
     "sport": "Koszykówka",
     "url": "{{ config.site_url }}",
-    "logo": "{{ og_image }}",
+    "logo": "{{ config.site_url }}assets/logo.png",
     "image": "{{ og_image }}",
     "address": {
       "@type": "PostalAddress",

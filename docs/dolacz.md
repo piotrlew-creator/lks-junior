@@ -1,68 +1,135 @@
 ---
 title: Dołącz do nas
 description: >-
-  Jak zapisać dziecko do ŁKS KM Junior — krok po kroku. Pierwszy
-  trening jest bezpłatny i bez zobowiązań.
+  Jak dołączyć do akademii ŁKS KM Szkoła Gortata — nabór do grup najmłodszych,
+  przyjęcia do drużyn starszych, najczęstsze pytania rodziców i kontakt do biura.
 ---
 
-# Dołącz do ŁKS KM Junior
+# Dołącz do akademii
 
-## Twoje miasto. Twój klub. Twoja gra.
+Prowadzimy grupy od U11 po U19 oraz zespół seniorski w 2 lidze. Sposób
+dołączenia zależy od wieku i doświadczenia zawodnika — poniżej wyjaśniamy
+oba warianty.
 
-ŁKS KM Junior to jeden z najbardziej rozpoznawalnych klubów koszykówki
-młodzieżowej w województwie łódzkim. Szukamy zawodników i zawodniczek
-w wieku **10–19 lat** (grupy U11–U19), którzy chcą rozwijać się
-sportowo, rywalizować na wysokim poziomie i być częścią czegoś
-większego niż tylko gra w piłkę.
+## Grupy najmłodsze — nabór otwarty
 
-**Pierwsze zajęcia są bezpłatne. Przychodź i sprawdź nas.**
+Do grup **U11 i U12** prowadzimy otwarty nabór przez cały sezon.
+Doświadczenie w koszykówce nie jest potrzebne — uczymy od podstaw,
+a pierwsze miesiące to przede wszystkim nauka poruszania się, koordynacji
+i gry w zespole.
 
-[Skontaktuj się z nami](kontakt.md){ .md-button .md-button--primary }
-[Zobacz harmonogram treningów](harmonogram.md){ .md-button }
+Wystarczy, że zadzwonisz lub napiszesz do biura. Umówimy termin pierwszych
+zajęć i spotkanie z trenerem prowadzącym grupę.
 
----
+## Grupy starsze — przyjęcie po spotkaniu z trenerem
 
-## Dlaczego warto grać w ŁKS?
+Do drużyn **U13 i starszych** również przyjmujemy nowych zawodników.
+Tu jednak zaczynamy od rozmowy: zawodnik przychodzi na spotkanie z trenerem
+prowadzącym, wspólnie sprawdzamy jego poziom i oceniamy, czy drużyna będzie
+dla niego dobrym miejscem — a on odnajdzie się w jej tempie i celach.
 
-- :material-whistle-outline: **Trenerzy z licencjami PZKosz** — uczymy nie tylko techniki, ale myślenia o grze i pracy zespołowej.
-- :material-trophy-outline: **Prawdziwa rywalizacja** — rozgrywki ligowe i turnieje na szczeblu wojewódzkim i ogólnopolskim.
-- :material-trending-up: **Indywidualny rozwój** — program dopasowany do wieku i poziomu każdego zawodnika.
-- :material-handshake-outline: **Więcej niż sport** — wspólne wyjazdy na turnieje i przyjaźnie na lata.
-- :material-school-outline: **Sport i nauka w parze** — treningi popołudniami i w weekendy, bez kolizji ze szkołą.
+To nie jest formalność do odhaczenia ani egzamin. Chodzi o to, żeby zawodnik
+trafił do grupy, w której będzie się realnie rozwijał, a nie siedział na ławce
+albo nudził się na treningu.
 
-Pełną listę osiągnięć klubu znajdziesz na stronie [O Akademii](o-klubie.md).
+!!! tip "Jak się umówić"
+    Spotkanie z trenerem umawiamy przez biuro klubu — napisz lub zadzwoń,
+    podając wiek zawodnika i jego dotychczasowe doświadczenie.
 
----
-
-## Jak wygląda dołączenie do klubu?
+## Jak wygląda pierwszy kontakt
 
 <div class="grid cards" markdown>
 
 -   **Krok 1 — Napisz lub zadzwoń**
 
-    Odpiszemy w ciągu 24 godzin i umówimy pierwsze zajęcia próbne.
+    Podaj wiek dziecka i ewentualne doświadczenie. Odpowiadamy w ciągu
+    kilku dni roboczych.
 
--   **Krok 2 — Przyjdź na trening próbny**
+-   **Krok 2 — Ustalamy termin**
 
-    Bezpłatnie i bez zobowiązań — poznasz trenera i drużynę.
+    Powiemy, czy w danym roczniku są wolne miejsca, i umówimy zajęcia
+    albo spotkanie z trenerem.
 
--   **Krok 3 — Dołącz do drużyny**
+-   **Krok 3 — Poznanie drużyny**
 
-    Pomagamy z formalnościami i przypisujemy odpowiednią grupę wiekową.
+    Zawodnik trafia na trening, poznaje trenera i grupę. Wtedy też
+    omawiamy warunki uczestnictwa.
 
--   **Krok 4 — Graj i rozwijaj się**
+-   **Krok 4 — Dołączenie**
 
-    Od pierwszego treningu jesteś częścią ŁKS KM Junior.
+    Po ustaleniach formalnych zawodnik zostaje wpisany do drużyny
+    i zaczyna regularne treningi.
 
 </div>
 
----
+## Kontakt
 
-## Masz pytania?
+<div class="lks-contact" markdown>
 
-Zajrzyj do [najczęściej zadawanych pytań](faq.md) — odpowiadamy tam
-m.in. na pytania o sprzęt, opłaty i pierwszy trening. Możesz też
-napisać do nas bezpośrednio — odpowiadamy szybko.
+:material-map-marker-outline: **Adres**
+: UZUPEŁNIJ — ulica, numer, kod pocztowy, Łódź
 
-[Zobacz FAQ](faq.md){ .md-button }
-[Przejdź do strony kontaktowej](kontakt.md){ .md-button .md-button--primary }
+:material-phone-outline: **Telefon do biura**
+: UZUPEŁNIJ numer telefonu
+
+:material-email-outline: **E-mail**
+: [kontakt@lkskm.pl](mailto:kontakt@lkskm.pl)
+
+:material-clock-outline: **Godziny pracy biura**
+: UZUPEŁNIJ dni i godziny
+
+</div>
+
+<div class="lks-fillme" markdown>
+**Uzupełnij:** adres, telefon i godziny pracy biura. Te same dane warto
+podmienić w pliku `mkdocs.yml` w sekcji `extra.social` — linki do mediów
+społecznościowych pojawiają się wtedy automatycznie w stopce.
+</div>
+
+## Najczęstsze pytania
+
+<div class="faq" markdown>
+
+??? question "Czy trzeba mieć wcześniejsze doświadczenie z koszykówką?"
+    W grupach najmłodszych (U11, U12) — nie. Uczymy od zera i program treningu
+    jest do tego dostosowany. W grupach starszych doświadczenie zwykle jest
+    potrzebne, ale o przyjęciu decyduje spotkanie z trenerem, a nie formalny staż.
+
+??? question "Ile kosztuje uczestnictwo?"
+    Wysokość składki i to, co obejmuje, omawiamy indywidualnie podczas kontaktu
+    z biurem — zależy między innymi od grupy i liczby treningów w tygodniu.
+
+    **Uzupełnij:** warto tu wymienić, co składka obejmuje (treningi, opiekę
+    trenerską, ubezpieczenie, udział w turniejach), czy są zniżki rodzinne
+    i czy płaci się przez wakacje — bez podawania kwoty.
+
+??? question "Jaki sprzęt jest potrzebny na start?"
+    Wygodny strój sportowy, obuwie na halę z jasną podeszwą i butelka wody.
+    Własna piłka nie jest konieczna — klub zapewnia sprzęt na treningi.
+
+    **Uzupełnij:** wymagania dotyczące stroju klubowego, jeśli takie są.
+
+??? question "Czy zawodnicy są ubezpieczeni?"
+    **Uzupełnij:** informacje o ubezpieczeniu NNW — czy jest wliczone
+    w składkę, czy trzeba je wykupić osobno i jak to zrobić.
+
+??? question "Jak długo trwa sezon i kiedy są przerwy?"
+    Sezon rozgrywkowy trwa zwykle od września do czerwca, z przerwą świąteczną
+    i feriami zgodnie z kalendarzem szkolnym województwa łódzkiego.
+
+??? question "Czy klub organizuje obozy?"
+    Tak — obozy i zgrupowania organizujemy w przerwie letniej i zimowej.
+    Terminy dla konkretnej grupy znajdziesz na jej stronie w
+    [Strefie dla rodzica](strefa-rodzica/index.md).
+
+??? question "Co zrobić, jeśli trening się nie odbędzie?"
+    Zmiany w harmonogramie zgłasza trener prowadzący bezpośrednio rodzicom
+    i zawodnikom. Publikujemy je też w
+    [Aktualnościach](aktualnosci/index.md).
+
+??? question "Do kogo zwracać się w sprawach dotyczącej drużyny?"
+    Do trenera prowadzącego — jego kontakt znajdziesz na stronie grupy
+    w [Strefie dla rodzica](strefa-rodzica/index.md). Sprawy wykraczające
+    poza jedną drużynę prowadzą koordynatorzy grup młodzieżowych.
+
+</div>

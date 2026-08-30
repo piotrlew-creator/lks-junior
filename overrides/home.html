@@ -1,0 +1,193 @@
+{% extends "main.html" %}
+
+{#
+  Strona główna ŁKS KM Szkoła Gortata.
+  Nadpisujemy blok "tabs", żeby wejść na pełną szerokość — bez paska
+  bocznego i spisu treści, których strona klubu nie potrzebuje.
+  Blok "content" zostaje pusty: całą treść budujemy poniżej.
+#}
+
+{% block tabs %}
+  {{ super() }}
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="lks-hero">
+    <img class="lks-hero__img" src="{{ 'assets/hero.jpg' | url }}"
+         alt="Zawodnicy ŁKS KM Szkoła Gortata na hali">
+    <div class="lks-hero__veil"></div>
+    <div class="lks-hero__inner md-grid">
+      <p class="lks-kicker">Akademia koszykówki · Łódź</p>
+      <h1 class="lks-hero__title">Tu zaczyna się<br><em>Twoja gra</em></h1>
+      <p class="lks-hero__sub">
+        Od grup najmłodszych po zespół seniorski w 2 lidze. Uczymy koszykówki
+        i tego, co zostaje na długo po ostatnim gwizdku.
+      </p>
+      <div class="lks-hero__cta">
+        <a href="{{ 'dolacz/' | url }}" class="lks-btn lks-btn--primary">Zapytaj o zapisy</a>
+        <a href="{{ 'strefa-rodzica/' | url }}" class="lks-btn lks-btn--ghost">Strefa dla rodzica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PASEK ZAUFANIA ══════════════ -->
+  <section class="lks-trust">
+    <div class="md-grid lks-trust__inner">
+      <div class="lks-trust__item">
+        <span class="lks-trust__big">Mistrzostwa Polski</span>
+        <span class="lks-trust__sm">U13 i U15 na poziomie krajowym</span>
+      </div>
+      <div class="lks-trust__item">
+        <span class="lks-trust__big">Licencje PZKosz</span>
+        <span class="lks-trust__sm">Kadra z uprawnieniami związkowymi</span>
+      </div>
+      <div class="lks-trust__item">
+        <span class="lks-trust__big">U11 – 2 liga</span>
+        <span class="lks-trust__sm">Pełna ścieżka bez zmiany klubu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ WYBÓR GRUPY ══════════════ -->
+  <section class="lks-sec md-grid lks-reveal" id="grupy">
+    <p class="lks-lbl">Strefa dla rodzica</p>
+    <h2 class="lks-h2">Wybierz grupę dziecka</h2>
+    <p class="lks-lead">
+      Trenujesz już u nas? Wejdź prosto do swojej drużyny — zapamiętamy ją
+      na następny raz. Dopiero szukasz grupy? Kliknij wiek dziecka.
+    </p>
+
+    <div class="lks-finder" id="lks-finder">
+      <p class="lks-finder__q">Ile lat ma Twoje dziecko?</p>
+      <div class="lks-ages" id="lks-ages">
+        <button type="button" class="lks-age" data-g="u11">10</button>
+        <button type="button" class="lks-age" data-g="u12">11</button>
+        <button type="button" class="lks-age" data-g="u13">12</button>
+        <button type="button" class="lks-age" data-g="u14">13</button>
+        <button type="button" class="lks-age" data-g="u15">14</button>
+        <button type="button" class="lks-age" data-g="u17">15</button>
+        <button type="button" class="lks-age" data-g="u17">16</button>
+        <button type="button" class="lks-age" data-g="u19">17</button>
+        <button type="button" class="lks-age" data-g="u19">18</button>
+      </div>
+
+      <div class="lks-res" id="lks-res">
+        <img class="lks-res__img no-lightbox" id="lks-res-img" src="" alt="">
+        <div class="lks-res__body">
+          <p class="lks-res__head">
+            <span class="lks-res__name" id="lks-res-name"></span>
+            <span id="lks-res-tag"></span>
+          </p>
+          <p class="lks-res__det" id="lks-res-det"></p>
+          <a class="lks-res__go" id="lks-res-go" href="#">Zobacz stronę drużyny →</a>
+        </div>
+      </div>
+      <p class="lks-res__note" id="lks-res-note"></p>
+    </div>
+  </section>
+
+  <!-- ══════════════ OSIĄGNIĘCIA ══════════════ -->
+  <section class="lks-sec lks-sec--alt lks-reveal">
+    <div class="md-grid">
+      <p class="lks-lbl">Dowody, nie deklaracje</p>
+      <h2 class="lks-h2">Gramy o najwyższe cele</h2>
+      <p class="lks-lead">Nasze roczniki regularnie grają na poziomie krajowym.</p>
+
+      <div class="lks-ach">
+        <article class="lks-ach__card">
+          <img class="no-lightbox" src="{{ 'assets/sukces-u13.jpg' | url }}" alt="Drużyna U13 na Mistrzostwach Polski">
+          <span class="lks-ach__veil"></span>
+          <span class="lks-ach__txt"><b>U13</b>Mistrzostwa Polski</span>
+        </article>
+        <article class="lks-ach__card">
+          <img class="no-lightbox" src="{{ 'assets/sukces-u15.jpg' | url }}" alt="Drużyna U15 na Mistrzostwach Polski">
+          <span class="lks-ach__veil"></span>
+          <span class="lks-ach__txt"><b>U15</b>Mistrzostwa Polski</span>
+        </article>
+        <article class="lks-ach__card">
+          <img class="no-lightbox" src="{{ 'assets/sukces-u12.jpg' | url }}" alt="Drużyna U12 z pucharami">
+          <span class="lks-ach__veil"></span>
+          <span class="lks-ach__txt"><b>U12</b>Mistrz województwa</span>
+        </article>
+        <article class="lks-ach__card">
+          <img class="no-lightbox" src="{{ 'assets/sukces-u16.jpg' | url }}" alt="Drużyna świętująca awans">
+          <span class="lks-ach__veil"></span>
+          <span class="lks-ach__txt"><b>U16</b>Awans</span>
+        </article>
+      </div>
+
+      <p class="lks-fillme">
+        <strong>Uzupełnij:</strong> dokładne miejsca i sezony przy każdym
+        osiągnięciu — podpisy powyżej są robocze.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════ WIĘCEJ NIŻ KOSZYKÓWKA ══════════════ -->
+  <section class="lks-sec md-grid">
+    <p class="lks-lbl">Więcej niż koszykówka</p>
+    <h2 class="lks-h2">Drużyna zostaje na lata</h2>
+
+    <div class="lks-spot lks-reveal">
+      <div class="lks-spot__img">
+        <img src="{{ 'assets/oboz.jpg' | url }}" alt="Obóz ŁKS KM nad morzem">
+      </div>
+      <div class="lks-spot__txt">
+        <h3>Obozy i wyjazdy</h3>
+        <p>
+          Lato nad morzem, wspólne wyjazdy na turnieje, treningi poza halą.
+          Dla wielu zawodników to właśnie te tygodnie zostają w pamięci
+          najdłużej — i to tam rodzi się drużyna.
+        </p>
+      </div>
+    </div>
+
+    <div class="lks-spot lks-spot--rev lks-reveal">
+      <div class="lks-spot__img">
+        <img src="{{ 'assets/klub.jpg' | url }}" alt="Spotkanie klubowe ŁKS KM">
+      </div>
+      <div class="lks-spot__txt">
+        <h3>Klub to także rodzice</h3>
+        <p>
+          Spotkania całej akademii — zawodnicy, rodzeństwo, rodzice i trenerzy.
+          Dziecko wchodzi do drużyny, a rodzic do społeczności, która kibicuje
+          sobie nawzajem przez cały sezon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ DLA FIRM ══════════════ -->
+  <section class="lks-spons lks-reveal">
+    <div class="md-grid">
+      <p class="lks-lbl lks-lbl--light">Dla firm</p>
+      <h2 class="lks-h2 lks-h2--light">Zbuduj markę tam,<br>gdzie rośnie Łódź</h2>
+      <p class="lks-spons__lead">
+        Osiem drużyn, komplet rodzin na trybunach i regularna obecność
+        w mediach społecznościowych klubu.
+      </p>
+      <div class="lks-nums">
+        <div class="lks-num"><span class="lks-num__v">8</span><span class="lks-num__l">Drużyn w klubie</span></div>
+        <div class="lks-num"><span class="lks-num__v">U11–2 liga</span><span class="lks-num__l">Pełna ścieżka</span></div>
+        <div class="lks-num"><span class="lks-num__v">MP</span><span class="lks-num__l">Poziom krajowy</span></div>
+      </div>
+      <a href="{{ 'sponsorzy/' | url }}" class="lks-btn lks-btn--primary">Zobacz ofertę współpracy</a>
+    </div>
+  </section>
+
+  <!-- ══════════════ KONTAKT ══════════════ -->
+  <section class="lks-final lks-reveal">
+    <div class="md-grid">
+      <h2 class="lks-h2 lks-h2--light">Chcesz dołączyć<br>do akademii?</h2>
+      <p class="lks-final__lead">
+        Nabór otwarty prowadzimy przede wszystkim do grup najmłodszych.
+        Do starszych drużyn również przyjmujemy — zaczynamy wtedy od spotkania
+        z trenerem prowadzącym. Napisz lub zadzwoń do biura, a powiemy Ci,
+        jak to wygląda w roczniku Twojego dziecka.
+      </p>
+      <a href="{{ 'dolacz/' | url }}" class="lks-btn lks-btn--primary">Skontaktuj się z biurem</a>
+      <p class="lks-final__phone">UZUPEŁNIJ NUMER TELEFONU</p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}{% endblock %}

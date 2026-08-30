@@ -1,11 +1,11 @@
-site_name: ŁKS KM Junior
+site_name: ŁKS KM Szkoła Gortata
 site_url: https://piotrlew-creator.github.io/lks-junior/
 site_description: >-
-  Akademia koszykówki młodzieżowej ŁKS KM w Łodzi. Grupy wiekowe U10–U19,
-  harmonogram treningów, turnieje, kadra trenerska i zapisy dla nowych
-  zawodników.
-site_author: ŁKS KM Junior
-copyright: Copyright &copy; ŁKS KM Junior
+  Akademia koszykówki ŁKS KM Szkoła Gortata w Łodzi. Grupy młodzieżowe
+  od U11 po U19 i zespół seniorski w 2 lidze — harmonogram treningów,
+  kadra trenerska, turnieje i zapisy.
+site_author: ŁKS KM Szkoła Gortata
+copyright: Copyright &copy; ŁKS KM Szkoła Gortata
 
 theme:
   name: material
@@ -16,7 +16,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   font:
-    text: Inter
+    text: Barlow
     code: Roboto Mono
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -36,6 +36,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sections
     - navigation.indexes
     - navigation.top
     - navigation.tracking
@@ -43,36 +44,40 @@ theme:
     - navigation.instant.progress
     - navigation.footer
     - content.tabs.link
-    - content.code.copy
     - content.tooltips
     - toc.follow
     - search.suggest
     - search.highlight
-    - search.share
 
 nav:
-  - Strona główna: index.md
-  - O Akademii: o-klubie.md
-  - Grupy wiekowe: grupy-wiekowe.md
-  - Harmonogram treningów: harmonogram.md
-  - Turnieje i wydarzenia: turnieje.md
-  - Kadra trenerska: trenerzy.md
-  - Dołącz do nas: dolacz.md
-  - FAQ: faq.md
-  - Strefa sponsora: sponsor.md
-  - Kontakt: kontakt.md
+  - Start: index.md
+  - Strefa dla rodzica:
+      - strefa-rodzica/index.md
+      - U11: strefa-rodzica/u11.md
+      - U12: strefa-rodzica/u12.md
+      - U13: strefa-rodzica/u13.md
+      - U14: strefa-rodzica/u14.md
+      - U15: strefa-rodzica/u15.md
+      - U17: strefa-rodzica/u17.md
+      - U19: strefa-rodzica/u19.md
+      - 2 liga: strefa-rodzica/dwa-liga.md
+  - Dołącz: dolacz.md
+  - Akademia: akademia.md
+  - Aktualności:
+      - aktualnosci/index.md
+  - Sponsorzy: sponsorzy.md
 
 extra:
   social:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/UZUPEŁNIJ-LINK-FB
-      name: ŁKS KM Junior na Facebooku
+      name: Znajdź nas na Facebooku
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/UZUPEŁNIJ-LINK-IG
-      name: ŁKS KM Junior na Instagramie
+      name: Znajdź nas na Instagramie
     - icon: fontawesome/solid/envelope
       link: mailto:kontakt@lkskm.pl
-      name: Napisz do nas
+      name: Napisz do biura
   generator: false
 
 extra_css:
@@ -85,10 +90,23 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.]+'
-  - git-revision-date-localized:
-      type: date
-      locale: pl
-      fallback_to_build_date: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      draggable: true
+      skip_classes:
+        - no-lightbox
+  - blog:
+      blog_dir: aktualnosci
+      blog_toc: false
+      post_url_format: "{slug}"
+      post_excerpt: optional
+      archive: true
+      archive_name: Archiwum
+      categories: true
+      categories_name: Drużyny
+      post_readtime: false
+      pagination_per_page: 8
 
 markdown_extensions:
   - meta
