@@ -9,19 +9,6 @@
 
   var STORE_KEY = "lks-grupa";
 
-  /* ── Dane grup ─────────────────────────────────────────────────
-     Nabór otwarty prowadzimy do grup najmłodszych; do starszych
-     przyjmujemy po spotkaniu z trenerem prowadzącym.              */
-  var GROUPS = {
-    u11: { name: "U11", coach: "Adam Krzysztoń", img: "u11.jpg", slug: "u11", open: true },
-    u12: { name: "U12", coach: "Radosław Darnikowski", img: "u12.jpg", slug: "u12", open: true },
-    u13: { name: "U13", coach: "Maciej Kochaniak", img: "u13.jpg", slug: "u13", open: false },
-    u14: { name: "U14", coach: "Maciej Rudziński", img: "u14.jpg", slug: "u14", open: false },
-    u15: { name: "U15", coach: "Maciej Puczyński", img: "u15.jpg", slug: "u15", open: false },
-    u17: { name: "U17", coach: "Patryk Dembowski", img: "u17.jpg", slug: "u17", open: false },
-    u19: { name: "U19", coach: "Piotr Trepka", img: "u19.jpg", slug: "u19", open: false }
-  };
-
   var NOTE_OPEN =
     "Do tej grupy prowadzimy otwarty nabór i doświadczenie nie jest potrzebne. " +
     "Zadzwoń lub napisz do biura — umówimy pierwsze zajęcia i spotkanie z trenerem.";
@@ -41,20 +28,27 @@
     try { return window.localStorage.getItem(STORE_KEY); } catch (e) { return null; }
   }
 
-  /* ── Ścieżka bazowa do zasobów ───────────────────────────────
-     Strona bywa serwowana z podkatalogu (GitHub Pages), więc
-     adresy budujemy względem znacznika <base> dodawanego przez
-     Material.                                                     */
-  function baseUrl() {
-    var b = document.querySelector("base");
-    if (b && b.href) return b.href;
-    return window.location.origin + "/";
+  /* ── Dane grup ───────────────────────────────────────────────
+     Wstrzykiwane przez szablon home.html razem z gotowymi adresami
+     — nie budujemy tu żadnych ścieżek, bo witryna stoi w podkatalogu
+     (GitHub Pages) i sklejanie adresów w JS się o to rozbijało.    */
+  function readGroups() {
+    var el = document.getElementById("lks-groups-data");
+    if (!el) return null;
+    try {
+      return JSON.parse(el.textContent);
+    } catch (e) {
+      return null;
+    }
   }
 
   /* ── Wyszukiwarka grupy na stronie głównej ─────────────────── */
   function initFinder() {
     var wrap = document.getElementById("lks-finder");
     if (!wrap) return;
+
+    var GROUPS = readGroups();
+    if (!GROUPS) return;
 
     var ages = document.getElementById("lks-ages");
     var res = document.getElementById("lks-res");
@@ -75,7 +69,7 @@
       buttons.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
       if (btn) btn.setAttribute("aria-pressed", "true");
 
-      img.src = baseUrl() + "assets/" + g.img;
+      img.src = g.img;
       img.alt = "Drużyna " + g.name;
       name.textContent = g.name;
       tag.innerHTML = g.open
@@ -84,7 +78,7 @@
       det.innerHTML =
         "Trener prowadzący: <strong>" + g.coach + "</strong><br>" +
         "Harmonogram i hala — zobacz stronę drużyny";
-      go.href = baseUrl() + "strefa-rodzica/" + g.slug + "/";
+      go.href = g.href;
       note.textContent = g.open ? NOTE_OPEN : NOTE_IND;
 
       res.classList.add("is-on");
@@ -109,10 +103,12 @@
     }
   }
 
-  /* ── Zapamiętanie grupy przy wejściu na jej podstronę ──────── */
+  /* ── Zapamiętanie grupy przy wejściu na jej podstronę ────────
+     Wzorzec dopasowuje wyłącznie slugi grup młodzieżowych (u11…u19),
+     więc nie wymaga listy drużyn.                                  */
   function rememberFromPath() {
-    var m = window.location.pathname.match(/strefa-rodzica\/(u\d+)\//);
-    if (m && GROUPS[m[1]]) remember(m[1]);
+    var m = window.location.pathname.match(/strefa-rodzica\/(u1[1-9])\/?$/);
+    if (m) remember(m[1]);
   }
 
   /* ── Odsłanianie sekcji przy przewijaniu ──────────────────── */
