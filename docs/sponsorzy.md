@@ -22,7 +22,7 @@ społeczności.
 
 </div>
 
-[Porozmawiajmy o współpracy](dolacz.md){ .md-button .md-button--primary }
+[Porozmawiajmy o współpracy](#kontakt-dla-firm){ .md-button .md-button--primary }
 
 ---
 
@@ -66,9 +66,38 @@ społeczności.
 
 ---
 
-## Porozmawiajmy
+## Kontakt dla firm { #kontakt-dla-firm }
 
-Każda współpraca zaczyna się od rozmowy — napisz do nas, a razem znajdziemy
-formę, która ma sens dla Twojej firmy.
+Każda współpraca zaczyna się od rozmowy. Napisz lub zadzwoń — przedstawimy
+szczegóły pakietów, opowiemy o zasięgach i wspólnie dobierzemy formę
+współpracy, która ma sens dla Twojej firmy.
 
-[Przejdź do kontaktu](dolacz.md){ .md-button .md-button--primary }
+<div class="lks-contact" markdown>
+
+:material-account-tie-outline: **Osoba do kontaktu**
+: UZUPEŁNIJ imię, nazwisko i funkcję
+
+:material-phone-outline: **Telefon**
+: UZUPEŁNIJ numer telefonu
+
+:material-email-outline: **E-mail**
+: [UZUPEŁNIJ adres e-mail](mailto:kontakt@lkskm.pl)
+
+:material-map-marker-outline: **Biuro klubu**
+: UZUPEŁNIJ — ulica, numer, kod pocztowy, Łódź
+
+:material-clock-outline: **Godziny pracy biura**
+: UZUPEŁNIJ dni i godziny
+
+</div>
+
+<div class="lks-fillme" markdown>
+**Uzupełnij:** warto wskazać jedną osobę odpowiedzialną za współpracę
+z firmami i podać do niej bezpośredni kontakt. Sponsor, który trafia
+na ogólny adres klubu, częściej rezygnuje niż ponawia próbę.
+</div>
+
+!!! tip "Rozliczenie i dokumenty"
+    **Uzupełnij:** informacja o tym, czy klub wystawia faktury, czy działa
+    jako organizacja pożytku publicznego i jakie dokumenty otrzymuje sponsor.
+    Dla firmy to jedno z pierwszych pytań przy podejmowaniu decyzji.

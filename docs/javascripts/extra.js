@@ -28,18 +28,59 @@
     try { return window.localStorage.getItem(STORE_KEY); } catch (e) { return null; }
   }
 
+  /* ── Skład grup ────────────────────────────────────────────── */
+  var ROSTER = [
+    ["u11", "U11", "Adam Krzysztoń", true],
+    ["u12", "U12", "Radosław Darnikowski", true],
+    ["u13", "U13", "Maciej Kochaniak", false],
+    ["u14", "U14", "Maciej Rudziński", false],
+    ["u15", "U15", "Maciej Puczyński", false],
+    ["u17", "U17", "Patryk Dembowski", false],
+    ["u19", "U19", "Piotr Trepka", false]
+  ];
+
+  /* ── Adres główny witryny ────────────────────────────────────
+     Odczytujemy go z odnośnika w logo, który generuje sam MkDocs —
+     dzięki temu jest poprawny również wtedy, gdy witryna stoi
+     w podkatalogu (GitHub Pages). Nie zgadujemy go z adresu okna,
+     bo to właśnie na tym wcześniej się przewróciło.               */
+  function siteRoot() {
+    var logo = document.querySelector(".md-header__button.md-logo, .md-header a.md-header__button[href]");
+    if (logo && logo.href) return logo.href.replace(/\/?$/, "/");
+
+    var canonical = document.querySelector("link[rel=canonical]");
+    if (canonical && canonical.href) {
+      // strona główna = katalog kanoniczny
+      return canonical.href.replace(/index\.html$/, "").replace(/\/?$/, "/");
+    }
+    return window.location.href.replace(/[^/]*$/, "");
+  }
+
   /* ── Dane grup ───────────────────────────────────────────────
-     Wstrzykiwane przez szablon home.html razem z gotowymi adresami
-     — nie budujemy tu żadnych ścieżek, bo witryna stoi w podkatalogu
-     (GitHub Pages) i sklejanie adresów w JS się o to rozbijało.    */
+     Najpierw sprawdzamy blok danych wstrzyknięty przez szablon
+     (adresy gotowe od Jinja). Jeśli go nie ma — składamy adresy
+     względem korzenia witryny odczytanego wyżej.                  */
   function readGroups() {
     var el = document.getElementById("lks-groups-data");
-    if (!el) return null;
-    try {
-      return JSON.parse(el.textContent);
-    } catch (e) {
-      return null;
+    if (el) {
+      try {
+        var parsed = JSON.parse(el.textContent);
+        if (parsed && parsed.u11) return parsed;
+      } catch (e) { /* spadamy do wariantu zapasowego */ }
     }
+
+    var root = siteRoot();
+    var out = {};
+    ROSTER.forEach(function (r) {
+      out[r[0]] = {
+        name: r[1],
+        coach: r[2],
+        open: r[3],
+        img: root + "assets/" + r[0] + ".jpg",
+        href: root + "strefa-rodzica/" + r[0] + "/"
+      };
+    });
+    return out;
   }
 
   /* ── Wyszukiwarka grupy na stronie głównej ─────────────────── */
@@ -47,8 +88,12 @@
     var wrap = document.getElementById("lks-finder");
     if (!wrap) return;
 
+    // Przy nawigacji bez przeładowania document$ potrafi zadziałać
+    // ponownie na tym samym elemencie — nie podpinamy zdarzeń dwa razy.
+    if (wrap.dataset.lksReady === "1") return;
+    wrap.dataset.lksReady = "1";
+
     var GROUPS = readGroups();
-    if (!GROUPS) return;
 
     var ages = document.getElementById("lks-ages");
     var res = document.getElementById("lks-res");
