@@ -457,6 +457,26 @@
       na następny raz. Dopiero szukasz grupy? Kliknij wiek dziecka.
     </p>
 
+    
+    <script type="application/json" id="lks-groups-data">
+      {
+        "u11": { "name": "U11", "coach": "Adam Krzysztoń",        "open": true,
+                 "img": "assets/u11.jpg", "href": "strefa-rodzica/u11/" },
+        "u12": { "name": "U12", "coach": "Radosław Darnikowski",  "open": true,
+                 "img": "assets/u12.jpg", "href": "strefa-rodzica/u12/" },
+        "u13": { "name": "U13", "coach": "Maciej Kochaniak",      "open": false,
+                 "img": "assets/u13.jpg", "href": "strefa-rodzica/u13/" },
+        "u14": { "name": "U14", "coach": "Maciej Rudziński",      "open": false,
+                 "img": "assets/u14.jpg", "href": "strefa-rodzica/u14/" },
+        "u15": { "name": "U15", "coach": "Maciej Puczyński",      "open": false,
+                 "img": "assets/u15.jpg", "href": "strefa-rodzica/u15/" },
+        "u17": { "name": "U17", "coach": "Patryk Dembowski",      "open": false,
+                 "img": "assets/u17.jpg", "href": "strefa-rodzica/u17/" },
+        "u19": { "name": "U19", "coach": "Piotr Trepka",          "open": false,
+                 "img": "assets/u19.jpg", "href": "strefa-rodzica/u19/" }
+      }
+    </script>
+
     <div class="lks-finder" id="lks-finder">
       <p class="lks-finder__q">Ile lat ma Twoje dziecko?</p>
       <div class="lks-ages" id="lks-ages">
@@ -472,7 +492,9 @@
       </div>
 
       <div class="lks-res" id="lks-res">
-        <img class="lks-res__img no-lightbox" id="lks-res-img" src="" alt="">
+        
+        <img class="lks-res__img no-lightbox" id="lks-res-img" loading="lazy"
+             src="assets/u14.jpg" alt="">
         <div class="lks-res__body">
           <p class="lks-res__head">
             <span class="lks-res__name" id="lks-res-name"></span>
