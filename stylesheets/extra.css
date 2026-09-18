@@ -179,6 +179,24 @@ summary:focus-visible,
   background-color: rgba(255, 255, 255, 0.14);
 }
 
+/* -- Szuflada nawigacji na telefonie -------------------------- */
+/* Material daje nagłówkowi szuflady kolor wiodący, czyli klubową
+   czerwień — a herb jest czerwony, więc na niej znikał. Nagłówek
+   szuflady dostaje więc to samo traktowanie co pasek górny. */
+.md-nav--primary .md-nav__title,
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  background: #ffffff;
+  color: var(--lks-black);
+  border-bottom: 1px solid var(--lks-border);
+  box-shadow: none;
+}
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__title[for="__drawer"] {
+  background: #0f0d0c;
+  color: #ffffff;
+  border-bottom-color: #2a2420;
+}
+
 .lks-announce {
   display: block;
   padding: 9px 16px;
