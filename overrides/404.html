@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{#
+  Domyślna strona 404 Material for MkDocs to gołe "404 - Not found"
+  bez żadnej drogi dalej. Ktoś, kto trafi tu ze starego adresu albo
+  z literówką w linku, ma dostać od razu skróty do głównych sekcji
+  zamiast klikać "wstecz".
+#}
+
+{% block content %}
+<article class="md-content__inner md-typeset lks-404">
+  <p class="lks-lbl">Błąd 404</p>
+  <h1>Nie znaleźliśmy tej strony</h1>
+  <p class="lks-404__lead">
+    Adres, pod którym tu trafiłeś, nie istnieje albo został zmieniony.
+    Sprawdź, czy wpisałeś go poprawnie, albo wybierz jedną z sekcji poniżej.
+  </p>
+
+  <div class="lks-404__links">
+    <a href="{{ 'index.html' | url }}" class="md-button md-button--primary">Strona główna</a>
+    <a href="{{ 'strefa-rodzica/' | url }}" class="md-button">Strefa dla rodzica</a>
+    <a href="{{ 'dolacz/' | url }}" class="md-button">Dołącz do akademii</a>
+    <a href="{{ 'aktualnosci/' | url }}" class="md-button">Aktualności</a>
+    <a href="{{ 'kontakt/' | url }}" class="md-button">Kontakt</a>
+  </div>
+</article>
+{% endblock %}

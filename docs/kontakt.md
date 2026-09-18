@@ -11,6 +11,8 @@ Najszybciej odpowiadamy telefonicznie i mailowo. Jeśli piszesz w sprawie
 zapisów, podaj wiek dziecka i jego dotychczasowe doświadczenie — dzięki temu
 od razu skierujemy Cię do właściwego trenera.
 
+[:material-phone: Zadzwoń: UZUPEŁNIJ numer telefonu](tel:UZUPEŁNIJ){ .lks-callbtn }
+
 ## Biuro klubu
 
 <div class="lks-contact" markdown>
@@ -30,9 +32,13 @@ od razu skierujemy Cię do właściwego trenera.
 </div>
 
 <div class="lks-fillme" markdown>
-**Uzupełnij:** adres, telefon i godziny pracy biura. Te same dane warto
-podmienić w pliku `mkdocs.yml` w sekcji `extra.social` — linki do mediów
-społecznościowych pojawiają się wtedy automatycznie w stopce.
+**Uzupełnij:** adres, telefon i godziny pracy biura. Numer telefonu wpisz
+w trzech miejscach: w tabeli powyżej oraz w przycisku „Zadzwoń" — jeden
+jest na tej stronie, drugi na stronie [Dołącz](dolacz.md). W obu podmień
+zarówno widoczny tekst, jak i sam link (`tel:UZUPEŁNIJ` na
+`tel:+48XXXXXXXXX`, bez spacji). Te same dane warto podmienić w pliku
+`mkdocs.yml` w sekcji `extra.social` — linki do mediów społecznościowych
+pojawiają się wtedy automatycznie w stopce.
 </div>
 
 ## Z kim się kontaktować

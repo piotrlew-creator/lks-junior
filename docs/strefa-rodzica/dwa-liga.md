@@ -5,6 +5,17 @@ description: >-
   obozy i aktualności drużyny.
 ---
 
+<nav class="lks-teamswitch" aria-label="Wybierz drużynę">
+  <a class="lks-teamswitch__chip" href="../u11/">U11</a>
+  <a class="lks-teamswitch__chip" href="../u12/">U12</a>
+  <a class="lks-teamswitch__chip" href="../u13/">U13</a>
+  <a class="lks-teamswitch__chip" href="../u14/">U14</a>
+  <a class="lks-teamswitch__chip" href="../u15/">U15</a>
+  <a class="lks-teamswitch__chip" href="../u17/">U17</a>
+  <a class="lks-teamswitch__chip" href="../u19/">U19</a>
+  <a class="lks-teamswitch__chip is-active" href="../dwa-liga/" aria-current="page">2 liga</a>
+</nav>
+
 # 2 liga
 
 ![Drużyna 2 liga ŁKS KM Szkoła Gortata](../assets/dwa-liga.jpg){ .lks-team-photo }

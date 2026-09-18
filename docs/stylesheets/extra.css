@@ -66,24 +66,30 @@ body,
   text-wrap: balance;
 }
 
+/* Skala płynna zamiast stałych rozmiarów — na telefonie stały 2,3rem
+   (46px) potrafił zająć cztery linijki i pół ekranu na dłuższym
+   nagłówku ("Grupy starsze — przyjęcie po spotkaniu z trenerem").
+   Wartości graniczne to te same rozmiary co wcześniej — na laptopie
+   nic się nie zmienia, clamp() po prostu dochodzi do tego samego
+   maksimum. */
 .md-typeset h1 {
-  font-size: 2.3rem;
-  line-height: 1.06;
+  font-size: clamp(1.65rem, 1.1rem + 4vw, 2.3rem);
+  line-height: 1.08;
   text-transform: uppercase;
   color: var(--md-default-fg-color);
   margin-bottom: 0.6em;
 }
 
 .md-typeset h2 {
-  font-size: 1.7rem;
-  line-height: 1.1;
+  font-size: clamp(1.3rem, 1rem + 2.4vw, 1.7rem);
+  line-height: 1.15;
   text-transform: uppercase;
   margin-top: 1.6em;
 }
 
 .md-typeset h3 {
-  font-size: 1.25rem;
-  line-height: 1.15;
+  font-size: clamp(1.05rem, 0.9rem + 1.2vw, 1.25rem);
+  line-height: 1.2;
 }
 
 /* Nagłówek witryny w pasku — węższy krój, spójny z resztą.
@@ -607,18 +613,23 @@ summary:focus-visible,
 
 /* ═══════════════════════════════════════════════════════════════
    ODSŁANIANIE PRZY PRZEWIJANIU
+   Sekcje są domyślnie w pełni widoczne — to jest stan na wypadek,
+   gdyby JavaScript się nie wykonał (zablokowany skrypt, wolne łącze,
+   błąd). Dopiero skrypt dokłada klasę .lks-reveal--js i wtedy elementy
+   chowają się, żeby zaraz odsłonić się przy przewijaniu. Bez tego
+   podziału strona główna bez JS byłaby w połowie pusta.
    ═══════════════════════════════════════════════════════════════ */
-.lks-reveal {
+.lks-reveal.lks-reveal--js {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.62s ease, transform 0.62s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-.lks-reveal.is-visible {
+.lks-reveal.lks-reveal--js.is-visible {
   opacity: 1;
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .lks-reveal { opacity: 1; transform: none; transition: none; }
+  .lks-reveal.lks-reveal--js { opacity: 1; transform: none; transition: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -700,6 +711,43 @@ summary:focus-visible,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+}
+
+/* -- Przełącznik drużyn na stronie grupy ---------------------- */
+/* Rodzic z dwójką dzieci w klubie wchodzi na stronę jednej drużyny
+   i często chce sprawdzić od razu drugą — bez tego przełącznika
+   jedyną drogą był powrót do listy w Strefie rodzica. Chipsy zawijają
+   się do kilku rzędów na wąskim ekranie, więc nigdy nie przycinają
+   żadnej nazwy ani nie wymagają przewijania w bok. */
+.md-typeset .lks-teamswitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 1.3rem;
+}
+.md-typeset .lks-teamswitch__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--lks-border);
+  background: var(--lks-surface);
+  color: var(--md-default-fg-color);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: border-color var(--lks-t), background var(--lks-t), color var(--lks-t);
+}
+.md-typeset .lks-teamswitch__chip:hover {
+  border-color: var(--lks-red);
+}
+.md-typeset .lks-teamswitch__chip.is-active {
+  background: var(--lks-red);
+  border-color: var(--lks-red);
+  color: var(--lks-white);
 }
 
 /* -- Zdjęcie drużyny na stronie grupy ------------------------- */
@@ -1002,4 +1050,66 @@ summary:focus-visible,
   font-size: 0.78rem;
   margin: 0.7rem 0 0;
   text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA 404
+   ═══════════════════════════════════════════════════════════════ */
+.lks-404 {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 0 0.8rem;
+  text-align: center;
+}
+.lks-404 .lks-lbl {
+  display: block;
+  text-align: center;
+}
+.lks-404__lead {
+  color: var(--lks-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 46ch;
+  margin: 0 auto 1.6rem;
+}
+.lks-404__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRZYCISK „ZADZWOŃ" (Dołącz, Kontakt)
+   Telefon to najszybsza droga kontaktu, a dotychczas numer był
+   schowany w akapicie. Duży, dotykowy przycisk z linkiem tel: —
+   na telefonie jedno dotknięcie zamiast przepisywania numeru.
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset a.lks-callbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 14px 28px;
+  margin: 1.3rem 0 1.6rem;
+  border-radius: 999px;
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  box-shadow: var(--lks-shadow);
+  transition: background var(--lks-t), transform var(--lks-t);
+}
+.md-typeset a.lks-callbtn:hover,
+.md-typeset a.lks-callbtn:focus-visible {
+  background: var(--lks-red-dark);
+  transform: translateY(-2px);
+}
+.md-typeset a.lks-callbtn .twemoji { font-size: 1.3rem; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset a.lks-callbtn { width: 100%; }
 }

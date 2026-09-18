@@ -11,6 +11,8 @@ Prowadzimy grupy od U11 po U19 oraz zespół seniorski w 2 lidze. Sposób
 dołączenia zależy od wieku i doświadczenia zawodnika — poniżej wyjaśniamy
 oba warianty.
 
+[:material-phone: Zadzwoń: UZUPEŁNIJ numer telefonu](tel:UZUPEŁNIJ){ .lks-callbtn }
+
 ## Grupy najmłodsze — nabór otwarty
 
 Do grup **U11 i U12** prowadzimy otwarty nabór przez cały sezon.
