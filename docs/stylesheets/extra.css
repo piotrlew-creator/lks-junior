@@ -92,9 +92,7 @@ body,
   line-height: 1.2;
 }
 
-/* Nagłówek witryny w pasku — węższy krój, spójny z resztą.
-   Nazwa klubu jest długa, więc pilnujemy, żeby nigdy nie łamała
-   się na dwie linie i nie wychodziła poza pasek. */
+/* Nagłówek witryny w pasku — węższy krój, spójny z resztą. */
 .md-header__title {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
@@ -108,8 +106,25 @@ body,
   display: block;
   max-width: 100%;
 }
+
+/* Na telefonie po herbie, hamburgerze i ikonach zostaje mało miejsca —
+   pełna nazwa klubu w jednej linii i tak by się nie zmieściła bez
+   zmniejszenia tekstu do nieczytelnego rozmiaru. Zamiast ucinać nazwę
+   wielokropkiem ("ŁKS KM Sz…"), pozwalamy jej złamać się do kilku linii
+   (mniejszy tekst, bez liter rozstrzelonych) — pasek nagłówka rośnie
+   razem z nią. Sprawdzone na szerokościach 320–430px: przy trzech
+   liniach i tym rozmiarze tekst zawsze mieści się w całości. */
 @media screen and (max-width: 44.9375em) {
-  .md-header__title { font-size: 0.92rem; }
+  .md-header__title { font-size: 0.78rem; letter-spacing: 0.01em; }
+  .md-header__topic {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: normal;
+    text-overflow: clip;
+    line-height: 1.15;
+    align-items: center;
+  }
 }
 
 /* -- Dostępność: widoczny fokus ------------------------------- */
