@@ -188,20 +188,6 @@ summary:focus-visible,
   color: var(--lks-white);
 }
 
-/* Herb nad nagłówkiem. Plik logo to ciemna grafika kwadratowa, więc
-   kadrujemy go do koła (napisy klubu biegną łukiem i mieszczą się
-   w okręgu) i obrysowujemy jasną obwódką — inaczej zlewa się z tłem. */
-.lks-hero__logo {
-  display: block;
-  width: 104px;
-  height: 104px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.92);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
-  margin: 0 0 1rem;
-}
-
 .lks-kicker {
   display: inline-block;
   font-family: "Barlow Condensed", sans-serif;
@@ -251,14 +237,12 @@ summary:focus-visible,
   .lks-hero { min-height: 72vh; }
   .lks-hero__inner { padding-bottom: 4rem; }
   .lks-hero__sub { font-size: 1rem; }
-  .lks-hero__logo { width: 142px; height: 142px; margin-bottom: 1.2rem; }
 }
 
 /* -- Herb w pasku nagłówka ------------------------------------ */
-/* Domyślne 1,2 rem robiło z herbu nieczytelną plamkę. Powiększamy go
-   i kadrujemy do koła — grafika jest ciemnym kwadratem, więc w kole
-   z jasną obwódką czyta się jak herb, a nie jak przypadkowy obrazek.
-   Pasek rośnie razem z nim, żeby herb nie był przyklejony do krawędzi. */
+/* Domyślne 1,2 rem robiło z herbu nieczytelną plamkę. Herb ma własne
+   przezroczyste tło i obwódkę, więc wystarczy go powiększyć — pasek
+   rośnie razem z nim, żeby nie był przyklejony do krawędzi. */
 .md-header__button.md-logo {
   padding: 0.35rem 0.6rem 0.35rem 0.1rem;
 }
@@ -266,9 +250,6 @@ summary:focus-visible,
 .md-header__button.md-logo svg {
   height: 4rem;
   width: 4rem;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Na telefonie herb jest domyślnie ukryty — pokazujemy go, bo to
