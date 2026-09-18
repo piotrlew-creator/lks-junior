@@ -55,6 +55,70 @@
     else tile.appendChild(badge);
   }
 
+  /* ── Posty z Facebooka ───────────────────────────────────────
+     Wtyczka Meta ładuje się dopiero po kliknięciu — dopóki tego nie
+     ma, strona nie wysyła do Facebooka żadnego zapytania. Zgodę
+     zapamiętujemy, więc przy kolejnych wizytach posty pokazują się
+     od razu.                                                       */
+  var FB_OK_KEY = "lks-fb-ok";
+
+  function fbAllowed() {
+    try { return window.localStorage.getItem(FB_OK_KEY) === "1"; } catch (e) { return false; }
+  }
+  function fbAllow() {
+    try { window.localStorage.setItem(FB_OK_KEY, "1"); } catch (e) { /* tryb prywatny */ }
+  }
+
+  function fbRender(box) {
+    var slot = box.querySelector(".lks-fb__slot");
+    if (!slot) return;
+
+    var href = box.getAttribute("data-href");
+    if (!href) return;
+
+    // Wtyczka ustala szerokość w chwili wczytania i później jej nie
+    // zmienia, więc mierzymy kontener sami. Meta przyjmuje 180–500 px.
+    var w = Math.max(180, Math.min(500, Math.floor(slot.clientWidth || box.clientWidth || 500)));
+    var h = parseInt(box.getAttribute("data-height"), 10) || 700;
+
+    var src =
+      "https://www.facebook.com/plugins/page.php?href=" + encodeURIComponent(href) +
+      "&tabs=timeline&width=" + w + "&height=" + h +
+      "&small_header=false&adapt_container_width=true&hide_cover=false" +
+      "&show_facepile=false&locale=pl_PL";
+
+    var frame = document.createElement("iframe");
+    frame.className = "lks-fb__frame";
+    frame.src = src;
+    frame.width = String(w);
+    frame.height = String(h);
+    frame.title = "Najnowsze posty z profilu klubu na Facebooku";
+    frame.style.width = w + "px";
+    frame.style.height = h + "px";
+    frame.setAttribute("scrolling", "no");
+    frame.setAttribute("frameborder", "0");
+    frame.setAttribute("allowfullscreen", "true");
+    frame.setAttribute("loading", "lazy");
+    frame.setAttribute("allow", "encrypted-media; clipboard-write; picture-in-picture; web-share");
+
+    slot.replaceWith(frame);
+  }
+
+  function initFacebook() {
+    var box = document.querySelector(".lks-fb");
+    if (!box || box.dataset.lksReady === "1") return;
+    box.dataset.lksReady = "1";
+
+    if (fbAllowed()) { fbRender(box); return; }
+
+    var btn = box.querySelector(".lks-fb__btn");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      fbAllow();
+      fbRender(box);
+    });
+  }
+
   /* ── Odsłanianie sekcji przy przewijaniu ──────────────────── */
   function initReveal() {
     var items = document.querySelectorAll(".lks-reveal");
@@ -94,6 +158,7 @@
   function initAll() {
     rememberFromPath();
     initMyTeam();
+    initFacebook();
     initReveal();
     initExternalLinks();
   }

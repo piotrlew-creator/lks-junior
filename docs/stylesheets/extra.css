@@ -824,3 +824,88 @@ summary:focus-visible,
 .md-typeset img:not(.lks-team-photo):not(.no-lightbox) {
   border-radius: var(--lks-r-sm);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   FACEBOOK — osadzone posty z profilu klubu
+   Wtyczka Meta wczytuje się dopiero po kliknięciu: strona nie łączy
+   się z Facebookiem, dopóki odwiedzający tego nie zechce.
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .lks-fb {
+  margin: 1.4rem 0 2.2rem;
+}
+
+/* -- Kafel zachęty (stan przed kliknięciem) ------------------- */
+.md-typeset .lks-fb__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  padding: 1.8rem 1.3rem;
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-r);
+  background: var(--lks-surface);
+  box-shadow: var(--lks-shadow);
+}
+.md-typeset .lks-fb__icon {
+  width: 42px;
+  height: 42px;
+  fill: #1877f2;
+  margin-bottom: 0.7rem;
+}
+.md-typeset .lks-fb__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  margin: 0 0 0.35rem;
+}
+.md-typeset .lks-fb__desc {
+  font-size: 0.8rem;
+  color: var(--lks-muted);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  max-width: 40ch;
+}
+.md-typeset .lks-fb__btn {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  min-height: 44px;
+  padding: 10px 26px;
+  border: 0;
+  border-radius: var(--lks-r-sm);
+  background: var(--lks-red);
+  color: var(--lks-white);
+  cursor: pointer;
+  transition: filter var(--lks-t), transform var(--lks-t);
+}
+.md-typeset .lks-fb__btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.md-typeset .lks-fb__note {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--lks-muted);
+  margin: 0.9rem 0 0;
+  max-width: 44ch;
+}
+
+/* -- Wczytana wtyczka ----------------------------------------- */
+/* Tło jest jasne niezależnie od motywu, bo sama wtyczka Meta
+   nie ma wersji ciemnej i inaczej wisiałaby w powietrzu. */
+.md-typeset .lks-fb__frame {
+  display: block;
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-r);
+  background: #fff;
+  max-width: 100%;
+  overflow: hidden;
+}
+.md-typeset .lks-fb__fallback {
+  font-size: 0.78rem;
+  margin: 0.7rem 0 0;
+}
