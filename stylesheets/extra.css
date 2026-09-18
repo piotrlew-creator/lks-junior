@@ -357,117 +357,6 @@ summary:focus-visible,
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   WYSZUKIWARKA GRUPY
-   ═══════════════════════════════════════════════════════════════ */
-.lks-finder {
-  background: var(--lks-surface);
-  border: 1px solid var(--lks-border);
-  border-radius: var(--lks-r);
-  padding: 1.1rem;
-  box-shadow: var(--lks-shadow);
-  max-width: 620px;
-}
-.lks-finder__q {
-  font-weight: 600;
-  font-size: 0.82rem;
-  margin: 0 0 0.7rem;
-}
-.lks-ages {
-  display: flex;
-  gap: 7px;
-  flex-wrap: wrap;
-}
-.lks-age {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 8px 13px;
-  border-radius: var(--lks-r-sm);
-  border: 1.5px solid var(--lks-border);
-  background: var(--lks-surface);
-  color: var(--md-default-fg-color);
-  cursor: pointer;
-  transition: all var(--lks-t);
-}
-.lks-age:hover { border-color: var(--lks-red); }
-.lks-age[aria-pressed="true"] {
-  background: var(--lks-red);
-  border-color: var(--lks-red);
-  color: var(--lks-white);
-}
-
-.lks-res {
-  display: none;
-  gap: 13px;
-  align-items: flex-start;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--lks-border);
-}
-.lks-res.is-on { display: flex; }
-.lks-res__img {
-  width: 86px;
-  height: 65px;
-  object-fit: cover;
-  border-radius: var(--lks-r-sm);
-  flex: none;
-}
-.lks-res__head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 0 0 3px;
-}
-.lks-res__name {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-size: 1.3rem;
-  line-height: 1;
-}
-.lks-res__det {
-  font-size: 0.78rem;
-  color: var(--lks-muted);
-  line-height: 1.5;
-  margin: 0 0 5px;
-}
-.lks-res__go {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--lks-red);
-  text-decoration: none !important;
-}
-.lks-res__note {
-  display: none;
-  margin: 0.8rem 0 0;
-  padding: 11px 13px;
-  border-radius: var(--lks-r-sm);
-  background: var(--lks-surface-2);
-  border: 1px solid var(--lks-border);
-  font-size: 0.76rem;
-  line-height: 1.55;
-  color: var(--lks-muted);
-}
-.lks-res__note.is-on { display: block; }
-
-.lks-tag {
-  display: inline-block;
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  padding: 3px 8px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-.lks-tag--open { background: #dff3e6; color: #1f6b3d; border: 1px solid #b6e0c6; }
-.lks-tag--ind  { background: #fbeedd; color: #8a5313; border: 1px solid #efd9bc; }
-[data-md-color-scheme="slate"] .lks-tag--open { background: rgba(95,191,127,.16); color: #7fd39c; border-color: rgba(95,191,127,.3); }
-[data-md-color-scheme="slate"] .lks-tag--ind  { background: rgba(217,145,63,.16); color: #e0a561; border-color: rgba(217,145,63,.3); }
-
-/* ═══════════════════════════════════════════════════════════════
    OSIĄGNIĘCIA (kafle ze zdjęciami)
    ═══════════════════════════════════════════════════════════════ */
 .lks-ach {
@@ -644,11 +533,20 @@ summary:focus-visible,
 /* ═══════════════════════════════════════════════════════════════
    STREFA DLA RODZICA — kafle grup
    ═══════════════════════════════════════════════════════════════ */
+/* Osiem drużyn układa się w równe rzędy: po dwie na telefonie,
+   trzy na tablecie, cztery na laptopie. Automatyczne wypełnianie
+   dawało na telefonie jedną kolumnę, czyli osiem ekranów przewijania. */
 .lks-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin: 1.6rem 0 2.4rem;
+}
+@media (min-width: 600px) {
+  .lks-groups { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+}
+@media (min-width: 900px) {
+  .lks-groups { grid-template-columns: repeat(4, 1fr); }
 }
 .lks-group {
   display: flex;
@@ -676,22 +574,41 @@ summary:focus-visible,
 .lks-group__name {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1;
-  padding: 12px 14px 2px;
+  padding: 10px 12px 2px;
   color: var(--md-default-fg-color);
 }
 .lks-group__coach {
-  padding: 0 14px;
+  padding: 0 12px;
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--lks-red);
 }
 .lks-group__age {
   margin-top: auto;
-  padding: 4px 14px 14px;
+  padding: 4px 12px 12px;
   font-size: 0.72rem;
   color: var(--lks-muted);
+}
+
+/* -- Drużyna zapamiętana z poprzedniej wizyty ----------------- */
+/* Klasę dodaje skrypt; bez JavaScriptu kafel wygląda jak każdy inny. */
+.lks-group.is-mine {
+  border-color: var(--lks-red);
+  box-shadow: var(--lks-shadow-lg);
+}
+.lks-group__mine {
+  align-self: flex-start;
+  margin: 9px 12px 0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--lks-red);
+  color: var(--lks-white);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
 /* -- Zdjęcie drużyny na stronie grupy ------------------------- */
