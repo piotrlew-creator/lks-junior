@@ -903,57 +903,11 @@ summary:focus-visible,
    Wtyczka Meta wczytuje się dopiero po kliknięciu: strona nie łączy
    się z Facebookiem, dopóki odwiedzający tego nie zechce.
    ═══════════════════════════════════════════════════════════════ */
-.md-typeset .lks-fb {
-  margin: 1.4rem 0 2.2rem;
-}
-
 /* Wtyczka Meta ma twardy limit 500 px szerokości i nie da się go
-   obejść — więc zamiast zostawiać pustą jedną trzecią, stawiamy obok
-   kolumnę z odnośnikami. Na telefonie kolumny układają się jedna
-   pod drugą. */
-.md-typeset .lks-fbwrap {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.4rem;
-  align-items: start;
-  margin: 1.4rem 0 2.2rem;
-}
-.md-typeset .lks-fbwrap > .lks-fb { margin: 0; }
-
-@media screen and (min-width: 60em) {
-  .md-typeset .lks-fbwrap {
-    grid-template-columns: 500px minmax(240px, 1fr);
-    gap: 2rem;
-  }
-}
-
-.md-typeset .lks-fbside {
-  padding: 1.3rem 1.4rem 1.5rem;
-  border: 1px solid var(--lks-border);
-  border-radius: var(--lks-r);
-  background: var(--lks-surface-2);
-}
-.md-typeset .lks-fbside > :first-child { margin-top: 0; }
-.md-typeset .lks-fbside h3 {
-  font-size: 1.15rem;
-  text-transform: uppercase;
-  margin: 0 0 0.5rem;
-}
-.md-typeset .lks-fbside p {
-  font-size: 0.78rem;
-  line-height: 1.6;
-  margin: 0 0 0.8rem;
-}
-.md-typeset .lks-fbside hr {
-  margin: 1.2rem 0;
-  border-color: var(--lks-border);
-}
-.md-typeset .lks-fbside .md-button {
-  display: block;
-  text-align: center;
-  font-size: 0.72rem;
-  padding: 0.45em 1em;
-  margin: 0 0 1rem;
+   obejść, więc zamiast rozciągać ją na siłę — centrujemy w kolumnie. */
+.md-typeset .lks-fb {
+  max-width: 500px;
+  margin: 1.4rem auto 2.2rem;
 }
 
 /* -- Kafel zachęty (stan przed kliknięciem) ------------------- */
@@ -962,7 +916,6 @@ summary:focus-visible,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 500px;
   padding: 1.8rem 1.3rem;
   border: 1px solid var(--lks-border);
   border-radius: var(--lks-r);
@@ -1030,4 +983,5 @@ summary:focus-visible,
 .md-typeset .lks-fb__fallback {
   font-size: 0.78rem;
   margin: 0.7rem 0 0;
+  text-align: center;
 }

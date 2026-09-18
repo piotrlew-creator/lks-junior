@@ -82,10 +82,10 @@ extra:
   generator: false
 
 extra_css:
-  - stylesheets/extra.css?v=7
+  - stylesheets/extra.css?v=8
 
 extra_javascript:
-  - javascripts/extra.js?v=7
+  - javascripts/extra.js?v=8
 
 plugins:
   - search:
