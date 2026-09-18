@@ -51,7 +51,10 @@ theme:
 
 nav:
   - Start: index.md
-  - Strefa dla rodzica:
+  - Aktualności:
+      - aktualnosci/index.md
+  - Akademia: akademia.md
+  - Strefa rodzica:
       - strefa-rodzica/index.md
       - U11: strefa-rodzica/u11.md
       - U12: strefa-rodzica/u12.md
@@ -61,11 +64,9 @@ nav:
       - U17: strefa-rodzica/u17.md
       - U19: strefa-rodzica/u19.md
       - 2 liga: strefa-rodzica/dwa-liga.md
-  - Dołącz: dolacz.md
-  - Akademia: akademia.md
-  - Aktualności:
-      - aktualnosci/index.md
-  - Sponsorzy: sponsorzy.md
+  - Dołącz do Akademii: dolacz.md
+  - Zostań sponsorem: sponsorzy.md
+  - Kontakt: kontakt.md
 
 extra:
   social:

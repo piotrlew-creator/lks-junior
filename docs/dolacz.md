@@ -62,29 +62,13 @@ albo nudził się na treningu.
 
 </div>
 
-## Kontakt
+## Napisz do nas
 
-<div class="lks-contact" markdown>
+Adres, telefon, e-mail i godziny pracy biura znajdziesz na stronie
+[Kontakt](kontakt.md). Piszemy tam też, z kim kontaktować się w jakiej
+sprawie.
 
-:material-map-marker-outline: **Adres**
-: UZUPEŁNIJ — ulica, numer, kod pocztowy, Łódź
-
-:material-phone-outline: **Telefon do biura**
-: UZUPEŁNIJ numer telefonu
-
-:material-email-outline: **E-mail**
-: [kontakt@lkskm.pl](mailto:kontakt@lkskm.pl)
-
-:material-clock-outline: **Godziny pracy biura**
-: UZUPEŁNIJ dni i godziny
-
-</div>
-
-<div class="lks-fillme" markdown>
-**Uzupełnij:** adres, telefon i godziny pracy biura. Te same dane warto
-podmienić w pliku `mkdocs.yml` w sekcji `extra.social` — linki do mediów
-społecznościowych pojawiają się wtedy automatycznie w stopce.
-</div>
+[Przejdź do kontaktu](kontakt.md){ .md-button .md-button--primary }
 
 ## Najczęstsze pytania
 
