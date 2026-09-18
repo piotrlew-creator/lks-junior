@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://piotrlew-creator.github.io/lks-junior/sitemap.xml
+Sitemap: https://lkskmjunior.pl/sitemap.xml
