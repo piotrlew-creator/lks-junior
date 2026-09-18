@@ -119,15 +119,18 @@
     });
   }
 
-  /* ── Odsłanianie sekcji przy przewijaniu ──────────────────── */
+  /* ── Odsłanianie sekcji przy przewijaniu ────────────────────
+     Sekcje są w CSS domyślnie widoczne — dopiero tu dokładamy klasę
+     .lks-reveal--js, która włącza chowanie i animację. Dzięki temu
+     ktoś bez JavaScriptu (albo z zablokowanym skryptem) zawsze widzi
+     całą stronę, zamiast połowy pustych sekcji.                     */
   function initReveal() {
     var items = document.querySelectorAll(".lks-reveal");
     if (!items.length) return;
 
-    if (!("IntersectionObserver" in window)) {
-      items.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
+    var reduceMotion = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
 
     var io = new IntersectionObserver(
       function (entries) {
@@ -141,7 +144,10 @@
       { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
     );
 
-    items.forEach(function (el) { io.observe(el); });
+    items.forEach(function (el) {
+      el.classList.add("lks-reveal--js");
+      io.observe(el);
+    });
   }
 
   /* ── Linki zewnętrzne otwierane w nowej karcie ────────────── */
