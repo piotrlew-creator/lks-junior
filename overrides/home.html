@@ -47,70 +47,70 @@
     </div>
   </section>
 
-  <!-- ══════════════ WYBÓR GRUPY ══════════════ -->
+  <!-- ══════════════ WYBÓR DRUŻYNY ══════════════ -->
+  {#
+    Kafle prowadzą prosto na strony drużyn. Adresy generuje Jinja filtrem
+    `url`, więc działają niezależnie od tego, czy witryna stoi w korzeniu
+    domeny, czy w podkatalogu. Sekcja działa też przy wyłączonym JavaScript —
+    skrypt jedynie podświetla drużynę zapamiętaną z poprzedniej wizyty.
+  #}
   <section class="lks-sec md-grid lks-reveal" id="grupy">
     <p class="lks-lbl">Strefa dla rodzica</p>
-    <h2 class="lks-h2">Wybierz grupę dziecka</h2>
+    <h2 class="lks-h2">Wybierz drużynę</h2>
     <p class="lks-lead">
-      Trenujesz już u nas? Wejdź prosto do swojej drużyny — zapamiętamy ją
-      na następny raz. Dopiero szukasz grupy? Kliknij wiek dziecka.
+      Trenujesz już u nas? A może dopiero szukasz grupy?
+      Wejdź prosto do swojej drużyny.
     </p>
 
-    {#
-      Adresy zdjęć i podstron generuje Jinja filtrem `url`, dzięki czemu
-      działają niezależnie od tego, czy witryna stoi w korzeniu domeny,
-      czy w podkatalogu (jak na GitHub Pages). Skrypt tylko je odczytuje
-      i niczego sam nie skleja.
-    #}
-    <script type="application/json" id="lks-groups-data">
-      {
-        "u11": { "name": "U11", "coach": "Adam Krzysztoń",        "open": true,
-                 "img": "{{ 'assets/u11.jpg' | url }}", "href": "{{ 'strefa-rodzica/u11/' | url }}" },
-        "u12": { "name": "U12", "coach": "Radosław Darnikowski",  "open": true,
-                 "img": "{{ 'assets/u12.jpg' | url }}", "href": "{{ 'strefa-rodzica/u12/' | url }}" },
-        "u13": { "name": "U13", "coach": "Maciej Kochaniak",      "open": false,
-                 "img": "{{ 'assets/u13.jpg' | url }}", "href": "{{ 'strefa-rodzica/u13/' | url }}" },
-        "u14": { "name": "U14", "coach": "Maciej Rudziński",      "open": false,
-                 "img": "{{ 'assets/u14.jpg' | url }}", "href": "{{ 'strefa-rodzica/u14/' | url }}" },
-        "u15": { "name": "U15", "coach": "Maciej Puczyński",      "open": false,
-                 "img": "{{ 'assets/u15.jpg' | url }}", "href": "{{ 'strefa-rodzica/u15/' | url }}" },
-        "u17": { "name": "U17", "coach": "Patryk Dembowski",      "open": false,
-                 "img": "{{ 'assets/u17.jpg' | url }}", "href": "{{ 'strefa-rodzica/u17/' | url }}" },
-        "u19": { "name": "U19", "coach": "Piotr Trepka",          "open": false,
-                 "img": "{{ 'assets/u19.jpg' | url }}", "href": "{{ 'strefa-rodzica/u19/' | url }}" }
-      }
-    </script>
-
-    <div class="lks-finder" id="lks-finder">
-      <p class="lks-finder__q">Ile lat ma Twoje dziecko?</p>
-      <div class="lks-ages" id="lks-ages">
-        <button type="button" class="lks-age" data-g="u11">10</button>
-        <button type="button" class="lks-age" data-g="u12">11</button>
-        <button type="button" class="lks-age" data-g="u13">12</button>
-        <button type="button" class="lks-age" data-g="u14">13</button>
-        <button type="button" class="lks-age" data-g="u15">14</button>
-        <button type="button" class="lks-age" data-g="u17">15</button>
-        <button type="button" class="lks-age" data-g="u17">16</button>
-        <button type="button" class="lks-age" data-g="u19">17</button>
-        <button type="button" class="lks-age" data-g="u19">18</button>
-      </div>
-
-      <div class="lks-res" id="lks-res">
-        {# Kadr zastępczy; skrypt podmienia go na zdjęcie wybranej grupy.
-           Blok jest ukryty do czasu kliknięcia, a lazy-loading sprawia,
-           że przeglądarka nie pobiera go niepotrzebnie. #}
-        <img class="lks-res__img no-lightbox" id="lks-res-img" loading="lazy"
-             src="{{ 'assets/u14.jpg' | url }}" alt="">
-        <div class="lks-res__body">
-          <p class="lks-res__head">
-            <span class="lks-res__name" id="lks-res-name"></span>
-            <span id="lks-res-tag"></span>
-          </p>
-          <p class="lks-res__det" id="lks-res-det"></p>
-          <a class="lks-res__go" id="lks-res-go" href="#">Zobacz stronę drużyny →</a>
-        </div>
-      </div>
-      <p class="lks-res__note" id="lks-res-note"></p>
+    <div class="lks-groups lks-groups--home" id="lks-teams">
+      <a class="lks-group" data-g="u11" href="{{ 'strefa-rodzica/u11/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u11.jpg' | url }}" alt="">
+        <span class="lks-group__name">U11</span>
+        <span class="lks-group__coach">Adam Krzysztoń</span>
+        <span class="lks-group__age">ok. 10–11 lat</span>
+      </a>
+      <a class="lks-group" data-g="u12" href="{{ 'strefa-rodzica/u12/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u12.jpg' | url }}" alt="">
+        <span class="lks-group__name">U12</span>
+        <span class="lks-group__coach">Radosław Darnikowski</span>
+        <span class="lks-group__age">ok. 11–12 lat</span>
+      </a>
+      <a class="lks-group" data-g="u13" href="{{ 'strefa-rodzica/u13/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u13.jpg' | url }}" alt="">
+        <span class="lks-group__name">U13</span>
+        <span class="lks-group__coach">Maciej Kochaniak</span>
+        <span class="lks-group__age">ok. 12–13 lat</span>
+      </a>
+      <a class="lks-group" data-g="u14" href="{{ 'strefa-rodzica/u14/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u14.jpg' | url }}" alt="">
+        <span class="lks-group__name">U14</span>
+        <span class="lks-group__coach">Maciej Rudziński</span>
+        <span class="lks-group__age">ok. 13–14 lat</span>
+      </a>
+      <a class="lks-group" data-g="u15" href="{{ 'strefa-rodzica/u15/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u15.jpg' | url }}" alt="">
+        <span class="lks-group__name">U15</span>
+        <span class="lks-group__coach">Maciej Puczyński</span>
+        <span class="lks-group__age">ok. 14–15 lat</span>
+      </a>
+      <a class="lks-group" data-g="u17" href="{{ 'strefa-rodzica/u17/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u17.jpg' | url }}" alt="">
+        <span class="lks-group__name">U17</span>
+        <span class="lks-group__coach">Patryk Dembowski</span>
+        <span class="lks-group__age">ok. 15–16 lat</span>
+      </a>
+      <a class="lks-group" data-g="u19" href="{{ 'strefa-rodzica/u19/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/u19.jpg' | url }}" alt="">
+        <span class="lks-group__name">U19</span>
+        <span class="lks-group__coach">Piotr Trepka</span>
+        <span class="lks-group__age">ok. 17–18 lat</span>
+      </a>
+      <a class="lks-group" data-g="dwa-liga" href="{{ 'strefa-rodzica/dwa-liga/' | url }}">
+        <img class="no-lightbox" loading="lazy" src="{{ 'assets/dwa-liga.jpg' | url }}" alt="">
+        <span class="lks-group__name">2 liga</span>
+        <span class="lks-group__coach">Piotr Trepka</span>
+        <span class="lks-group__age">seniorzy</span>
+      </a>
     </div>
   </section>
 
