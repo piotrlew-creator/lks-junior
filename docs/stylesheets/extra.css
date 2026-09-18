@@ -119,32 +119,77 @@ summary:focus-visible,
 
 /* ═══════════════════════════════════════════════════════════════
    PASEK GÓRNY I OGŁOSZENIE
+   Tryb jasny: cały pasek (ogłoszenie, nagłówek, zakładki) biały
+   z ciemnym tekstem. Tryb ciemny: czarny z białym.
+   Zmienne Material nadpisujemy WYŁĄCZNIE wewnątrz tych trzech
+   elementów — gdyby zmienić je globalnie, czerwone przyciski
+   w treści strony zrobiłyby się białe.
    ═══════════════════════════════════════════════════════════════ */
-.md-header {
-  background: linear-gradient(120deg, var(--lks-black) 0%, var(--lks-red-darker) 140%);
-}
+.md-banner,
+.md-header,
 .md-tabs {
-  background: var(--lks-black);
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: var(--lks-black);
+  --md-primary-bg-color--light: rgba(23, 20, 15, 0.62);
+  background: #ffffff;
+  color: var(--lks-black);
 }
+.md-banner { border-bottom: 1px solid var(--lks-border); }
+.md-header {
+  border-bottom: 1px solid var(--lks-border);
+  box-shadow: none;
+}
+.md-tabs { border-bottom: 1px solid var(--lks-border); }
+
+[data-md-color-scheme="slate"] .md-banner,
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
+  --md-primary-fg-color: #0f0d0c;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.72);
   background: #0f0d0c;
+  color: #ffffff;
+  border-bottom-color: #2a2420;
 }
 
-.md-announce {
-  background: var(--lks-red);
+/* Aktywna zakładka na czerwono — na białym pasku samo pogrubienie
+   ginęło, a rodzic musi wiedzieć, gdzie jest. */
+.md-tabs__link--active,
+.md-tabs__link:hover,
+.md-tabs__item--active .md-tabs__link {
+  color: var(--lks-red);
+  opacity: 1;
+  font-weight: 700;
 }
+
+/* Pole wyszukiwania. Material przyciemnia je półprzezroczystą czernią,
+   co na białym pasku dawało ciężką szarą plamę. */
+.md-search__form {
+  background-color: var(--lks-surface-2);
+  border: 1px solid var(--lks-border);
+}
+.md-search__form:hover {
+  background-color: var(--lks-surface);
+}
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+[data-md-color-scheme="slate"] .md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
 .lks-announce {
   display: block;
   padding: 9px 16px;
   text-align: center;
-  color: var(--lks-white) !important;
+  color: inherit !important;
   font-weight: 600;
   font-size: 0.72rem;
   text-decoration: none !important;
 }
 .lks-announce:hover {
-  background: var(--lks-red-dark);
+  color: var(--lks-red) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════
