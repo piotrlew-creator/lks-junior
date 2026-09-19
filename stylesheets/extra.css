@@ -709,25 +709,6 @@ summary:focus-visible,
   color: var(--lks-muted);
 }
 
-/* -- Drużyna zapamiętana z poprzedniej wizyty ----------------- */
-/* Klasę dodaje skrypt; bez JavaScriptu kafel wygląda jak każdy inny. */
-.lks-group.is-mine {
-  border-color: var(--lks-red);
-  box-shadow: var(--lks-shadow-lg);
-}
-.lks-group__mine {
-  align-self: flex-start;
-  margin: 9px 12px 0;
-  padding: 3px 8px;
-  border-radius: 999px;
-  background: var(--lks-red);
-  color: var(--lks-white);
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
 /* -- Przełącznik drużyn na stronie grupy ---------------------- */
 /* Rodzic z dwójką dzieci w klubie wchodzi na stronę jednej drużyny
    i często chce sprawdzić od razu drugą — bez tego przełącznika

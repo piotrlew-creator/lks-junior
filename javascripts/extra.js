@@ -11,50 +11,6 @@
 (function () {
   "use strict";
 
-  var STORE_KEY = "lks-grupa";
-
-  /* ── Pamięć wyboru drużyny ───────────────────────────────────
-     Rodzic grającego dziecka wchodzi na stronę swojej drużyny;
-     przy kolejnej wizycie jej kafel jest wyróżniony na stronie
-     głównej.                                                      */
-  function remember(key) {
-    try { window.localStorage.setItem(STORE_KEY, key); } catch (e) { /* tryb prywatny */ }
-  }
-  function recall() {
-    try { return window.localStorage.getItem(STORE_KEY); } catch (e) { return null; }
-  }
-
-  /* ── Zapamiętanie drużyny przy wejściu na jej podstronę ──────
-     Wzorzec dopasowuje slugi grup młodzieżowych (u11…u19) oraz
-     zespołu seniorskiego, więc nie wymaga listy drużyn.           */
-  function rememberFromPath() {
-    var m = window.location.pathname.match(/strefa-rodzica\/(u1[1-9]|dwa-liga)\/?$/);
-    if (m) remember(m[1]);
-  }
-
-  /* ── Wyróżnienie zapamiętanej drużyny na stronie głównej ───── */
-  function initMyTeam() {
-    var wrap = document.getElementById("lks-teams");
-    if (!wrap) return;
-
-    var saved = recall();
-    if (!saved) return;
-
-    var tile = wrap.querySelector('.lks-group[data-g="' + saved + '"]');
-    if (!tile || tile.classList.contains("is-mine")) return;
-
-    tile.classList.add("is-mine");
-
-    var badge = document.createElement("span");
-    badge.className = "lks-group__mine";
-    badge.textContent = "Twoja drużyna";
-
-    // Plakietka trafia pod nazwę drużyny, nad nazwisko trenera.
-    var coach = tile.querySelector(".lks-group__coach");
-    if (coach) tile.insertBefore(badge, coach);
-    else tile.appendChild(badge);
-  }
-
   /* ── Posty z Facebooka ───────────────────────────────────────
      Wtyczka Meta ładuje się dopiero po kliknięciu — dopóki tego nie
      ma, strona nie wysyła do Facebooka żadnego zapytania. Zgodę
@@ -162,8 +118,6 @@
   }
 
   function initAll() {
-    rememberFromPath();
-    initMyTeam();
     initFacebook();
     initReveal();
     initExternalLinks();
