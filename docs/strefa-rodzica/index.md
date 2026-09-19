@@ -13,6 +13,13 @@ najbliższe turnieje oraz aktualności dotyczące tej konkretnej drużyny.
 
 <div class="lks-groups" markdown>
 
+<a class="lks-group" href="poczatkujaca/">
+  <span class="lks-group__ph"><img class="no-lightbox" src="../assets/logo.png" alt=""></span>
+  <span class="lks-group__name">Grupa początkująca</span>
+  <span class="lks-group__coach">Adam Krzysztoń</span>
+  <span class="lks-group__age">rocznik 2017–2019 · nabór otwarty</span>
+</a>
+
 <a class="lks-group" href="u11/">
   <img class="no-lightbox" src="../assets/u11.jpg" alt="">
   <span class="lks-group__name">U11</span>

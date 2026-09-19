@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 
+{#
+  Pasek ogłoszenia. Wcześniej był to jeden cienki odnośnik — łatwo go było
+  wziąć za ozdobnik i przewinąć dalej. Teraz komunikat i przycisk są
+  rozdzielone: tekst mówi, co jest grane, a przycisk jasno prowadzi do
+  zapisów. Na telefonie oba elementy układają się jeden pod drugim.
+#}
 {% block announce %}
-  <a href="{{ 'dolacz/' | url }}" class="lks-announce">
-    Nabór do grup najmłodszych — zapytaj biuro o wolne miejsca
-  </a>
+  <div class="lks-announce">
+    <div class="lks-announce__inner">
+      <p class="lks-announce__text">
+        <strong>Nabór otwarty przez cały sezon</strong>
+        <span class="lks-announce__sub">Grupa początkująca (rocznik 2017–2019) i grupy młodzieżowe</span>
+      </p>
+      <a href="{{ 'dolacz/' | url }}" class="lks-announce__btn">Dołącz do Akademii</a>
+    </div>
+  </div>
 {% endblock %}
 
 {% block extrahead %}

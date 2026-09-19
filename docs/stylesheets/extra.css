@@ -218,17 +218,79 @@ summary:focus-visible,
   border-bottom-color: #2a2420;
 }
 
+/* Pasek ogłoszenia — komunikat plus przycisk do zapisów.
+   Cienki pasek z samym tekstem ginął nad nagłówkiem; teraz jest na tyle
+   wysoki, żeby dało się go zauważyć, ale wciąż nie zjada ekranu na
+   telefonie (tam tekst i przycisk układają się w pionie). */
 .lks-announce {
-  display: block;
-  padding: 9px 16px;
-  text-align: center;
-  color: inherit !important;
-  font-weight: 600;
-  font-size: 0.72rem;
-  text-decoration: none !important;
+  padding: 12px 16px;
 }
-.lks-announce:hover {
-  color: var(--lks-red) !important;
+.lks-announce__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+.lks-announce__text {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.25;
+  text-align: center;
+}
+.lks-announce__text strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.lks-announce__sub {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--lks-muted);
+}
+[data-md-color-scheme="slate"] .lks-announce__sub {
+  color: rgba(255, 255, 255, 0.66);
+}
+.lks-announce__btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: background var(--lks-t), transform var(--lks-t);
+}
+.lks-announce__btn:hover,
+.lks-announce__btn:focus-visible {
+  background: var(--lks-red-dark);
+  transform: translateY(-1px);
+}
+
+/* Na wąskim ekranie przycisk idzie pod tekst i rozciąga się na szerokość —
+   inaczej wychodziłby poza pasek albo zostawał na kciuk za mały. */
+@media screen and (max-width: 29.9375em) {
+  .lks-announce { padding: 11px 14px; }
+  .lks-announce__inner { gap: 9px; }
+  .lks-announce__text strong { font-size: 0.94rem; }
+  .lks-announce__btn {
+    width: 100%;
+    min-height: 42px;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -687,6 +749,29 @@ summary:focus-visible,
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+}
+
+/* Kafel drużyny, która nie ma jeszcze zdjęcia. Zamiast pustego miejsca
+   albo rozjechanej siatki — herb na klubowym tle, w tych samych
+   proporcjach co zwykłe zdjęcie. */
+.lks-group__ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.1), transparent 62%),
+    linear-gradient(150deg, var(--lks-red-dark) 0%, var(--lks-red) 58%, #e0364f 100%);
+}
+.lks-group__ph img {
+  width: 46%;
+  max-width: 116px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
 .lks-group__name {
   font-family: "Barlow Condensed", sans-serif;
