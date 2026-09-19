@@ -6,7 +6,7 @@ description: >-
 ---
 
 <nav class="lks-teamswitch" aria-label="Wybierz drużynę">
-  <a class="lks-teamswitch__chip" href="../poczatkujaca/">Początkująca</a>
+  <a class="lks-teamswitch__chip" href="../naborowa/">Naborowa</a>
   <a class="lks-teamswitch__chip" href="../u11/">U11</a>
   <a class="lks-teamswitch__chip" href="../u12/">U12</a>
   <a class="lks-teamswitch__chip" href="../u13/">U13</a>

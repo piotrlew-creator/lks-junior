@@ -1,9 +1,6 @@
 site_name: ŁKS KM Szkoła Gortata
 site_url: https://lkskmjunior.pl/
-site_description: >-
-  Akademia koszykówki ŁKS KM Szkoła Gortata w Łodzi. Od grupy początkującej
-  (rocznik 2017–2019) przez grupy młodzieżowe U11–U19 po zespół seniorski
-  w 2 lidze — harmonogram treningów, kadra trenerska, turnieje i zapisy.
+site_description: Akademia koszykówki ŁKS KM Szkoła Gortata w Łodzi
 site_author: ŁKS KM Szkoła Gortata
 copyright: Copyright &copy; ŁKS KM Szkoła Gortata
 
@@ -56,7 +53,7 @@ nav:
   - Akademia: akademia.md
   - Strefa rodzica:
       - strefa-rodzica/index.md
-      - Grupa początkująca: strefa-rodzica/poczatkujaca.md
+      - Grupa naborowa: strefa-rodzica/naborowa.md
       - U11: strefa-rodzica/u11.md
       - U12: strefa-rodzica/u12.md
       - U13: strefa-rodzica/u13.md
@@ -83,7 +80,7 @@ extra:
   generator: false
 
 extra_css:
-  - stylesheets/extra.css?v=14
+  - stylesheets/extra.css?v=15
 
 extra_javascript:
   - javascripts/extra.js?v=11

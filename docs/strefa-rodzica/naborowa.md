@@ -1,12 +1,12 @@
 ---
-title: Grupa początkująca
+title: Grupa naborowa
 description: >-
-  Grupa początkująca ŁKS KM Szkoła Gortata — rocznik 2017–2019, trener
+  Grupa naborowa ŁKS KM Szkoła Gortata — rocznik 2017–2019, trener
   Adam Krzysztoń, nabór otwarty przez cały sezon.
 ---
 
 <nav class="lks-teamswitch" aria-label="Wybierz drużynę">
-  <a class="lks-teamswitch__chip is-active" href="../poczatkujaca/" aria-current="page">Początkująca</a>
+  <a class="lks-teamswitch__chip is-active" href="../naborowa/" aria-current="page">Naborowa</a>
   <a class="lks-teamswitch__chip" href="../u11/">U11</a>
   <a class="lks-teamswitch__chip" href="../u12/">U12</a>
   <a class="lks-teamswitch__chip" href="../u13/">U13</a>
@@ -17,13 +17,13 @@ description: >-
   <a class="lks-teamswitch__chip" href="../dwa-liga/">2 liga</a>
 </nav>
 
-# Grupa początkująca
+# Grupa naborowa
 
 <!--
   ZDJĘCIE GRUPY — do uzupełnienia.
-  1. Wrzuć zdjęcie do folderu docs/assets/ pod nazwą poczatkujaca.jpg
+  1. Wrzuć zdjęcie do folderu docs/assets/ pod nazwą naborowa.jpg
   2. Usuń ten komentarz razem z jego znacznikami i zostaw samą linijkę:
-     ![Grupa początkująca ŁKS KM Szkoła Gortata](../assets/poczatkujaca.jpg){ .lks-team-photo }
+     ![Grupa naborowa ŁKS KM Szkoła Gortata](../assets/naborowa.jpg){ .lks-team-photo }
   3. Kafel tej grupy na stronie głównej (overrides/home.html) i w Strefie
      rodzica (docs/strefa-rodzica/index.md) pokazuje na razie herb klubu —
      tam też można wtedy wstawić zdjęcie, tak jak mają pozostałe drużyny.
@@ -51,7 +51,7 @@ pierwszy raz mają kontakt z koszykówką, i to jest tu normą, a nie wyjątkiem
 </div>
 
 !!! success "Nabór otwarty przez cały sezon"
-    Do Grupy początkującej można dołączyć w dowolnym momencie sezonu — nie
+    Do Grupy naborowej można dołączyć w dowolnym momencie sezonu — nie
     czekamy na wrzesień ani na początek rundy. Zadzwoń lub napisz do biura,
     a umówimy pierwszy trening.
 
@@ -77,7 +77,7 @@ Własna piłka nie jest konieczna — sprzęt na treningi zapewnia klub.
 
 ## :material-stairs-up: Co dalej
 
-Z Grupy początkującej zawodnicy przechodzą naturalnie do
+Z Grupy naborowej zawodnicy przechodzą naturalnie do
 [U11](u11.md) i dalej — aż po zespół seniorski w 2 lidze. Cała ścieżka
 odbywa się w jednym klubie, bez zmiany barw i bez szukania nowej drużyny
 co dwa lata.
