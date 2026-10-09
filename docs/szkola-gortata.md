@@ -1,12 +1,12 @@
 ---
-title: ŁKS x Szkoła Gortata
+title: ŁKS × Szkoła Gortata
 description: >-
   Współpraca ŁKS Koszykówka Męska ze Szkołą Mistrzostwa Sportowego Marcina
   Gortata w Łodzi (szkoła podstawowa i liceum): więcej treningów, plan lekcji
   dopasowany do treningów, bursa, psycholodzy sportowi i więcej angielskiego.
 ---
 
-# ŁKS <span class="lks-lc">x</span> Szkoła Gortata
+# ŁKS × Szkoła Gortata
 
 ![Zawodnicy z flagą Szkoły Gortata](assets/foto-u13.webp){ .lks-team-photo width="1000" height="435" }
 

@@ -89,7 +89,7 @@ koordynatorzy — ich kontakty znajdziesz w zakładce [Kontakt](kontakt.md).
 
 Szkoła Mistrzostwa Sportowego Marcina Gortata w Łodzi jest partnerem naszych drużyn U11–U17. To szkoła podstawowa i liceum, ale grać u nas może każdy — nie trzeba być jej uczniem. Uczeń, który jest też zawodnikiem, zyskuje więcej treningów i plan
 lekcji dopasowany do treningów. Więcej w zakładce
-[ŁKS x Szkoła Gortata](szkola-gortata.md).
+[ŁKS × Szkoła Gortata](szkola-gortata.md).
 
 ## :material-domain: Politechnika Łódzka
 

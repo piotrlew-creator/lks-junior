@@ -1447,11 +1447,10 @@ summary:focus-visible,
 .md-typeset .lks-ach-grid img { aspect-ratio: 3 / 2; }
 .md-typeset .lks-photo-ph { height: auto; aspect-ratio: 2 / 1; max-height: none; }
 
-/* „ŁKS x Szkoła Gortata” — „x” zawsze małą literą, także w nagłówkach
-   pisanych wersalikami. */
+/* „ŁKS × Szkoła Gortata” — znak mnożenia (U+00D7) zamiast litery „x”. */
 .lks-lc { text-transform: none; }
 .md-typeset .lks-team-photo { margin-bottom: 0.2rem; }
-/* Tytuły w wynikach wyszukiwania — bez wersalików, „x” zostaje małe. */
+/* Tytuły w wynikach wyszukiwania — bez wersalików. */
 .md-search-result .md-typeset h1,
 .md-search-result .md-typeset h2 { text-transform: none; }
 /* Dłuższa nazwa drużyny na kafelku (ŁKS Politechnika Łódzka). */
