@@ -13,7 +13,7 @@ description: >-
 
 Sponsoring ŁKS Koszykówka Męska to inwestycja w młodych ludzi i w wizerunek
 Twojej firmy. Mamy 15 drużyn — od grup naborowych w czterech szkołach
-podstawowych po zespół seniorski w 2. lidze. To około 200 zawodników z Łodzi
+podstawowych po zespół seniorski w 2. lidze. To około 250 zawodników z Łodzi
 i okolic, a z nimi ich rodziny i przyjaciele.
 
 Możesz wesprzeć jedną drużynę, grupę naborową w wybranej szkole albo cały Klub.
