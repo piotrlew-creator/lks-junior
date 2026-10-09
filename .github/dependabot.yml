@@ -1,0 +1,12 @@
+# Co tydzien GitHub sprawdza, czy sa nowsze wersje bibliotek strony
+# (requirements.txt) i akcji publikacji, i proponuje aktualizacje.
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

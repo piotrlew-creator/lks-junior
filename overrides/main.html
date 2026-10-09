@@ -21,6 +21,18 @@
 {% endblock %}
 
 {#
+  Zasady bezpieczeństwa dla przeglądarki (CSP): skrypty, style, obrazy
+  i czcionki tylko z tej domeny; ramki tylko z Facebooka (posty po zgodzie).
+  Chcesz osadzić coś z innego serwisu (np. YouTube)? Dopisz jego adres
+  do „frame-src”, inaczej przeglądarka zablokuje ramkę.
+#}
+{% block site_meta %}
+  {{ super() }}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; manifest-src 'self'; frame-src https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+{% endblock %}
+
+{#
   Statystyki odwiedzin bez cookies (Cloudflare Web Analytics). Skrypt
   dołączamy tylko wtedy, gdy w mkdocs.yml jest ustawiony token.
 #}
