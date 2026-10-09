@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{#
+  Pasek ogłoszenia. Wcześniej był to jeden cienki odnośnik — łatwo go było
+  wziąć za ozdobnik i przewinąć dalej. Teraz komunikat i przycisk są
+  rozdzielone: tekst mówi, co jest grane, a przycisk jasno prowadzi do
+  zapisów. Na telefonie oba elementy układają się jeden pod drugim.
+#}
+{% block announce %}
+  <div class="lks-announce">
+    <div class="lks-announce__inner">
+      <p class="lks-announce__text">
+        <strong>Nabór otwarty przez cały sezon</strong>
+        <span class="lks-announce__sub">Grupy naborowe — chłopcy urodzeni w 2017 roku i młodsi</span>
+      </p>
+      <a href="{{ 'dolacz/' | url }}" class="lks-announce__btn">Dołącz do naszego Klubu</a>
+      {# Telefon: cały pasek to jeden link w jednej linii. #}
+      <a href="{{ 'dolacz/' | url }}" class="lks-announce__m"><strong>Nabór do grup naborowych</strong> · Dołącz <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+{% endblock %}
+
+{#
+  Statystyki odwiedzin bez cookies (Cloudflare Web Analytics). Skrypt
+  dołączamy tylko wtedy, gdy w mkdocs.yml jest ustawiony token.
+#}
+{% block analytics %}
+  {{ super() }}
+  {% if config.extra.cf_web_analytics_token %}
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ config.extra.cf_web_analytics_token }}"}'></script>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {# Stały pasek na telefonie: „Zapisy” prowadzi na stronę „Dołącz” (tam są
+     numery koordynatorów), „Zadzwoń” łączy z biurem Klubu. Poza telefonem ukryty. #}
+  <nav class="lks-callbar" aria-label="Zapisy i kontakt z Klubem">
+    <a class="lks-callbar__btn lks-callbar__call" href="{{ 'dolacz/' | url }}">Zapisy</a>
+    <a class="lks-callbar__btn lks-callbar__mail" href="tel:+48733341908" aria-label="Zadzwoń do biura Klubu">Zadzwoń</a>
+  </nav>
+  {{ super() }}
+{% endblock %}
+
+{% block extrahead %}
+  {# Czcionki są hostowane lokalnie (docs/assets/fonts) — wczytujemy z góry dwie najważniejsze. #}
+  <link rel="preload" href="{{ 'assets/fonts/barlow-latin-400-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'assets/fonts/barlow-condensed-latin-800-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'assets/fonts/barlow-condensed-latin-700-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+
+  {% set meta_title = page.meta.title if (page and page.meta and page.meta.title) else (page.title if (page and page.title and not page.is_homepage) else None) %}
+  {% set page_title = (meta_title ~ " - " ~ config.site_name) if meta_title else config.site_name %}
+  {% set page_description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
+  {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
+  {% set og_image = config.site_url ~ 'assets/hero.jpg' %}
+
+  <meta name="description" content="{{ page_description }}">
+  <meta name="theme-color" content="#D40414">
+  <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
+  <link rel="manifest" href="{{ 'manifest.webmanifest' | url }}">
+  <meta name="application-name" content="ŁKS Koszykówka Męska">
+  <meta name="apple-mobile-web-app-title" content="ŁKS Koszykówka Męska">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:locale" content="pl_PL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "ŁKS Koszykówka Męska",
+    "alternateName": "ŁKS KM",
+    "sport": "Koszykówka",
+    "url": "{{ config.site_url }}",
+    "logo": "{{ config.site_url }}assets/logo.png",
+    "image": "{{ og_image }}",
+    "email": "biuro@lkskm.pl",
+    "telephone": "+48 733 341 908",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al. Unii Lubelskiej 2, II piętro",
+      "addressLocality": "Łódź",
+      "postalCode": "94-020",
+      "addressCountry": "PL"
+    },
+    "sameAs": [
+      "https://www.facebook.com/lksKMjunior"
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}

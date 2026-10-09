@@ -1,0 +1,80 @@
+{#-
+  Kopia stopki Material z jedną zmianą: strzałki „Poprzednia / Następna strona”
+  na stronach Aktualności (lista, kategorie, archiwum, wpisy) i na stronie
+  „Nasz klub” prowadzą do odpowiednich zakładek menu, a nie do podstron
+  kategorii i archiwum generowanych przez wtyczkę bloga.
+-#}
+{% set ns = namespace(prev=page.previous_page, next=page.next_page, start=none, aktu=none, klub=none) %}
+{% for p in nav.pages %}
+  {% if p.is_homepage %}{% set ns.start = p %}{% endif %}
+  {% if p.url == "aktualnosci/" %}{% set ns.aktu = p %}{% endif %}
+  {% if p.url == "klub/" %}{% set ns.klub = p %}{% endif %}
+{% endfor %}
+{% set url = page.url or "" %}
+{% if url == "aktualnosci/" %}
+  {% if ns.start %}{% set ns.prev = ns.start %}{% endif %}
+  {% if ns.klub %}{% set ns.next = ns.klub %}{% endif %}
+{% elif url.startswith("aktualnosci/") %}
+  {% if ns.aktu %}{% set ns.prev = ns.aktu %}{% endif %}
+  {% if ns.klub %}{% set ns.next = ns.klub %}{% endif %}
+{% elif url == "klub/" %}
+  {% if ns.aktu %}{% set ns.prev = ns.aktu %}{% endif %}
+{% endif %}
+<footer class="md-footer">
+  {% if "navigation.footer" in features %}
+    {% if ns.prev or ns.next %}
+      {% if page.meta and page.meta.hide %}
+        {% set hidden = "hidden" if "footer" in page.meta.hide %}
+      {% endif %}
+      <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+        {% if ns.prev %}
+          {% set direction = lang.t("footer.previous") %}
+          <a href="{{ ns.prev.url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ direction }}: {{ ns.prev.title | e }}">
+            <div class="md-footer__button md-icon">
+              {% set icon = config.theme.icon.previous or "material/arrow-left" %}
+              {% include ".icons/" ~ icon ~ ".svg" %}
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                {{ direction }}
+              </span>
+              <div class="md-ellipsis">
+                {{ ns.prev.title }}
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        {% if ns.next %}
+          {% set direction = lang.t("footer.next") %}
+          <a href="{{ ns.next.url | url }}" class="md-footer__link md-footer__link--next" aria-label="{{ direction }}: {{ ns.next.title | e }}">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                {{ direction }}
+              </span>
+              <div class="md-ellipsis">
+                {{ ns.next.title }}
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              {% set icon = config.theme.icon.next or "material/arrow-right" %}
+              {% include ".icons/" ~ icon ~ ".svg" %}
+            </div>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  {% endif %}
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      {% include "partials/copyright.html" %}
+      <div class="lks-partners-foot">
+        <a href="https://www.p.lodz.pl/" target="_blank" rel="noopener" title="Politechnika Łódzka"><img src="{{ 'assets/partner-pl-mono.png' | url }}" alt="Politechnika Łódzka" width="91" height="144" loading="lazy"></a>
+        <a href="https://szkolagortata.pl/" target="_blank" rel="noopener" title="Szkoła Gortata"><img src="{{ 'assets/partner-gortata-mono.png' | url }}" alt="Szkoła Mistrzostwa Sportowego Marcina Gortata" width="273" height="144" loading="lazy"></a>
+        <a href="https://e-sklep.coolpack.com.pl/" target="_blank" rel="noopener" title="CoolPack"><img src="{{ 'assets/partner-coolpack-mono.png' | url }}" alt="CoolPack" class="lks-pf-wide" width="541" height="72" loading="lazy"></a>
+      </div>
+      {% if config.extra.social %}
+        {% include "partials/social.html" %}
+      {% endif %}
+    </div>
+  </div>
+</footer>

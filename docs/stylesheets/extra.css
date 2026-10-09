@@ -1,0 +1,2303 @@
+/* ═══════════════════════════════════════════════════════════════
+   CZCIONKI HOSTOWANE LOKALNIE (Barlow, Barlow Condensed — licencja
+   SIL OFL). Strona nie łączy się z serwerami Google. Pliki pochodzą
+   z pakietów @fontsource; latin-ext zawiera polskie znaki (ą ę ł ń ś ź ż ć).
+   ═══════════════════════════════════════════════════════════════ */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url(../assets/fonts/barlow-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url(../assets/fonts/barlow-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url(../assets/fonts/barlow-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url(../assets/fonts/barlow-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/barlow-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/barlow-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:700;font-display:swap;src:url(../assets/fonts/barlow-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:700;font-display:swap;src:url(../assets/fonts/barlow-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:800;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:800;font-display:swap;src:url(../assets/fonts/barlow-condensed-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* ═══════════════════════════════════════════════════════════════
+   ŁKS KM SZKOŁA GORTATA — SYSTEM WIZUALNY
+   Paleta: czerwień klubowa, czerń hali, bursztyn parkietu.
+   Typografia: Barlow Condensed (nagłówki) + Barlow (tekst).
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* -- Barwy klubowe (źródło prawdy) -------------------------- */
+  /* Paleta (zatwierdzona 8.10.2026): jedna czerwień, czerń i biel. */
+  --lks-red: #d40414;          /* kolor herbu: przyciski, plakietki, linki */
+  --lks-red-dark: #a8030f;     /* hover, focus, tło sekcji dla firm */
+  --lks-red-on-dark: #ff4b4b;  /* tekst i obrysy w ciemnym motywie */
+  --lks-red-text: var(--lks-red);
+  --lks-red-tint: #f4f0ea;
+  --lks-black: #17140f;
+  --lks-cream: #f4f0ea;
+  --lks-wood: #8f5314;
+  --lks-wood-light: #f0a65a;
+  --lks-white: #ffffff;
+
+  /* -- Podłączenie do zmiennych Material ---------------------- */
+  --md-primary-fg-color: var(--lks-red);
+  --md-primary-fg-color--light: var(--lks-red);
+  --md-primary-fg-color--dark: var(--lks-red-dark);
+  --md-accent-fg-color: var(--lks-red);
+  --md-typeset-a-color: var(--lks-red);
+
+  /* -- Kolory tekstu i stopki Material → nasza czerń i biel ---- */
+  --md-default-fg-color: var(--lks-black);
+  --md-default-fg-color--light: #6b6259;
+  --md-default-fg-color--lighter: rgba(23, 20, 15, 0.32);
+  --md-default-fg-color--lightest: rgba(23, 20, 15, 0.07);
+  --md-typeset-color: var(--lks-black);
+  --md-footer-bg-color: var(--lks-black);
+  --md-footer-bg-color--dark: var(--lks-black);
+
+  /* -- Tokeny komponentów ------------------------------------- */
+  --lks-r: 14px;
+  --lks-r-sm: 10px;
+  --lks-shadow: 0 2px 14px rgba(23, 20, 15, 0.08);
+  --lks-shadow-lg: 0 14px 38px rgba(23, 20, 15, 0.16);
+  --lks-t: 180ms cubic-bezier(0.2, 0.6, 0.3, 1);
+
+  /* -- Powierzchnie (motyw jasny) ----------------------------- */
+  --lks-surface: #ffffff;
+  --lks-surface-2: #f4f0ea;
+  --lks-border: #e3dcd3;
+  --lks-muted: #6b6259;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--lks-red);
+  --md-accent-fg-color: var(--lks-red-on-dark);
+  --lks-red-text: var(--lks-red-on-dark);
+  --md-default-bg-color: var(--lks-black);
+  --md-default-bg-color--light: rgba(23, 20, 15, 0.54);
+  --md-default-bg-color--lighter: rgba(23, 20, 15, 0.26);
+  --md-default-bg-color--lightest: rgba(23, 20, 15, 0.07);
+  --md-default-fg-color: var(--lks-cream);
+  --md-default-fg-color--light: #a0968c;
+  --md-default-fg-color--lighter: rgba(244, 240, 234, 0.32);
+  --md-default-fg-color--lightest: rgba(244, 240, 234, 0.12);
+  --md-typeset-color: var(--lks-cream);
+  --md-code-bg-color: #211c18;
+  --md-code-fg-color: var(--lks-cream);
+  --lks-surface: #211c18;
+  --lks-surface-2: #211c18;
+  --lks-border: #332c27;
+  --lks-muted: #a0968c;
+  --lks-wood: #f0a65a;
+  --lks-red-tint: #211c18;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAFIA
+   ═══════════════════════════════════════════════════════════════ */
+body,
+.md-typeset {
+  font-family: "Barlow", -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-header__topic,
+.md-nav__title {
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  text-wrap: balance;
+}
+
+/* Skala płynna zamiast stałych rozmiarów — na telefonie stały 2,3rem
+   (46px) potrafił zająć cztery linijki i pół ekranu na dłuższym
+   nagłówku ("Grupy starsze — przyjęcie po spotkaniu z trenerem").
+   Wartości graniczne to te same rozmiary co wcześniej — na laptopie
+   nic się nie zmienia, clamp() po prostu dochodzi do tego samego
+   maksimum. */
+.md-typeset h1 {
+  font-size: clamp(1.65rem, 1.1rem + 4vw, 2.3rem);
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.6em;
+}
+
+.md-typeset h2 {
+  font-size: clamp(1.3rem, 1rem + 2.4vw, 1.7rem);
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-top: 1.6em;
+}
+
+.md-typeset h3 {
+  font-size: clamp(1.05rem, 0.9rem + 1.2vw, 1.25rem);
+  line-height: 1.2;
+}
+
+/* Nagłówek witryny w pasku — węższy krój, spójny z resztą. */
+.md-header__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+}
+.md-header__topic {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+}
+
+/* Na telefonie po herbie, hamburgerze i ikonach zostaje mało miejsca —
+   pełna nazwa klubu w jednej linii i tak by się nie zmieściła bez
+   zmniejszenia tekstu do nieczytelnego rozmiaru. Zamiast ucinać nazwę
+   wielokropkiem ("ŁKS KM Sz…"), pozwalamy jej złamać się do kilku linii
+   (mniejszy tekst, bez liter rozstrzelonych) — pasek nagłówka rośnie
+   razem z nią. Sprawdzone na szerokościach 320–430px: przy trzech
+   liniach i tym rozmiarze tekst zawsze mieści się w całości. */
+@media screen and (max-width: 44.9375em) {
+  .md-header__title { font-size: 0.78rem; letter-spacing: 0.01em; }
+  .md-header__topic {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: normal;
+    text-overflow: clip;
+    line-height: 1.15;
+    align-items: center;
+  }
+}
+
+/* -- Dostępność: widoczny fokus ------------------------------- */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+.md-nav__link:focus-visible {
+  outline: 3px solid var(--lks-wood);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PASEK GÓRNY I OGŁOSZENIE
+   Tryb jasny: cały pasek (ogłoszenie, nagłówek, zakładki) biały
+   z ciemnym tekstem. Tryb ciemny: czarny z białym.
+   Zmienne Material nadpisujemy WYŁĄCZNIE wewnątrz tych trzech
+   elementów — gdyby zmienić je globalnie, czerwone przyciski
+   w treści strony zrobiłyby się białe.
+   ═══════════════════════════════════════════════════════════════ */
+.md-banner,
+.md-header,
+.md-tabs {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: var(--lks-black);
+  --md-primary-bg-color--light: rgba(23, 20, 15, 0.62);
+  background: #ffffff;
+  color: var(--lks-black);
+}
+.md-banner { border-bottom: 1px solid var(--lks-border); }
+.md-header {
+  border-bottom: 1px solid var(--lks-border);
+  box-shadow: none;
+}
+.md-tabs { border-bottom: 1px solid var(--lks-border); }
+
+[data-md-color-scheme="slate"] .md-banner,
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  --md-primary-fg-color: var(--lks-black);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.72);
+  background: var(--lks-black);
+  color: #ffffff;
+  border-bottom-color: var(--lks-border);
+}
+
+/* Aktywna zakładka na czerwono — na białym pasku samo pogrubienie
+   ginęło, a rodzic musi wiedzieć, gdzie jest. */
+.md-tabs__link--active,
+.md-tabs__link:hover,
+.md-tabs__item--active .md-tabs__link {
+  color: var(--lks-red-text);
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* Pole wyszukiwania. Material przyciemnia je półprzezroczystą czernią,
+   co na białym pasku dawało ciężką szarą plamę. */
+.md-search__form {
+  background-color: var(--lks-surface-2);
+  border: 1px solid var(--lks-border);
+}
+.md-search__form:hover {
+  background-color: var(--lks-surface);
+}
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+[data-md-color-scheme="slate"] .md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+/* -- Szuflada nawigacji na telefonie -------------------------- */
+/* Material daje nagłówkowi szuflady kolor wiodący, czyli klubową
+   czerwień — a herb jest czerwony, więc na niej znikał. Nagłówek
+   szuflady dostaje więc to samo traktowanie co pasek górny. */
+.md-nav--primary .md-nav__title,
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  background: #ffffff;
+  color: var(--lks-black);
+  border-bottom: 1px solid var(--lks-border);
+  box-shadow: none;
+}
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__title[for="__drawer"] {
+  background: var(--lks-black);
+  color: #ffffff;
+  border-bottom-color: var(--lks-border);
+}
+
+/* Pasek ogłoszenia — komunikat plus przycisk do zapisów.
+   Cienki pasek z samym tekstem ginął nad nagłówkiem; teraz jest na tyle
+   wysoki, żeby dało się go zauważyć, ale wciąż nie zjada ekranu na
+   telefonie (tam tekst i przycisk układają się w pionie). */
+.lks-announce {
+  padding: 12px 16px;
+}
+.lks-announce__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+.lks-announce__text {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.25;
+  text-align: center;
+}
+.lks-announce__text strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.lks-announce__sub {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--lks-muted);
+}
+[data-md-color-scheme="slate"] .lks-announce__sub {
+  color: rgba(255, 255, 255, 0.66);
+}
+.lks-announce__btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: background var(--lks-t), transform var(--lks-t);
+}
+.lks-announce__btn:hover,
+.lks-announce__btn:focus-visible {
+  background: var(--lks-red-dark);
+  transform: translateY(-1px);
+}
+
+/* Na wąskim ekranie przycisk idzie pod tekst i rozciąga się na szerokość —
+   inaczej wychodziłby poza pasek albo zostawał na kciuk za mały. */
+@media screen and (max-width: 29.9375em) {
+  .lks-announce { padding: 11px 14px; }
+  .lks-announce__inner { gap: 9px; }
+  .lks-announce__text strong { font-size: 0.94rem; }
+  .lks-announce__btn {
+    width: 100%;
+    min-height: 42px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA GŁÓWNA — HERO
+   ═══════════════════════════════════════════════════════════════ */
+.lks-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--lks-black);
+}
+
+.lks-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+.lks-hero__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 13, 12, 0.3) 0%,
+    rgba(15, 13, 12, 0.34) 26%,
+    rgba(15, 13, 12, 0.72) 56%,
+    rgba(15, 13, 12, 0.94) 82%,
+    rgba(15, 13, 12, 0.98) 100%
+  );
+}
+
+.lks-hero__inner {
+  position: relative;
+  width: 100%;
+  padding: 0 0.8rem 3rem;
+  color: var(--lks-white);
+}
+
+.lks-kicker {
+  display: inline-block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: var(--lks-wood-light);
+  background: rgba(15, 13, 12, 0.7);
+  border: 1px solid rgba(240, 166, 90, 0.3);
+  border-radius: 4px;
+  padding: 5px 11px;
+  margin: 0 0 0.9rem;
+}
+
+.lks-hero__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.15rem, 8.5vw, 4.4rem);
+  line-height: 1.02;
+  margin: 0 0 0.5rem;
+  color: var(--lks-white);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+}
+.lks-hero__title em {
+  font-style: normal;
+  color: var(--lks-red-on-dark);
+}
+
+.lks-hero__sub {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--lks-cream);
+  max-width: 44ch;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.lks-hero__cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 60em) {
+  .lks-hero { min-height: 72vh; }
+  .lks-hero__inner { padding-bottom: 4rem; }
+  .lks-hero__sub { font-size: 1rem; }
+}
+
+/* -- Herb w pasku nagłówka ------------------------------------ */
+/* Domyślne 1,2 rem robiło z herbu nieczytelną plamkę. Herb ma własne
+   przezroczyste tło i obwódkę, więc wystarczy go powiększyć — pasek
+   rośnie razem z nim, żeby nie był przyklejony do krawędzi. */
+.md-header__button.md-logo {
+  padding: 0.35rem 0.6rem 0.35rem 0.1rem;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+/* Na telefonie herb jest domyślnie ukryty — pokazujemy go, bo to
+   jedyny element identyfikacji widoczny na każdej podstronie. */
+@media screen and (max-width: 76.1875em) {
+  .md-header__button.md-logo {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 0.2rem 0.35rem 0.2rem 0;
+  }
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+/* -- Przyciski ------------------------------------------------ */
+.lks-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 26px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-decoration: none !important;
+  transition: transform var(--lks-t), background var(--lks-t), border-color var(--lks-t);
+}
+.lks-btn--primary {
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+}
+.lks-btn--primary:hover,
+.lks-btn--primary:focus-visible {
+  background: var(--lks-red-dark);
+  transform: translateY(-2px);
+}
+.lks-btn--ghost {
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  color: var(--lks-white) !important;
+}
+.lks-btn--ghost:hover,
+.lks-btn--ghost:focus-visible {
+  border-color: var(--lks-white);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA GŁÓWNA — PASEK ZAUFANIA
+   ═══════════════════════════════════════════════════════════════ */
+.lks-trust {
+  background: var(--lks-black);
+  color: var(--lks-cream);
+  padding: 1.3rem 0;
+}
+.lks-trust__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0 0.8rem;
+  text-align: center;
+}
+@media screen and (min-width: 45em) {
+  .lks-trust__inner { grid-template-columns: repeat(3, 1fr); }
+}
+.lks-trust__big {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--lks-wood-light);
+}
+.lks-trust__sm {
+  display: block;
+  font-size: 0.7rem;
+  color: #a0968c;
+  margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA GŁÓWNA — SEKCJE
+   ═══════════════════════════════════════════════════════════════ */
+.lks-sec {
+  padding: 3rem 0.8rem;
+}
+/* Zakotwiczenie nie może chować nagłówka pod przyklejonym paskiem */
+.lks-sec[id] {
+  scroll-margin-top: 5.5rem;
+}
+.lks-sec--alt {
+  background: var(--lks-surface-2);
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+}
+.lks-sec--alt > .md-grid {
+  padding: 0 0.8rem;
+}
+
+.lks-lbl {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
+  color: var(--lks-wood);
+  margin: 0 0 0.5rem;
+}
+.lks-lbl--light { color: var(--lks-wood-light); }
+
+.lks-h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 5.5vw, 2.4rem);
+  line-height: 1.06;
+  margin: 0 0 0.6rem;
+  color: var(--md-default-fg-color);
+}
+.lks-h2--light { color: var(--lks-white); }
+
+.lks-lead {
+  color: var(--lks-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 52ch;
+  margin: 0 0 1.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   OSIĄGNIĘCIA (kafle ze zdjęciami)
+   ═══════════════════════════════════════════════════════════════ */
+.lks-ach {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 11px;
+}
+@media screen and (min-width: 30em) { .lks-ach { grid-template-columns: repeat(2, 1fr); } }
+@media screen and (min-width: 60em) { .lks-ach { grid-template-columns: repeat(4, 1fr); } }
+
+.lks-ach__card {
+  position: relative;
+  min-height: 150px;
+  border-radius: var(--lks-r);
+  overflow: hidden;
+  background: var(--lks-black);
+  display: flex;
+  align-items: flex-end;
+}
+.lks-ach__card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+.lks-ach__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 28%, rgba(15, 13, 12, 0.93) 100%);
+}
+.lks-ach__txt {
+  position: relative;
+  padding: 12px;
+  color: var(--lks-white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.12;
+}
+.lks-ach__txt b {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lks-wood-light);
+  margin-bottom: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SEKCJE ZE ZDJĘCIEM (spotlight)
+   ═══════════════════════════════════════════════════════════════ */
+.lks-spot {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 50em) {
+  .lks-spot { grid-template-columns: 1fr 1fr; gap: 2.2rem; }
+  .lks-spot--rev .lks-spot__img { order: 2; }
+}
+.lks-spot__img img {
+  width: 100%;
+  border-radius: var(--lks-r);
+  display: block;
+}
+.lks-spot__txt h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  margin: 0 0 0.4rem;
+}
+.lks-spot__txt p {
+  font-size: 0.88rem;
+  line-height: 1.62;
+  color: var(--lks-muted);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOK DLA FIRM I SEKCJA KOŃCOWA
+   ═══════════════════════════════════════════════════════════════ */
+.lks-spons {
+  background: linear-gradient(135deg, var(--lks-black) 0%, var(--lks-red-dark) 100%);
+  color: var(--lks-white);
+  padding: 3rem 0;
+}
+.lks-spons > .md-grid { padding: 0 0.8rem; }
+.lks-spons__lead {
+  color: var(--lks-cream);
+  font-size: 0.88rem;
+  max-width: 46ch;
+  margin: 0 0 1.2rem;
+}
+
+.lks-nums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin: 0 0 1.4rem;
+}
+.lks-num {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--lks-r-sm);
+  padding: 12px 14px;
+}
+.lks-num__v {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--lks-wood-light);
+}
+.lks-num__l {
+  display: block;
+  font-size: 0.66rem;
+  color: rgba(244, 240, 234, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 4px;
+}
+/* Wariant na jasnym tle (podstrona sponsorów) */
+.lks-nums--light .lks-num {
+  background: var(--lks-surface-2);
+  border-color: var(--lks-border);
+}
+.lks-nums--light .lks-num__v { color: var(--lks-wood); }
+.lks-nums--light .lks-num__l { color: var(--lks-muted); }
+
+.lks-final {
+  background: var(--lks-black);
+  color: var(--lks-white);
+  padding: 3.4rem 0;
+  text-align: center;
+}
+.lks-final > .md-grid { padding: 0 0.8rem; }
+.lks-final__lead {
+  color: #a0968c;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  max-width: 54ch;
+  margin: 0 auto 1.4rem;
+}
+.lks-final__phone {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--lks-wood-light);
+  margin: 1.1rem 0 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ODSŁANIANIE PRZY PRZEWIJANIU
+   Sekcje są domyślnie w pełni widoczne — to jest stan na wypadek,
+   gdyby JavaScript się nie wykonał (zablokowany skrypt, wolne łącze,
+   błąd). Dopiero skrypt dokłada klasę .lks-reveal--js i wtedy elementy
+   chowają się, żeby zaraz odsłonić się przy przewijaniu. Bez tego
+   podziału strona główna bez JS byłaby w połowie pusta.
+   ═══════════════════════════════════════════════════════════════ */
+.lks-reveal.lks-reveal--js {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.62s ease, transform 0.62s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.lks-reveal.lks-reveal--js.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lks-reveal.lks-reveal--js { opacity: 1; transform: none; transition: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NASZE DRUŻYNY — kafle drużyn
+   ═══════════════════════════════════════════════════════════════ */
+/* Osiem drużyn układa się w równe rzędy: po dwie na telefonie,
+   trzy na tablecie, cztery na laptopie. Automatyczne wypełnianie
+   dawało na telefonie jedną kolumnę, czyli osiem ekranów przewijania. */
+.lks-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 1.6rem 0 2.4rem;
+}
+@media (min-width: 600px) {
+  .lks-groups { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+}
+@media (min-width: 900px) {
+  .lks-groups { grid-template-columns: repeat(4, 1fr); }
+}
+.lks-group {
+  display: flex;
+  flex-direction: column;
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-r);
+  overflow: hidden;
+  text-decoration: none !important;
+  box-shadow: var(--lks-shadow);
+  transition: transform var(--lks-t), box-shadow var(--lks-t), border-color var(--lks-t);
+}
+.lks-group:hover,
+.lks-group:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--lks-shadow-lg);
+  border-color: var(--lks-red);
+}
+.lks-group img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Kafel drużyny, która nie ma jeszcze zdjęcia. Zamiast pustego miejsca
+   albo rozjechanej siatki — herb na klubowym tle, w tych samych
+   proporcjach co zwykłe zdjęcie. */
+.lks-group__ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.1), transparent 62%),
+    linear-gradient(150deg, var(--lks-red-dark) 0%, var(--lks-red) 100%);
+}
+.lks-group__ph img {
+  width: 46%;
+  max-width: 116px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+.lks-group__name {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 10px 12px 2px;
+  color: var(--md-default-fg-color);
+}
+.lks-group__coach {
+  padding: 0 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--lks-red-text);
+}
+/* Zakres lat ("11–12", "2017–2019") nie może się łamać na myślniku. */
+.lks-nw { white-space: nowrap; }
+/* Najwęższe telefony (ok. 320 px): kafel ma wtedy ~115 px szerokości,
+   a „R. Darnikowski" w zwykłym rozmiarze ledwo się w nim mieści. */
+@media screen and (max-width: 22em) {
+  .lks-group__coach { font-size: 0.7rem; }
+}
+.lks-group__age {
+  margin-top: auto;
+  padding: 4px 12px 12px;
+  font-size: 0.72rem;
+  color: var(--lks-muted);
+}
+
+/* -- Przełącznik drużyn na stronie grupy ---------------------- */
+/* Rodzic z dwójką dzieci w klubie wchodzi na stronę jednej drużyny
+   i często chce sprawdzić od razu drugą — bez tego przełącznika
+   jedyną drogą był powrót do listy w Naszych drużynach. Chipsy zawijają
+   się do kilku rzędów na wąskim ekranie, więc nigdy nie przycinają
+   żadnej nazwy ani nie wymagają przewijania w bok. */
+.md-typeset .lks-teamswitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 1.3rem;
+}
+.md-typeset .lks-teamswitch__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--lks-border);
+  background: var(--lks-surface);
+  color: var(--md-default-fg-color);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: border-color var(--lks-t), background var(--lks-t), color var(--lks-t);
+}
+.md-typeset .lks-teamswitch__chip:hover {
+  border-color: var(--lks-red);
+}
+.md-typeset .lks-teamswitch__chip.is-active {
+  background: var(--lks-red);
+  border-color: var(--lks-red);
+  color: var(--lks-white);
+}
+
+/* -- Zdjęcie drużyny na stronie grupy ------------------------- */
+/* Zdjęcie drużyny nie może spychać harmonogramu poniżej ekranu —
+   rodzic wraca na tę stronę po godziny treningu, nie po fotografię. */
+.md-typeset .lks-team-photo {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: var(--lks-r);
+  margin: 0 0 1.4rem;
+}
+
+/* -- Dane trenera (lista definicji) --------------------------- */
+.lks-coach {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 3px solid var(--lks-red);
+  border-radius: 0 var(--lks-r) var(--lks-r) 0;
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+}
+.md-typeset .lks-coach dl { margin: 0; }
+.md-typeset .lks-coach dt {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--lks-muted);
+  margin-top: 0.7rem;
+}
+.md-typeset .lks-coach dt:first-child { margin-top: 0; }
+.md-typeset .lks-coach dd {
+  margin: 2px 0 0;
+  font-size: 0.95rem;
+}
+.lks-coach .twemoji {
+  --md-icon-size: 1rem;
+  color: var(--lks-red-text);
+  margin-right: 4px;
+}
+
+/* -- Karta kontaktowa (ta sama mechanika) --------------------- */
+.lks-contact {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 3px solid var(--lks-red);
+  border-radius: 0 var(--lks-r) var(--lks-r) 0;
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+  max-width: 480px;
+}
+.md-typeset .lks-contact dl { margin: 0; }
+.md-typeset .lks-contact dt {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--lks-muted);
+  margin-top: 0.7rem;
+}
+.md-typeset .lks-contact dt:first-child { margin-top: 0; }
+.md-typeset .lks-contact dd { margin: 2px 0 0; font-size: 0.95rem; }
+.lks-contact .twemoji {
+  --md-icon-size: 1rem;
+  color: var(--lks-red-text);
+  margin-right: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KARTY (misja / wizja / wartości)
+   ═══════════════════════════════════════════════════════════════ */
+.lks-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 1.4rem 0 2rem;
+}
+@media screen and (min-width: 50em) {
+  .lks-cards { grid-template-columns: repeat(3, 1fr); }
+}
+.lks-card {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-top: 3px solid var(--lks-red);
+  border-radius: 0 0 var(--lks-r) var(--lks-r);
+  padding: 1.1rem 1.2rem;
+}
+.md-typeset .lks-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lks-card h3 .twemoji {
+  --md-icon-size: 1.1rem;
+  color: var(--lks-red-text);
+  flex: none;
+}
+.md-typeset .lks-card p { margin: 0; font-size: 0.9rem; color: var(--lks-muted); }
+
+/* -- Siatka zdjęć osiągnięć na podstronie --------------------- */
+.lks-ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 1.4rem 0;
+}
+.md-typeset .lks-ach-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--lks-r-sm);
+  display: block;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PLACEHOLDERY DO UZUPEŁNIENIA
+   ═══════════════════════════════════════════════════════════════ */
+.lks-fillme,
+.md-typeset .lks-fillme {
+  border: 2px dashed rgba(212, 4, 20, 0.32);
+  background: var(--lks-red-tint);
+  border-radius: var(--lks-r-sm);
+  padding: 11px 15px;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--lks-red-dark);
+  margin: 1rem 0;
+}
+[data-md-color-scheme="slate"] .lks-fillme {
+  color: var(--lks-red-on-dark);
+  border-color: rgba(212, 4, 20, 0.42);
+}
+.md-typeset .lks-fillme p:last-child { margin-bottom: 0; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .faq details {
+  border-radius: var(--lks-r-sm);
+  border: 1px solid var(--lks-border);
+  border-left: 3px solid var(--lks-red);
+  box-shadow: none;
+  margin: 0 0 12px;
+}
+.md-typeset .faq summary {
+  font-weight: 600;
+  background: var(--lks-surface-2);
+}
+.md-typeset .faq summary::before {
+  background-color: var(--lks-red) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ELEMENTY WSPÓLNE
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset table:not([class]) {
+  display: block;
+  overflow-x: auto;
+  border-radius: var(--lks-r-sm);
+  font-size: 0.82rem;
+}
+.md-typeset table:not([class]) th {
+  background: var(--lks-black);
+  color: var(--lks-white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.md-typeset .md-button {
+  border-radius: 28px;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  border-color: var(--lks-red);
+  font-weight: 700;
+}
+.md-typeset .md-button--primary {
+  background-color: var(--lks-red);
+  border-color: var(--lks-red);
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus-visible {
+  background-color: var(--lks-red-dark);
+  border-color: var(--lks-red-dark);
+}
+.md-typeset .md-button:not(.md-button--primary):hover {
+  color: var(--lks-red-text);
+  border-color: var(--lks-red);
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: var(--lks-r-sm);
+  border: 1px solid var(--lks-border);
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--lks-red);
+  box-shadow: var(--lks-shadow-lg);
+}
+
+/* Ikony wewnątrz treści dziedziczą kolor akcentu */
+.md-typeset h2 .twemoji,
+.md-typeset h3 .twemoji {
+  --md-icon-size: 1em;
+  color: var(--lks-red-text);
+  margin-right: 6px;
+}
+
+/* Zdjęcia w treści — zaokrąglenie i kursor lupy (glightbox) */
+.md-typeset img:not(.lks-team-photo):not(.no-lightbox) {
+  border-radius: var(--lks-r-sm);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FACEBOOK — osadzone posty z profilu klubu
+   Wtyczka Meta wczytuje się dopiero po kliknięciu: strona nie łączy
+   się z Facebookiem, dopóki odwiedzający tego nie zechce.
+   ═══════════════════════════════════════════════════════════════ */
+/* Wtyczka Meta ma twardy limit 500 px szerokości i nie da się go
+   obejść, więc zamiast rozciągać ją na siłę — centrujemy w kolumnie. */
+.md-typeset .lks-fb {
+  max-width: 500px;
+  margin: 1.4rem auto 2.2rem;
+}
+
+/* -- Kafel zachęty (stan przed kliknięciem) ------------------- */
+.md-typeset .lks-fb__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.8rem 1.3rem;
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-r);
+  background: var(--lks-surface);
+  box-shadow: var(--lks-shadow);
+}
+.md-typeset .lks-fb__icon {
+  width: 42px;
+  height: 42px;
+  fill: #1877f2;
+  margin-bottom: 0.7rem;
+}
+.md-typeset .lks-fb__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  margin: 0 0 0.35rem;
+}
+.md-typeset .lks-fb__desc {
+  font-size: 0.8rem;
+  color: var(--lks-muted);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  max-width: 40ch;
+}
+.md-typeset .lks-fb__btn {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  min-height: 44px;
+  padding: 10px 26px;
+  border: 0;
+  border-radius: var(--lks-r-sm);
+  background: var(--lks-red);
+  color: var(--lks-white);
+  cursor: pointer;
+  transition: filter var(--lks-t), transform var(--lks-t);
+}
+.md-typeset .lks-fb__btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.md-typeset .lks-fb__note {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--lks-muted);
+  margin: 0.9rem 0 0;
+  max-width: 44ch;
+}
+
+/* -- Wczytana wtyczka ----------------------------------------- */
+/* Tło jest jasne niezależnie od motywu, bo sama wtyczka Meta
+   nie ma wersji ciemnej i inaczej wisiałaby w powietrzu. */
+.md-typeset .lks-fb__frame {
+  display: block;
+  border: 1px solid var(--lks-border);
+  border-radius: var(--lks-r);
+  background: #fff;
+  max-width: 100%;
+  overflow: hidden;
+}
+.md-typeset .lks-fb__fallback {
+  font-size: 0.78rem;
+  margin: 0.7rem 0 0;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA 404
+   ═══════════════════════════════════════════════════════════════ */
+.lks-404 {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 0 0.8rem;
+  text-align: center;
+}
+.lks-404 .lks-lbl {
+  display: block;
+  text-align: center;
+}
+.lks-404__lead {
+  color: var(--lks-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 46ch;
+  margin: 0 auto 1.6rem;
+}
+.lks-404__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRZYCISK „ZADZWOŃ" (Dołącz, Kontakt)
+   Telefon to najszybsza droga kontaktu, a dotychczas numer był
+   schowany w akapicie. Duży, dotykowy przycisk z linkiem tel: —
+   na telefonie jedno dotknięcie zamiast przepisywania numeru.
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset a.lks-callbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 14px 28px;
+  margin: 1.3rem 0 1.6rem;
+  border-radius: 999px;
+  background: var(--lks-red);
+  color: var(--lks-white) !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  box-shadow: var(--lks-shadow);
+  transition: background var(--lks-t), transform var(--lks-t);
+}
+.md-typeset a.lks-callbtn:hover,
+.md-typeset a.lks-callbtn:focus-visible {
+  background: var(--lks-red-dark);
+  transform: translateY(-2px);
+}
+.md-typeset a.lks-callbtn .twemoji { font-size: 1.3rem; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset a.lks-callbtn { width: 100%; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   DWIE DRUŻYNY W JEDNEJ KATEGORII (U12, U13, U15)
+   Skróty na górze strony kategorii prowadzą do sekcji konkretnej
+   drużyny. Dwie kolumny na komputerze, jedna pod drugą na telefonie.
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .lks-subteams {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 1.2rem 0 1.8rem;
+}
+@media (min-width: 600px) {
+  .md-typeset .lks-subteams { grid-template-columns: 1fr 1fr; }
+}
+.md-typeset .lks-subteams__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px 12px 14px;
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  border-radius: var(--lks-r-sm);
+  background: var(--lks-surface);
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none !important;
+  box-shadow: var(--lks-shadow);
+  transition: transform var(--lks-t), box-shadow var(--lks-t), border-color var(--lks-t);
+}
+.md-typeset .lks-subteams__item:hover,
+.md-typeset .lks-subteams__item:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--lks-shadow-lg);
+  border-color: var(--lks-red);
+}
+.md-typeset .lks-subteams__k {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--lks-muted);
+}
+.md-typeset .lks-subteams__v {
+  order: -1;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+.md-typeset .lks-subteams__v::after {
+  content: " ↓";
+  color: var(--lks-red-text);
+}
+
+/* Zdjęcie drużyny, której jeszcze nie mamy — herb na klubowym tle,
+   ta sama wysokość i zaokrąglenie co zwykłe zdjęcie drużyny. */
+.md-typeset .lks-photo-ph {
+  width: 100%;
+  height: 300px;
+  max-height: 46vw;
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--lks-r);
+  margin: 0 0 1.4rem;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.1), transparent 62%),
+    linear-gradient(150deg, var(--lks-red-dark) 0%, var(--lks-red) 100%);
+}
+.md-typeset .lks-photo-ph img {
+  width: auto;
+  height: 52%;
+  max-height: 150px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  border-radius: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DANE BIURA — strona główna i stopka
+   ═══════════════════════════════════════════════════════════════ */
+.lks-final__phone a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.lks-final__phone a:hover { color: var(--lks-white) !important; }
+.lks-final__contact {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #a0968c;
+}
+.lks-final__contact a {
+  color: var(--lks-white) !important;
+  font-weight: 600;
+}
+
+/* Stopka: nazwa klubu w pierwszej linii, dane biura w drugiej. */
+.md-copyright__highlight {
+  line-height: 1.7;
+}
+.md-copyright__highlight a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 2px;
+}
+.md-copyright__highlight a:hover {
+  color: var(--md-footer-fg-color);
+  text-decoration-color: currentColor;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KOMPAKTOWY PASEK GÓRNY
+   Ogłoszenie + nagłówek + zakładki zajmowały na laptopie ok. 240 px,
+   a na telefonie ok. 240 px (sam baner 180 px). Poniższe reguły
+   przesłaniają wcześniejsze wartości: baner w jednej linii, mniejszy
+   herb i niższe zakładki. Herb nadal jest wyraźnie widoczny.
+   ═══════════════════════════════════════════════════════════════ */
+.md-banner__inner { margin: 0 auto; padding: 0; max-width: none; }
+.lks-announce { padding: 5px 16px; }
+.lks-announce__inner { gap: 4px 14px; flex-wrap: nowrap; }
+.lks-announce__text {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px 12px;
+  text-align: left;
+  line-height: 1.2;
+}
+.lks-announce__text strong { font-size: 0.9rem; }
+.lks-announce__sub { font-size: 0.66rem; }
+.lks-announce__btn {
+  min-height: 28px;
+  padding: 3px 14px;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Poniżej ok. 1200 px podpis nie mieści się w jednej linii z przyciskiem. */
+@media screen and (max-width: 74.9375em) {
+  .lks-announce__sub { display: none; }
+}
+
+/* Telefon: tekst po lewej, przycisk po prawej, oba najwyżej w dwóch
+   liniach — baner ma ok. 50 px zamiast 180. */
+@media screen and (max-width: 29.9375em) {
+  .lks-announce { padding: 6px 12px; }
+  .lks-announce__inner { gap: 10px; justify-content: space-between; }
+  .lks-announce__text { flex: 1 1 auto; min-width: 0; }
+  .lks-announce__text strong { font-size: 0.78rem; line-height: 1.1; letter-spacing: 0; }
+  .lks-announce__btn {
+    width: auto;
+    flex: 0 0 auto;
+    max-width: 42%;
+    min-height: 32px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Herb: mniejszy, ale nadal największy element paska. */
+.md-header__button.md-logo { padding: 0.25rem 0.5rem 0.25rem 0.1rem; }
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg { height: 2.9rem; width: 2.9rem; }
+@media screen and (max-width: 76.1875em) {
+  .md-header__button.md-logo { padding: 0.2rem 0.35rem 0.2rem 0; }
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg { height: 2rem; width: 2rem; }
+}
+
+/* Zakładki: niższy rząd, litery bez zmian. */
+.md-tabs__list { height: 2rem; contain-intrinsic-size: 0 2rem; }
+.md-tabs__link { margin-top: 0.45rem; font-size: 0.72rem; }
+
+/* Zdjęcie grupy na stronie „Nasz klub” — plik jest już przycięty do
+   zawodników, więc nie obcinamy go dodatkowo. */
+.md-typeset .lks-team-photo--wide {
+  max-height: none;
+  height: auto;
+  aspect-ratio: 1310 / 400;
+  object-position: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KADROWANIE ZDJĘĆ
+   Zdjęcia są przycięte do zawodników już w plikach:
+   foto-*.jpg  — zdjęcia drużyn na podstronach (pokazywane w całości,
+                 bez dodatkowego obcinania przez przeglądarkę),
+   kafel-*.jpg — kafelki drużyn i osiągnięć, zawsze w proporcji 3:2.
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset .lks-team-photo {
+  max-height: none;
+  height: auto;
+  object-fit: fill;
+}
+.lks-group img,
+.lks-group__ph { aspect-ratio: 3 / 2; }
+.lks-ach__card { aspect-ratio: 3 / 2; min-height: 0; }
+.md-typeset .lks-ach-grid img { aspect-ratio: 3 / 2; }
+.md-typeset .lks-photo-ph { height: auto; aspect-ratio: 2 / 1; max-height: none; }
+
+/* „ŁKS x Szkoła Gortata” — „x” zawsze małą literą, także w nagłówkach
+   pisanych wersalikami. */
+.lks-lc { text-transform: none; }
+.md-typeset .lks-team-photo { margin-bottom: 0.2rem; }
+/* Tytuły w wynikach wyszukiwania — bez wersalików, „x” zostaje małe. */
+.md-search-result .md-typeset h1,
+.md-search-result .md-typeset h2 { text-transform: none; }
+/* Dłuższa nazwa drużyny na kafelku (ŁKS Politechnika Łódzka). */
+.lks-group__name--long { font-size: 1.02rem; line-height: 1.08; }
+
+/* ═══════════════════════════════════════════════════════════════
+   HARMONOGRAM TRENINGÓW — jedna karta na dzień
+   Tabela w Markdownie zostaje (łatwo ją uzupełniać: Dzień | Godziny | Hala),
+   a CSS zamienia każdy wiersz w kartę. Dzięki temu na telefonie nic nie
+   wychodzi poza ekran, nawet przy długiej nazwie hali.
+   ═══════════════════════════════════════════════════════════════ */
+html .md-typeset .lks-schedule .md-typeset__table { display: block; width: 100%; }
+html .md-typeset .lks-schedule table:not([class]) {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0 1rem;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+html .md-typeset .lks-schedule .md-typeset__table { border: 0; box-shadow: none; background: none; }
+.md-typeset .lks-schedule table thead { display: none; }
+.md-typeset .lks-schedule table tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  gap: 12px;
+}
+.md-typeset .lks-schedule table tr {
+  display: grid;
+  gap: 2px;
+  padding: 0.8rem 1rem;
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 3px solid var(--lks-red);
+  border-radius: 0 var(--lks-r) var(--lks-r) 0;
+}
+html .md-typeset .lks-schedule table:not([class]) td {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .lks-schedule table td:nth-child(1) {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.md-typeset .lks-schedule table td:nth-child(2)::before,
+.md-typeset .lks-schedule table td:nth-child(3)::before {
+  display: inline-block;
+  min-width: 4.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--lks-muted);
+}
+.md-typeset .lks-schedule table td:nth-child(2)::before { content: "Godziny"; }
+.md-typeset .lks-schedule table td:nth-child(3)::before { content: "Hala"; }
+
+/* ═══════════════════════════════════════════════════════════════
+   POLA DO KLIKNIĘCIA — ok. 44 px (zalecenie dla ekranów dotykowych)
+   ═══════════════════════════════════════════════════════════════ */
+.md-post__action a,
+.md-post__action .md-button,
+.md-content__button + .md-post__action a,
+.md-typeset a.md-post__action,
+.md-post__action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+/* Linki w ramkach kontaktu zostają w linii tekstu (inline), żeby przecinek
+   i dalszy tekst, np. „, II piętro”, nie przeskakiwały same do nowego wiersza.
+   Pole dotyku powiększa pionowy padding (ok. 44 px). */
+.md-typeset .lks-contact dd a { display: inline; padding: 0.68em 0; }
+.md-footer__link { min-height: 44px; }
+.md-search__icon[for="__search"],
+.md-search__icon { min-width: 44px; }
+.md-search__icon[type="reset"] { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.md-footer-meta .md-social__link { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.md-footer-meta .md-social__link svg { max-height: 1.1rem; }
+.md-top { min-height: 44px; }
+.md-header__button:not([hidden]) { min-width: 44px; min-height: 44px; }
+@media (pointer: coarse) {
+  .lks-announce__btn { min-height: 44px; }
+  .lks-teamswitch__chip, .lks-subteams a { min-height: 44px; display: inline-flex; align-items: center; }
+  .md-typeset .md-button { min-height: 44px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PASEK NA TELEFONIE — menu (lewy brzeg), tytuł strony, lupa (prawy brzeg)
+   Herb klubu jest tylko w menu. Przełącznik motywu jest u dołu otwartego
+   menu (extra.js). Dzięki temu tytuł mieści się w jednej linii od 320 px.
+   ═══════════════════════════════════════════════════════════════ */
+.lks-drawer-tools { display: none; }
+
+@media screen and (max-width: 44.9375em) {
+  .md-header__option { display: none; }
+  .md-header .md-header__button.md-logo { display: none !important; }
+
+  /* Hamburger przy lewym brzegu, lupa przy prawym — pola dotyku 48 px. */
+  .md-header__inner { padding: 0; }
+  .md-header__button[for="__drawer"],
+  .md-header__button[for="__search"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .md-header__title {
+    overflow: hidden;
+    min-width: 0;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+  }
+  .md-header__topic {
+    display: block;
+    -webkit-line-clamp: unset;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 2.4rem;
+  }
+
+  /* Dolny pasek menu: dwa duże przyciski, widoczne na każdym poziomie. */
+  .lks-drawer-tools {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    border-top: 1px solid var(--lks-border);
+    background: var(--md-default-bg-color);
+  }
+  .lks-drawer-tools__btn {
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 48px;
+    padding: 0.5rem 0.7rem;
+    border: 0;
+    background: none;
+    color: var(--md-default-fg-color);
+    font: 700 0.78rem "Barlow Condensed", sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .lks-drawer-tools__theme { flex: 1 1 auto; }
+  .lks-drawer-tools__btn::before {
+    content: "";
+    flex: 0 0 1.15rem;
+    height: 1.15rem;
+    background: currentColor;
+    -webkit-mask: var(--lks-ico) center / contain no-repeat;
+    mask: var(--lks-ico) center / contain no-repeat;
+  }
+  .lks-drawer-tools__theme { --lks-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2A10 10 0 1 0 12 22 10 10 0 0 0 12 2m0 2v16a8 8 0 0 1 0-16'/%3E%3C/svg%3E"); }
+  .lks-drawer-tools__btn:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: -2px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KOMUNIKATY „WKRÓTCE", ADRES STRONY W AKTUALNOŚCIACH
+   ═══════════════════════════════════════════════════════════════ */
+.lks-soon,
+.md-typeset .lks-soon {
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  background: var(--md-code-bg-color);
+  border-radius: var(--lks-r-sm);
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin: 1rem 0;
+}
+.md-typeset .lks-soon p:last-child { margin-bottom: 0; }
+.md-typeset .lks-soon .twemoji { vertical-align: -0.2em; margin-right: 0.3em; }
+
+.md-typeset .lks-address {
+  border: 2px solid var(--lks-red);
+  border-radius: var(--lks-r-sm);
+  padding: 1.1rem 1.2rem;
+  margin: 1.2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.md-typeset .lks-address p { margin: 0.2em 0; }
+.md-typeset .lks-address strong,
+.md-typeset .lks-address a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.4rem, 1rem + 3.5vw, 2rem);
+  font-weight: 800;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STAŁY PASEK „ZADZWOŃ / NAPISZ” (tylko telefon)
+   ═══════════════════════════════════════════════════════════════ */
+.lks-callbar { display: none; }
+@media screen and (max-width: 44.9375em) {
+  .lks-callbar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    gap: 8px;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    background: var(--md-default-bg-color);
+    border-top: 1px solid var(--lks-border);
+    box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.1);
+  }
+  .lks-callbar__btn {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 999px;
+    font: 800 1rem "Barlow Condensed", sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .lks-callbar__call { background: var(--lks-red); color: #fff; }
+  .lks-callbar__mail {
+    background: transparent;
+    color: var(--md-default-fg-color);
+    border: 2px solid var(--md-default-fg-color);
+  }
+  .lks-callbar__btn:active { opacity: 0.85; }
+  .lks-callbar__btn:focus-visible { outline: 3px solid var(--md-accent-fg-color); outline-offset: 2px; }
+  body { padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
+  [data-md-color-scheme="slate"] .lks-callbar__call { background: var(--lks-red); }
+}
+
+/* Drugi przycisk „Napisz” obok „Zadzwoń” na stronach kontaktowych. */
+.md-typeset a.lks-callbtn.lks-callbtn--alt {
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
+  border: 2px solid var(--md-default-fg-color);
+  box-shadow: none;
+  margin-top: -0.7rem;
+}
+.md-typeset a.lks-callbtn.lks-callbtn--alt:hover,
+.md-typeset a.lks-callbtn.lks-callbtn--alt:focus-visible {
+  background: var(--md-code-bg-color);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KONTRAST ODNOŚNIKÓW (min. 4,5:1)
+   Domyślna czerwień Materiala (#ef5350) miała ok. 3,4:1 na bieli.
+   Przyciski i tła zostają w czerwieni klubowej, zmienia się tylko
+   kolor tekstu odnośników.
+   ═══════════════════════════════════════════════════════════════ */
+[data-md-color-primary="red"] {
+  --md-typeset-a-color: var(--lks-red);
+  --md-accent-fg-color: var(--lks-red);
+}
+[data-md-color-scheme="slate"][data-md-color-primary="red"] {
+  --md-typeset-a-color: var(--lks-red-on-dark);
+  --md-accent-fg-color: var(--lks-red-on-dark);
+}
+.md-typeset .md-meta__link,
+.md-post__meta a { text-decoration: underline; text-underline-offset: 0.15em; }
+
+/* Przyciski konturowe i odnośniki w tekście: czytelny kolor + podkreślenie. */
+.md-typeset .md-button:not(.md-button--primary) {
+  color: var(--md-typeset-a-color);
+  border-color: var(--md-typeset-a-color);
+}
+.md-content p a:not(.md-button):not([class*="lks-"]):not(.headerlink),
+.md-content dd a:not(.md-button):not([class*="lks-"]),
+.md-content li a:not(.md-button):not([class*="lks-"]):not(.md-nav__link):not(.md-post__action) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   JEDNOLITE BOXY (wariant A: biała karta, kolorowy pasek z lewej)
+   Kolor oznacza znaczenie: czerwień = klub/kontakt, zieleń = nabór,
+   niebieski = info, bursztyn = „wkrótce”/wskazówka, szary = pytania.
+   ═══════════════════════════════════════════════════════════════ */
+html body{--tone-red:#d40414;--tone-blue:#0b5fa5;--tone-green:#1b7a3a;--tone-amber:#8f5314;--tone-grey:#6b6259}
+html body[data-md-color-scheme="slate"]{--tone-red:#ff4b4b;--tone-blue:#6cb6f5;--tone-green:#5fd187;--tone-amber:#f0a65a;--tone-grey:#a0968c}
+html body .md-content .md-typeset :is(.admonition,details,.lks-coach,.lks-contact,.lks-soon,.lks-card,.lks-address){--bx:var(--tone-red);box-sizing:border-box;box-shadow:none;margin:1.2rem 0;padding:.9rem 1.1rem;font-size:.85rem;line-height:1.55;text-align:left;max-width:none;overflow:visible}
+html body .md-content .md-typeset :is(.admonition.info){--bx:var(--tone-blue)}
+html body .md-content .md-typeset :is(.admonition.success){--bx:var(--tone-green)}
+html body .md-content .md-typeset :is(.admonition.tip,.lks-soon){--bx:var(--tone-amber)}
+html body .md-content .md-typeset :is(details.question){--bx:var(--tone-grey)}
+html body .md-content .md-typeset :is(.admonition,details)>:is(.admonition-title,summary){background:none;margin:-.15rem 0 .35rem;padding:0 0 0 1.7rem;font-weight:700;font-size:.85rem;min-height:0}
+html body .md-content .md-typeset details>summary{margin:-.15rem 0 0;padding-right:1.8rem}
+html body .md-content .md-typeset details[open]>summary{margin-bottom:.35rem}
+html body .md-content .md-typeset :is(.admonition,details)>:is(.admonition-title,summary)::before{background-color:var(--bx);left:0;top:.15em}
+html body .md-content .md-typeset details>summary::after{background-color:var(--bx);right:0}
+html body .md-content .md-typeset :is(.admonition,details) p{margin:.3em 0}
+html body .md-content .md-typeset :is(.lks-coach,.lks-contact) dd{font-size:.9rem}
+html body .md-content .md-typeset .lks-address{text-align:center}
+html body .md-content .md-typeset .lks-cards{gap:12px}
+html body .md-content .md-typeset .lks-card{margin:0}
+html body .md-content .md-typeset :is(.admonition,details,.lks-coach,.lks-contact,.lks-soon,.lks-card,.lks-address){background:var(--lks-surface);border:1px solid var(--lks-border);border-left:4px solid var(--bx);border-radius:10px}
+html body .md-content .md-typeset .lks-address{border-width:1px 1px 1px 4px}
+html body .md-content .md-typeset :is(.admonition,details,.lks-coach,.lks-contact,.lks-soon,.lks-card,.lks-address)>:is(p,dl):first-child{margin-top:0}
+html body .md-content .md-typeset :is(.admonition,details,.lks-soon,.lks-address)>p:last-child{margin-bottom:0}
+html body .md-content .md-typeset .grid.cards>ul>li{--bx:var(--tone-red);background:var(--lks-surface);border:1px solid var(--lks-border);border-left:4px solid var(--bx);border-radius:10px;padding:.9rem 1.1rem;margin:0;box-shadow:none}
+html body .md-content .md-typeset .grid.cards>ul>li:hover{border-color:var(--bx);box-shadow:var(--lks-shadow)}
+html body .md-content .md-typeset .grid.cards>ul>li>:is(h3,p):first-child{margin-top:0}
+html body .md-content .md-typeset .grid.cards>ul>li>p:last-child{margin-bottom:0}
+html body .md-content .md-typeset a[href^="tel:"]{white-space:nowrap}
+html body .md-content .md-typeset table a{text-decoration:underline;text-underline-offset:2px}
+
+/* -- Adres obiektu pod nazwą hali w harmonogramie --------------- */
+html body .md-content .md-typeset .lks-schedule table td:is(:nth-child(2),:nth-child(3)){display:grid;grid-template-columns:4.2rem minmax(0,1fr);align-items:baseline}
+html body .md-content .md-typeset .lks-schedule .lks-addr{grid-column:2;font-size:.8em;color:var(--lks-muted)}
+/* Karty harmonogramu — ten sam wygląd co pozostałe boxy (wariant A) */
+html body .md-content .md-typeset .lks-schedule table tr{border:1px solid var(--lks-border);border-left:4px solid var(--tone-red);border-radius:10px;padding:.9rem 1.1rem}
+
+/* -- Stopka: dane biura jako osobne linki z polem dotyku 44 px ---- */
+.md-copyright__highlight .lks-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.1rem;
+  margin-top: 0.15rem;
+}
+.md-copyright__highlight .lks-foot a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.15rem;
+}
+@media screen and (max-width: 44.9375em) {
+  .md-copyright__highlight .lks-foot { flex-direction: column; gap: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA GŁÓWNA I NASZE DRUŻYNY — runda 3
+   ═══════════════════════════════════════════════════════════════ */
+
+/* -- Pasek naboru na telefonie: jedna linia, cały pasek klikalny -- */
+.lks-announce__m { display: none; }
+@media screen and (max-width: 29.9375em) {
+  .lks-announce { padding: 0; }
+  .lks-announce__text,
+  .lks-announce__btn { display: none; }
+  .lks-announce__inner { display: block; }
+  .lks-announce__m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+    min-height: 40px;
+    padding: 0 12px;
+    font: 600 0.8rem/1.1 "Barlow Condensed", sans-serif;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--md-default-fg-color);
+    text-decoration: none;
+  }
+  .lks-announce__m strong { color: var(--lks-red-text); font-weight: 800; }
+  [data-md-color-scheme="slate"] .lks-announce__m strong { color: var(--lks-red-on-dark); }
+  .lks-announce__m:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: -3px; }
+}
+
+/* -- Siatka drużyn: 2 kolumny na telefonie, 4 od 600 px; 2 liga jako
+      szeroki pasek pod młodzieżą, więc nic nie zostaje samotnie ------ */
+.lks-groups { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 600px) { .lks-groups { grid-template-columns: repeat(4, 1fr); } }
+
+.lks-group__media { position: relative; display: block; }
+.lks-group__media > img,
+.lks-group__media > .lks-group__ph { display: flex; width: 100%; aspect-ratio: 3 / 2; }
+.lks-group__media > img { display: block; object-fit: cover; }
+
+.lks-badge {
+  position: absolute;
+  padding: 3px 7px;
+  border-radius: 999px;
+  font: 700 0.62rem/1.2 "Barlow Condensed", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.lks-badge--open { left: 8px; bottom: 8px; background: var(--lks-red); color: #fff; }
+.lks-badge--count { right: 8px; top: 8px; background: rgba(23, 20, 15, 0.82); color: #fff; }
+/* Na kafelku herbu (tło czerwone) plakietka naboru jest biała. */
+.lks-group__ph ~ .lks-badge--open { background: #fff; color: var(--lks-red); }
+
+.lks-group__name { padding-top: 10px; }
+.lks-group__age { padding-top: 6px; }
+
+/* Szeroki kafel 2 ligi */
+.lks-group--wide { grid-column: 1 / -1; flex-direction: row; align-items: stretch; }
+.lks-group--wide .lks-group__media { flex: 0 0 42%; }
+.lks-group--wide .lks-group__media > img { height: 100%; aspect-ratio: auto; min-height: 7rem; }
+.lks-group__body { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; padding: 4px 0 0; }
+.lks-group__kicker {
+  padding: 10px 12px 0;
+  font: 700 0.64rem/1 "Barlow Condensed", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lks-wood);
+}
+[data-md-color-scheme="slate"] .lks-group__kicker { color: var(--lks-wood-light); }
+.lks-group--wide .lks-group__name { padding-top: 4px; }
+@media (min-width: 600px) {
+  .lks-group--wide .lks-group__media { flex-basis: 25%; }
+  .lks-group--wide .lks-group__body { justify-content: center; padding: 0.4rem 0.6rem; }
+  .lks-group--wide .lks-group__name--long { font-size: 1.35rem; }
+  .lks-group--wide .lks-group__age { margin-top: 0; }
+}
+
+/* -- Aktualności na stronie głównej ------------------------------- */
+.lks-news { padding-top: 0; }
+.lks-news__list { display: grid; gap: 12px; margin: 1.2rem 0 0.6rem; }
+@media (min-width: 60em) { .lks-news__list { grid-template-columns: repeat(3, 1fr); } }
+.lks-news__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.9rem 1.1rem;
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  border-radius: 10px;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none !important;
+  transition: box-shadow var(--lks-t), border-color var(--lks-t);
+}
+.lks-news__item:hover,
+.lks-news__item:focus-visible { box-shadow: var(--lks-shadow); border-color: var(--lks-red); }
+.lks-news__date { font-size: 0.72rem; font-weight: 600; color: var(--lks-muted); }
+.lks-news__title { font: 800 1.2rem/1.1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.lks-news__sum { font-size: 0.82rem; line-height: 1.55; color: var(--lks-muted); }
+.lks-news__more { margin-top: 4px; font-size: 0.8rem; font-weight: 700; color: var(--md-typeset-a-color); }
+.lks-news__all { margin: 0.4rem 0 0; font-size: 0.85rem; }
+.lks-news__all a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* -- Krótsza strona główna na telefonie --------------------------- */
+@media screen and (max-width: 44.9375em) {
+  /* Osiągnięcia: dwie kolumny zamiast jednej */
+  .lks-ach { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .lks-ach__card { min-height: 0; }
+  /* „Drużyna zostaje na lata”: zdjęcie obok tekstu */
+  .lks-spot { grid-template-columns: 38% 1fr; gap: 0.8rem; margin-bottom: 1.1rem; }
+  .lks-spot--rev .lks-spot__img { order: 0; }
+  .lks-spot__img img { aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--lks-r-sm); }
+  .lks-spot__txt h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+  .lks-spot__txt p { font-size: 0.8rem; line-height: 1.5; }
+  /* Dla firm: trzy liczby w jednym rzędzie */
+  .lks-spons .lks-nums { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .lks-spons .lks-num { padding: 9px 8px; }
+  .lks-spons .lks-num__v { font-size: 1.15rem; }
+  .lks-spons .lks-num__l { font-size: 0.56rem; letter-spacing: 0.04em; }
+}
+
+/* -- Linki w kartach: większe pole dotyku bez zmiany układu -------- */
+.md-typeset :is(.lks-coach, .lks-contact) dd { line-height: 1.85; }
+.md-typeset :is(.lks-coach, .lks-contact, .lks-soon, .admonition, details) a:not(.md-button),
+.md-typeset .grid.cards > ul > li a:not(.md-button) {
+  padding: 0.55em 0.1em;
+  margin: -0.55em -0.1em;
+}
+/* Na stronie „Nasze drużyny” Markdown owija każdy kafel w <p>, który
+   blokował wyrównanie wysokości i szeroki kafel 2 ligi. */
+.md-typeset .lks-groups > p { display: contents; }
+/* Jeden wpis w Aktualnościach: karta na szerokość tekstu, nie w wąskiej kolumnie. */
+@media (min-width: 60em) { .lks-news__item:only-child { grid-column: 1 / -1; max-width: 46rem; } }
+/* Linki w zwykłym tekście i w harmonogramie: pole dotyku ok. 40 px bez zmiany układu. */
+.md-content .md-typeset :is(p, li, dd, td) > a:not([class]),
+.md-content .md-typeset .lks-schedule td a {
+  padding: 0.55em 0.1em;
+  margin: -0.55em -0.1em;
+}
+.md-post__meta a, .md-post__categories a { display: inline-block; padding: 0.6em 0.15em; margin: -0.6em -0.15em; }
+/* Nieparzysta liczba kart w dwóch kolumnach: ostatnia na całą szerokość, bez dziury obok. */
+@media (min-width: 45em) {
+  .md-typeset .grid.cards > ul > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRUPY PRZYCISKÓW — jednakowa wielkość i stały odstęp
+   Dwa przyciski obok siebie (Dołącz / Nasze drużyny, Skontaktuj się
+   z biurem / numer, Zadzwoń / Napisz) miały różną szerokość, a na
+   telefonie stykały się krawędziami. Teraz każda grupa to rząd
+   przycisków o równej szerokości i wysokości; gdy brakuje miejsca,
+   zawijają się w kolumnę, nadal równe, z odstępem 0,75 rem.
+   ═══════════════════════════════════════════════════════════════ */
+.lks-btn,
+.md-typeset .md-button {
+  box-sizing: border-box;
+  min-height: 50px;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+.lks-hero__cta,
+.md-typeset p:has(> .md-button ~ .md-button) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+.lks-hero__cta .lks-btn,
+.md-typeset p:has(> .md-button ~ .md-button) > .md-button {
+  flex: 1 1 0;
+  min-width: 14rem;
+  max-width: 18rem;
+}
+/* Strona 404: pięć przycisków w równej siatce. */
+.lks-404__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.75rem;
+  max-width: 42rem;
+}
+.lks-404__links .md-button { width: 100%; }
+/* „Zadzwoń” / „Napisz”: ta sama wysokość (obwódka także w czerwonym). */
+.md-typeset a.lks-callbtn { border: 2px solid var(--lks-red); box-sizing: border-box; }
+.md-typeset a.lks-callbtn.lks-callbtn--alt { border-color: var(--md-default-fg-color); }
+
+/* ═══════════════════════════════════════════════════════════════
+   STRONA GŁÓWNA — „CHCESZ DOŁĄCZYĆ”: koordynatorzy jako pierwszy kontakt
+   ═══════════════════════════════════════════════════════════════ */
+.lks-final__coords {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 40rem;
+  margin: 1.4rem auto 0;
+}
+@media screen and (min-width: 45em) {
+  .lks-final__coords { grid-template-columns: 1fr 1fr; }
+}
+.lks-final__coord {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--lks-r);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+}
+.lks-final__who { color: #a0968c; }
+.lks-final__coord a {
+  color: var(--lks-white) !important;
+  font-weight: 600;
+  word-break: break-word;
+}
+.lks-final__coord a.lks-final__tel {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--lks-wood-light) !important;
+  text-decoration: none !important;
+}
+.lks-final .lks-final__contact { margin-top: 1.2rem; }
+
+/* Tło strony głównej na laptopie: przyciemnienie z lewej strony, żeby
+   nagłówek nie konkurował z twarzami zawodników pod nim. */
+@media screen and (min-width: 60em) {
+  .lks-hero__veil::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      rgba(15, 13, 12, 0.72) 0%,
+      rgba(15, 13, 12, 0.5) 34%,
+      rgba(15, 13, 12, 0) 60%);
+  }
+}
+
+/* Kompaktowy blok „Kontakt i zapisy” na stronach drużyn. */
+.md-typeset .lks-contact--compact dd { margin-bottom: 0.7rem; }
+.md-typeset .lks-contact--compact dt { font-weight: 400; }
+
+/* Adres szkoły pod nagłówkiem harmonogramu grup naborowych */
+.md-typeset .lks-addr-line { margin: -0.4em 0 0.8em; color: var(--lks-muted); font-size: 0.85em; }
+
+/* Nagłówek: bez logo, sama nazwa (ŁKS Koszykówka Męska) */
+.md-header .md-header__button.md-logo { display: none !important; }
+.md-typeset .lks-subteams__item { align-items: flex-start; }
+
+/* Logo sponsora/nazwy drużyny: mała ramka z tekstem */
+.md-typeset .lks-teamname {
+  display: flex; align-items: center; gap: 14px;
+  margin: 1rem 0; padding: 10px 14px;
+  border: 1px solid var(--lks-border); border-radius: var(--lks-r-sm);
+  background: var(--lks-surface);
+}
+.md-typeset .lks-teamname img { flex: 0 0 auto; height: auto; margin: 0; background: transparent; }
+.md-typeset .lks-teamname--wide img { background: #fff; padding: 4px 6px; border-radius: 4px; }
+.md-typeset .lks-teamname p { margin: 0; }
+@media (max-width: 36em) {
+  .md-typeset .lks-teamname { gap: 10px; padding: 8px 10px; }
+  .md-typeset .lks-teamname img { width: 48px; }
+  .md-typeset .lks-teamname--wide img { width: 88px; }
+}
+/* Logo w prawym górnym rogu kafelka drużyny; plakietka „2 drużyny” przeszła w lewy górny */
+.lks-group__media > img.lks-group__logo {
+  position: absolute; top: 8px; right: 8px; left: auto;
+  width: 38px; height: 38px; aspect-ratio: 1; object-fit: contain;
+  padding: 3px; background: #fff; border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.lks-badge--count { right: auto; left: 8px; }
+.md-typeset .lks-teamname > p:has(> img) { flex: 0 0 auto; margin: 0; line-height: 0; }
+.md-typeset .lks-teamname img { max-width: none; width: 56px; }
+.md-typeset .lks-teamname--wide img { width: 120px; }
+@media (max-width: 36em) {
+  .md-typeset .lks-teamname img { width: 48px; }
+  .md-typeset .lks-teamname--wide img { width: 96px; }
+}
+/* Logo przy tekście bez ramki — spójnie z resztą strony */
+.md-typeset .lks-teamname { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+/* Menu boczne (szuflada) bez logo — tylko nazwa */
+.md-nav__title .md-logo, .md-nav--primary > .md-nav__title .md-nav__button.md-logo { display: none !important; }
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary > .md-nav__title[for="__drawer"] { height: auto; padding: 1rem .8rem .7rem; }
+}
+/* ═══ 1. liga — ŁKS CoolPack (strona główna) ═══ */
+.lks-btn--outline {
+  border: 2px solid var(--lks-red);
+  color: var(--lks-red-text) !important;
+}
+[data-md-color-scheme="slate"] .lks-btn--outline { border-color: var(--lks-red-on-dark); color: var(--lks-red-on-dark) !important; }
+.lks-btn--outline:hover,
+.lks-btn--outline:focus-visible { background: rgba(212, 4, 20, 0.08); transform: translateY(-2px); }
+.lks-pro { display: grid; grid-template-columns: 160px 1fr; gap: 2rem; align-items: center; }
+.lks-pro__logo { width: 160px; height: auto; }
+.lks-pro .lks-lead { margin-bottom: 1.2rem; }
+.lks-pro__btns { display: grid; grid-template-columns: repeat(2, minmax(0, 15rem)); gap: 12px; }
+@media screen and (max-width: 44.9375em) {
+  .lks-pro { grid-template-columns: 1fr; gap: 1rem; text-align: left; }
+  .lks-pro__logo { width: 112px; }
+  .lks-pro__btns { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lks-pro__btns .lks-btn { padding: 12px 10px; font-size: 0.72rem; text-align: center; }
+}
+/* Logo drużyny 1. ligi w treści stron */
+.md-typeset .lks-teamname--pro img { width: 96px; }
+@media screen and (max-width: 44.9375em) { .md-typeset .lks-teamname--pro img { width: 72px; } }
+.md-typeset .lks-fb__logo { width: 64px; height: auto; margin: 0 auto 0.6rem; display: block; }
+.lks-sec--pro { width: 100%; box-sizing: border-box; }
+.md-typeset .md-button .twemoji { margin-right: 0.4em; }
+.md-typeset .lks-photo-ph__icon { width: auto; height: 46%; max-height: 130px; fill: #fff; opacity: 0.9; }
+
+/* ═══ Herb (logo.png) w lewym górnym rogu paska — desktop i telefon ═══ */
+.md-header .md-header__button.md-logo {
+  display: inline-flex !important;
+  align-items: center;
+  order: -1;
+  margin: 0;
+  padding: 0.2rem 0.6rem 0.2rem 0.1rem;
+}
+.md-header .md-header__button.md-logo img { height: 2.6rem; width: auto; }
+@media screen and (max-width: 76.1875em) {
+  .md-header .md-header__button.md-logo { padding: 0.15rem 0.3rem 0.15rem 0.3rem; }
+  .md-header .md-header__button.md-logo img { height: 2rem; }
+}
+@media screen and (max-width: 22.5em) {
+  .md-header .md-header__button.md-logo { padding: 0.1rem 0.2rem; }
+  .md-header .md-header__button.md-logo img { height: 1.7rem; }
+  .md-header__title { margin-left: 0.3rem !important; margin-right: 0 !important; }
+}
+
+/* Logo CoolPack: dwie wersje barwne (#D40414 jasny, #FF4B4B ciemny motyw) */
+.lks-logo-dark { display: none !important; }
+[data-md-color-scheme="slate"] .lks-logo-light { display: none !important; }
+[data-md-color-scheme="slate"] .lks-logo-dark { display: revert !important; }
+[data-md-color-scheme="slate"] .md-typeset .lks-fb__logo.lks-logo-dark { display: block !important; }
+
+/* Telefon i tablet: najpierw ikona menu, potem herb, potem tytuł i lupa */
+@media screen and (max-width: 76.1875em) {
+  .md-header__button[for="__drawer"] { order: -2; }
+  .md-header .md-header__button.md-logo { order: -1; }
+}
+
+/* Przycisk konturowy (biały z czerwonym napisem): po najechaniu i przy
+   fokusie tło czerwone, napis biały — w obu motywach. */
+.md-typeset .md-button:not(.md-button--primary):hover,
+.md-typeset .md-button:not(.md-button--primary):focus,
+.md-typeset .md-button:not(.md-button--primary):focus-visible {
+  background-color: var(--lks-red);
+  border-color: var(--lks-red);
+  color: #ffffff !important;
+}
+.md-typeset .md-button:not(.md-button--primary):hover *,
+.md-typeset .md-button:not(.md-button--primary):focus *,
+.md-typeset .md-button:not(.md-button--primary):focus-visible * {
+  color: #ffffff !important;
+  fill: currentColor;
+}
+.lks-btn--outline:hover,
+.lks-btn--outline:focus-visible,
+[data-md-color-scheme="slate"] .lks-btn--outline:hover,
+[data-md-color-scheme="slate"] .lks-btn--outline:focus-visible {
+  background: var(--lks-red);
+  border-color: var(--lks-red);
+  color: #ffffff !important;
+}
+
+/* Herb w ciemnym motywie: jasne kółko pod spodem, żeby był wyraźny na czarnym pasku */
+[data-md-color-scheme="slate"] .md-header .md-header__button.md-logo img {
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+/* Dołącz: dwa kafelki w jednym wierszu — telefon i e-mail koordynatora. */
+.md-typeset .lks-contactrow__lbl { margin: 1.4rem 0 0; font-size: 0.95rem; }
+.md-typeset .lks-contactrow { margin: 0; }
+.md-typeset .lks-contactrow > p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0.6rem 0 0;
+}
+.md-typeset .lks-contactrow a.lks-callbtn,
+.md-typeset .lks-contactrow a.lks-callbtn.lks-callbtn--alt {
+  margin: 0;
+  padding: 12px 14px;
+  min-width: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 39.9375em) {
+  .md-typeset .lks-contactrow > p { grid-template-columns: 1fr; }
+}
+
+/* Harmonogram: dopisek pod godzinami (np. „trening motoryczny”). */
+html body .md-content .md-typeset .lks-schedule .lks-sched-note {
+  grid-column: 2;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--lks-red-text);
+}
+
+/* FAQ i rozwijane ramki: miejsce na strzałkę, żeby tekst pytania na nią nie nachodził. */
+html body .md-content .md-typeset :is(.admonition, details) > :is(.admonition-title, summary) { padding-right: 1.9rem; }
+
+/* Start: mniej pustego miejsca przed sekcją 1. ligi. */
+.lks-groups--home { margin-bottom: 0; }
+.lks-sec.lks-sec--pro { padding-top: 1.2rem; }
+
+/* Start (telefon): małe logo ŁKS CoolPack obok nagłówka zamiast osobno nad tekstem. */
+@media screen and (max-width: 44.9375em) {
+  .lks-pro { grid-template-columns: 64px 1fr; column-gap: 14px; row-gap: 0; align-items: center; }
+  .lks-pro__txt { display: contents; }
+  .lks-pro__logo { width: 64px; grid-column: 1; grid-row: 1 / span 2; align-self: center; }
+  .lks-pro .lks-lbl { grid-column: 2; grid-row: 1; margin: 0; align-self: end; }
+  .lks-pro .lks-h2 { grid-column: 2; grid-row: 2; margin: 0.15rem 0 0; align-self: start; }
+  .lks-pro .lks-lead, .lks-pro__btns { grid-column: 1 / -1; }
+  .lks-pro .lks-lead { margin-top: 1rem; }
+}
+
+/* Start („Chcesz dołączyć”): telefon i e-mail koordynatora z polem dotyku min. 44 px. */
+.lks-final__coord a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 0.6rem;
+}
+
+/* FAQ: całe pole pytania (min. 44 px) reaguje na dotknięcie. */
+html body .md-content .md-typeset .faq :is(.admonition, details) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+html body .md-content .md-typeset .faq :is(.admonition, details) > :is(.admonition-title, summary) {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+}
+html body .md-content .md-typeset .faq :is(.admonition, details) > :is(.admonition-title, summary)::before,
+html body .md-content .md-typeset .faq :is(.admonition, details) > :is(.admonition-title, summary)::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+html body .md-content .md-typeset .faq :is(.admonition, details)[open] > :is(.admonition-title, summary)::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+html body .md-content .md-typeset .faq :is(.admonition, details)[open] { padding-bottom: 0.9rem; }
+html body .md-content .md-typeset .faq :is(.admonition, details)[open] > :is(.admonition-title, summary) { margin-bottom: 0.2rem; }
+
+/* Przełącznik drużyn na telefonie: stała siatka 5 kolumn, żeby układ
+   nie zmieniał się po wczytaniu czcionki (bez „skoku” treści, CLS). */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .lks-teamswitch {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .md-typeset .lks-teamswitch__chip { padding: 6px 4px; white-space: nowrap; }
+  .md-typeset .lks-teamswitch__chip:first-child { grid-column: span 2; }
+}
+
+/* -- Logotypy partnerów: karty na stronie sponsorów + stopka ------- */
+html body .md-content .md-typeset .grid.cards img.lks-partner-logo{display:block;height:60px;width:auto;max-width:100%;margin:0 0 .6rem;padding:6px 10px;background:#fff;border-radius:6px;box-sizing:content-box}
+html body .md-content .md-typeset .grid.cards>ul>li>p:first-child:has(> img.lks-partner-logo){margin:0}
+.md-footer-meta .lks-partners-foot{display:flex;align-items:center;gap:1.4rem;margin:0 .6rem 0 auto;flex-wrap:wrap}
+.md-footer-meta .lks-partners-foot a{display:inline-flex;align-items:center;min-height:44px;opacity:.75;transition:opacity .2s}
+.md-footer-meta .lks-partners-foot a:hover,.md-footer-meta .lks-partners-foot a:focus-visible{opacity:1}
+.md-footer-meta .lks-partners-foot img{height:36px;width:auto;display:block;border-radius:0!important;background:none!important;box-shadow:none!important}
+@media screen and (min-width:76.25em){.md-footer-meta__inner{flex-wrap:nowrap;align-items:center}.md-footer-meta .md-copyright{flex:0 1 auto}.md-footer-meta .lks-partners-foot{flex:0 0 auto}}
+@media screen and (max-width:44.9375em){
+  .md-footer-meta .lks-partners-foot{width:100%;justify-content:flex-start;gap:1.2rem;margin:.4rem .6rem .2rem}
+  .md-footer-meta .lks-partners-foot img{height:30px}
+}
+/* CoolPack — logotyp poziomy: niższy, żeby optycznie pasował do pozostałych */
+html body .md-content .md-typeset .grid.cards img.lks-partner-logo--wide{height:26px;padding:23px 10px}
+.md-footer-meta .lks-partners-foot img.lks-pf-wide{height:14px}
+@media screen and (min-width:76.25em){.md-footer-meta .lks-partners-foot{gap:1rem;margin-right:.3rem}.md-copyright__highlight .lks-foot{gap:0 .85rem}}
+@media screen and (max-width:44.9375em){.md-footer-meta .lks-partners-foot img.lks-pf-wide{height:16px}}

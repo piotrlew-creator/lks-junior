@@ -1,0 +1,177 @@
+site_name: ŁKS Koszykówka Męska
+site_url: https://lkskmjunior.pl/
+site_description: Stowarzyszenie ŁKS Koszykówka Męska prowadzi drużyny koszykówki chłopców w Łodzi
+site_author: ŁKS Koszykówka Męska
+copyright: >-
+  &copy; ŁKS Koszykówka Męska
+  <span class="lks-foot">
+  <a href="https://www.google.com/maps/search/?api=1&query=Al.+Unii+Lubelskiej+2,+94-020+%C5%81%C3%B3d%C5%BA">Biuro: Al. Unii Lubelskiej 2, 94-020 Łódź, II&nbsp;piętro</a>
+  <a href="tel:+48733341908">tel.: 733&nbsp;34&nbsp;<strong>1908</strong></a>
+  <a href="mailto:biuro@lkskm.pl">biuro@lkskm.pl</a>
+  <a href="https://lkskmjunior.pl/">www.lkskmjunior.pl</a>
+  <a href="/prywatnosc/">Prywatność</a>
+  </span>
+
+theme:
+  name: material
+  language: pl
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon-32.png
+  icon:
+    repo: fontawesome/brands/github
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Przełącz na tryb ciemny
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Przełącz na tryb jasny
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.footer
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Start: index.md
+  - Aktualności:
+      - aktualnosci/index.md
+  - Nasz Klub: klub.md
+  - Nasze drużyny:
+      - druzyny/index.md
+      - Grupy naborowe: druzyny/naborowa.md
+      - U11: druzyny/u11.md
+      - U12: druzyny/u12.md
+      - U13: druzyny/u13.md
+      - U14: druzyny/u14.md
+      - U15: druzyny/u15.md
+      - U17: druzyny/u17.md
+      - U19: druzyny/u19.md
+      - ŁKS Politechnika Łódzka: druzyny/dwa-liga.md
+  - ŁKS CoolPack: lks-coolpack.md
+  - ŁKS x Szkoła Gortata: szkola-gortata.md
+  - Dołącz do naszego Klubu: dolacz.md
+  - Zostań sponsorem: sponsorzy.md
+  - Kontakt: kontakt.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/lksKMjunior
+      name: Znajdź nas na Facebooku
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/lks_kmjunior/
+      name: Znajdź nas na Instagramie
+    - icon: fontawesome/solid/envelope
+      link: mailto:biuro@lkskm.pl
+      name: Napisz do biura — biuro@lkskm.pl
+    - icon: fontawesome/solid/phone
+      link: tel:+48733341908
+      name: Zadzwoń do biura — 733 34 1908
+  generator: false
+  # Statystyki bez cookies (Cloudflare Web Analytics). Wklej token z panelu
+  # Cloudflare: Analytics & Logs → Web Analytics → strona lkskmjunior.pl.
+  # Puste = skrypt statystyk nie jest dołączany.
+  cf_web_analytics_token: ""
+
+not_in_nav: |
+  /prywatnosc.md
+
+extra_css:
+  - stylesheets/extra.css?v=73
+
+extra_javascript:
+  - javascripts/extra.js?v=17
+
+hooks:
+  - hooks/latest_posts.py
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      draggable: true
+      skip_classes:
+        - no-lightbox
+  # Adresy sprzed zmiany nazw (Akademia → Nasz klub, Strefa rodzica →
+  # Nasze drużyny) i stare podstrony z pierwszej wersji serwisu. Linki
+  # udostępnione wcześniej na Facebooku czy zapisane w Google przekierują
+  # pod nowy adres zamiast kończyć się błędem 404.
+  - redirects:
+      redirect_maps:
+        akademia.md: klub.md
+        strefa-rodzica/index.md: druzyny/index.md
+        strefa-rodzica/naborowa.md: druzyny/naborowa.md
+        strefa-rodzica/u11.md: druzyny/u11.md
+        strefa-rodzica/u12.md: druzyny/u12.md
+        strefa-rodzica/u13.md: druzyny/u13.md
+        strefa-rodzica/u14.md: druzyny/u14.md
+        strefa-rodzica/u15.md: druzyny/u15.md
+        strefa-rodzica/u17.md: druzyny/u17.md
+        strefa-rodzica/u19.md: druzyny/u19.md
+        strefa-rodzica/dwa-liga.md: druzyny/dwa-liga.md
+        o-klubie.md: klub.md
+        trenerzy.md: klub.md
+        grupy-wiekowe.md: druzyny/index.md
+        harmonogram.md: druzyny/index.md
+        faq.md: dolacz.md
+        aktualnosci/nowa-strona-klubu.md: aktualnosci/index.md
+        sponsor.md: sponsorzy.md
+        turnieje.md: aktualnosci/index.md
+  - blog:
+      blog_dir: aktualnosci
+      blog_toc: false
+      post_url_format: "{slug}"
+      post_excerpt: optional
+      archive: false
+      archive_name: Archiwum
+      categories: false
+      categories_name: Drużyny
+      post_readtime: false
+      pagination_per_page: 8
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: "#"
+      title: Na tej stronie

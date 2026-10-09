@@ -1,0 +1,222 @@
+{% extends "main.html" %}
+
+{#
+  Strona główna ŁKS Koszykówka Męska.
+  Nadpisujemy blok "tabs", żeby wejść na pełną szerokość — bez paska
+  bocznego i spisu treści, których strona Klubu nie potrzebuje.
+  Blok "content" zostaje pusty: całą treść budujemy poniżej.
+#}
+
+{% block tabs %}
+  {{ super() }}
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="lks-hero" aria-label="Tu zaczyna się Twoja gra">
+    <img class="lks-hero__img" src="{{ 'assets/hero.webp' | url }}"
+         srcset="{{ 'assets/hero-900.webp' | url }} 900w, {{ 'assets/hero-1200.webp' | url }} 1200w, {{ 'assets/hero.webp' | url }} 1600w"
+         sizes="100vw" fetchpriority="high" decoding="async"
+         alt="Zawodnicy ŁKS Koszykówka Męska na hali">
+    <div class="lks-hero__veil"></div>
+    <div class="lks-hero__inner md-grid">
+      <h1 class="lks-hero__title">Tu zaczyna się<br><em>Twoja gra</em></h1>
+      <p class="lks-hero__sub">
+        Od grup naborowych po zespół seniorski w 2. lidze. Uczymy koszykówki
+        i tego, co zostaje na długo po ostatnim gwizdku.
+      </p>
+      <div class="lks-hero__cta">
+        <a href="{{ 'dolacz/' | url }}" class="lks-btn lks-btn--primary">Zapytaj o zapisy</a>
+        <a href="{{ 'druzyny/' | url }}" class="lks-btn lks-btn--ghost">Nasze drużyny</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ WYBÓR DRUŻYNY ══════════════ -->
+  {#
+    Kafle prowadzą prosto na strony drużyn. Adresy generuje Jinja filtrem
+    `url`, więc działają niezależnie od tego, czy witryna stoi w korzeniu
+    domeny, czy w podkatalogu. Sekcja działa też przy wyłączonym JavaScript —
+    skrypt jedynie podświetla drużynę zapamiętaną z poprzedniej wizyty.
+  #}
+  <section class="lks-sec md-grid lks-reveal" id="grupy" aria-label="Wybierz drużynę">
+    <p class="lks-lbl">Nasze drużyny</p>
+    <h2 class="lks-h2">Wybierz drużynę</h2>
+    <p class="lks-lead">
+      Trenujesz już u nas? A może dopiero szukasz grupy?
+      Wejdź prosto do swojej drużyny.
+    </p>
+
+    <div class="lks-groups lks-groups--home" id="lks-teams">
+      <a class="lks-group" data-g="naborowa" href="{{ 'druzyny/naborowa/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-naborowa.webp' | url }}" alt=""><span class="lks-badge lks-badge--open">Nabór otwarty</span></span>
+        <span class="lks-group__name">Grupy naborowe</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2017&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u11" href="{{ 'druzyny/u11/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u11.webp' | url }}" alt=""></span>
+        <span class="lks-group__name">U11</span>
+        <span class="lks-group__coach">A.&nbsp;Krzysztoń</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2016&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u12" href="{{ 'druzyny/u12/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u12.webp' | url }}" alt=""><span class="lks-badge lks-badge--count">2 drużyny</span></span>
+        <span class="lks-group__name">U12</span>
+        <span class="lks-group__coach">R.&nbsp;Darnikowski<br>W.&nbsp;Szewczyk</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2015&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u13" href="{{ 'druzyny/u13/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u13.webp' | url }}" alt=""><span class="lks-badge lks-badge--count">2 drużyny</span></span>
+        <span class="lks-group__name">U13</span>
+        <span class="lks-group__coach">M.&nbsp;Kochaniak<br>M.&nbsp;Markowicz</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2014&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u14" href="{{ 'druzyny/u14/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u14.webp' | url }}" alt=""></span>
+        <span class="lks-group__name">U14</span>
+        <span class="lks-group__coach">M.&nbsp;Rudziński</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2013&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u15" href="{{ 'druzyny/u15/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u15-nowy.webp' | url }}" alt=""><span class="lks-badge lks-badge--count">2 drużyny</span></span>
+        <span class="lks-group__name">U15</span>
+        <span class="lks-group__coach">M.&nbsp;Puczyński<br>B.&nbsp;Frątczak</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2012&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u17" href="{{ 'druzyny/u17/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u17.webp' | url }}" alt=""></span>
+        <span class="lks-group__name">U17</span>
+        <span class="lks-group__coach">P.&nbsp;Dembowski</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2010&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group" data-g="u19" href="{{ 'druzyny/u19/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-u19.webp' | url }}" alt=""></span>
+        <span class="lks-group__name">U19</span>
+        <span class="lks-group__coach">P.&nbsp;Trepka</span>
+        <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2008&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
+      </a>
+      <a class="lks-group lks-group--wide" data-g="dwa-liga" href="{{ 'druzyny/dwa-liga/' | url }}">
+        <span class="lks-group__media"><img class="no-lightbox" loading="lazy" src="{{ 'assets/kafel-2liga.webp' | url }}" alt=""></span>
+        <span class="lks-group__body"><span class="lks-group__kicker">Seniorzy</span><span class="lks-group__name lks-group__name--long">ŁKS Politechnika Łódzka</span>
+        <span class="lks-group__coach">P.&nbsp;Trepka</span>
+        <span class="lks-group__age">zespół seniorski · 2.&nbsp;liga</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════ AKTUALNOŚCI ══════════════ -->
+  {% if latest_posts %}
+  <section class="lks-sec lks-news md-grid lks-reveal" aria-labelledby="lks-news-h">
+    <p class="lks-lbl">Aktualności</p>
+    <h2 class="lks-h2" id="lks-news-h">Co nowego w Klubie</h2>
+    <div class="lks-news__list">
+      {% for post in latest_posts %}
+      <a class="lks-news__item" href="{{ post.url | url }}">
+        <time class="lks-news__date" datetime="{{ post.iso }}">{{ post.date }}</time>
+        <span class="lks-news__title">{{ post.title }}</span>
+        {% if post.summary %}<span class="lks-news__sum">{{ post.summary }}</span>{% endif %}
+        <span class="lks-news__more">Czytaj dalej <span aria-hidden="true">→</span></span>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="lks-news__all"><a href="{{ 'aktualnosci/' | url }}">Wszystkie aktualności</a></p>
+  </section>
+  {% endif %}
+
+  <!-- ══════════════ 1. LIGA — ŁKS COOLPACK ══════════════ -->
+  <section class="lks-sec lks-sec--pro md-grid lks-reveal" aria-labelledby="lks-pro-h">
+    <div class="lks-pro">
+      <img class="lks-pro__logo lks-logo-light" src="{{ 'assets/logo-lks-coolpack.png' | url }}" alt="Logo ŁKS CoolPack Koszykówka Męska" width="160" height="161" loading="lazy">
+      <img class="lks-pro__logo lks-logo-dark" src="{{ 'assets/logo-lks-coolpack-dark.png' | url }}" alt="Logo ŁKS CoolPack Koszykówka Męska" width="160" height="161" loading="lazy">
+      <div class="lks-pro__txt">
+        <p class="lks-lbl">1. liga</p>
+        <h2 class="lks-h2" id="lks-pro-h">ŁKS CoolPack Łódź</h2>
+        <p class="lks-lead">
+          Seniorska drużyna ŁKS CoolPack walczy w 1. lidze o awans do PGE Basket
+          Ligi, czyli ekstraklasy. Wspieramy seniorów i kibicujemy im. Wierzymy,
+          że nasi młodzieżowcy będą kiedyś walczyć na parkietach ekstraklasy
+          w barwach ŁKS CoolPack Łódź.
+        </p>
+        <div class="lks-pro__btns">
+          <a href="{{ 'lks-coolpack/' | url }}" class="lks-btn lks-btn--primary">Poznaj drużynę</a>
+          <a href="{{ 'aktualnosci/' | url }}#aktualnosci-z-1-ligi" class="lks-btn lks-btn--outline">Aktualności z 1. ligi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ WIĘCEJ NIŻ KOSZYKÓWKA ══════════════ -->
+  <section class="lks-sec md-grid" aria-label="Więcej niż koszykówka">
+    <p class="lks-lbl">Więcej niż koszykówka</p>
+    <h2 class="lks-h2">Drużyna zostaje na lata</h2>
+
+    <div class="lks-spot lks-reveal">
+      <div class="lks-spot__img">
+        <img loading="lazy" src="{{ 'assets/foto-oboz.webp' | url }}" alt="Obóz ŁKS Koszykówka Męska nad morzem">
+      </div>
+      <div class="lks-spot__txt">
+        <h3>Obozy i wyjazdy</h3>
+        <p>
+          Obozy nad morzem, wyjazdy na turnieje i treningi poza halą.
+          Tam rodzi się drużyna.
+        </p>
+      </div>
+    </div>
+
+    <div class="lks-spot lks-spot--rev lks-reveal">
+      <div class="lks-spot__img">
+        <img loading="lazy" src="{{ 'assets/foto-klub.webp' | url }}" alt="Spotkanie Klubu ŁKS Koszykówka Męska">
+      </div>
+      <div class="lks-spot__txt">
+        <h3>Klub to także rodzice</h3>
+        <p>
+          Spotykamy się całym Klubem — zawodnicy, rodzeństwo, rodzice i trenerzy.
+          Kibicujemy sobie przez cały sezon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ DLA FIRM ══════════════ -->
+  <section class="lks-spons lks-reveal" aria-label="Dla firm">
+    <div class="md-grid">
+      <p class="lks-lbl lks-lbl--light">Dla firm</p>
+      <h2 class="lks-h2 lks-h2--light">Zbuduj markę tam,<br>gdzie rośnie Łódź</h2>
+      <p class="lks-spons__lead">
+        15 drużyn — od grup naborowych po 2. ligę. Naszym strategicznym sponsorem jest CoolPack,
+        a partnerami — Szkoła Gortata i Politechnika Łódzka. Pokaż, że Twojej marce zależy na lokalnej społeczności.
+      </p>
+      <a href="{{ 'sponsorzy/' | url }}" class="lks-btn lks-btn--primary">Zostań sponsorem</a>
+    </div>
+  </section>
+
+  <!-- ══════════════ KONTAKT ══════════════ -->
+  <section class="lks-final lks-reveal" aria-label="Chcesz dołączyć do naszego Klubu">
+    <div class="md-grid">
+      <h2 class="lks-h2 lks-h2--light">Chcesz dołączyć<br>do naszego Klubu?</h2>
+      <p class="lks-final__lead">
+        Nabór do grup naborowych (rocznik 2017 i młodsi) jest otwarty.
+        Do drużyn U11–U19 przyjmujemy po spotkaniu z trenerem. Zadzwoń
+        do koordynatora — powie Ci, jak dołączyć.
+      </p>
+      <a href="{{ 'dolacz/' | url }}" class="lks-btn lks-btn--primary">Jak dołączyć</a>
+      <div class="lks-final__coords">
+        <p class="lks-final__coord">
+          <span class="lks-final__who">Koordynator grup naborowych — Szczepan&nbsp;Prasol</span>
+          <a class="lks-final__tel" href="tel:+48695262230">695 262 230</a>
+          <a href="mailto:szczepan.prasol@lkskm.pl">szczepan.prasol@lkskm.pl</a>
+        </p>
+        <p class="lks-final__coord">
+          <span class="lks-final__who">Koordynator organizacyjny — Maciej&nbsp;Kochaniak</span>
+          <a class="lks-final__tel" href="tel:+48508206918">508 206 918</a>
+          <a href="mailto:maciej.kochaniak@lkskm.pl">maciej.kochaniak@lkskm.pl</a>
+        </p>
+      </div>
+      <p class="lks-final__contact">
+        Biuro Klubu: <a href="tel:+48733341908">733&nbsp;34&nbsp;<strong>1908</strong></a>, <a href="mailto:biuro@lkskm.pl">biuro@lkskm.pl</a><br>
+        Al. Unii Lubelskiej 2, 94-020 Łódź, II&nbsp;piętro<br>
+        <a href="https://www.instagram.com/lks_kmjunior/" target="_blank" rel="noopener">Instagram: @lks_kmjunior</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}{% endblock %}
