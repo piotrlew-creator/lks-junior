@@ -358,6 +358,11 @@ summary:focus-visible,
   object-position: center 10%;
 }
 
+/* Dwa zdjęcia hero: jasny motyw — białe koszulki, ciemny motyw — czarne. */
+.lks-hero__img--dark { display: none; }
+[data-md-color-scheme="slate"] .lks-hero__img { display: none; }
+[data-md-color-scheme="slate"] .lks-hero__img--dark { display: block; }
+
 .lks-hero__veil {
   position: absolute;
   inset: 0;
