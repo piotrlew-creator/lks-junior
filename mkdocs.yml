@@ -92,7 +92,7 @@ extra:
   # Statystyki bez cookies (Cloudflare Web Analytics). Wklej token z panelu
   # Cloudflare: Analytics & Logs → Web Analytics → strona lkskmjunior.pl.
   # Puste = skrypt statystyk nie jest dołączany.
-  cf_web_analytics_token: ""
+  cf_web_analytics_token: "4b45d552b2c3482a9fb65bbdf9e96222"
 
 not_in_nav: |
   /prywatnosc.md
