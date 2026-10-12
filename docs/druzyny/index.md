@@ -51,7 +51,7 @@ drużyny, każdą z własnym trenerem.
 </a>
 
 <a class="lks-group" href="u15/">
-  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u15-puczynski.webp" alt=""><span class="lks-badge lks-badge--count">2 drużyny</span></span>
+  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u15-nowy.webp" alt=""><span class="lks-badge lks-badge--count">2 drużyny</span></span>
   <span class="lks-group__name">U15</span>
   <span class="lks-group__coach">M.&nbsp;Puczyński<br>B.&nbsp;Frątczak</span>
   <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2012&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
@@ -65,7 +65,7 @@ drużyny, każdą z własnym trenerem.
 </a>
 
 <a class="lks-group" href="u19/">
-  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u19.webp" alt=""></span>
+  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u19-druzyny.webp" alt=""></span>
   <span class="lks-group__name">U19</span>
   <span class="lks-group__coach">P.&nbsp;Trepka</span>
   <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2008&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
