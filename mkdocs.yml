@@ -43,8 +43,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.tracking
-    - navigation.instant
-    - navigation.instant.progress
     - navigation.footer
     - content.tabs.link
     - content.tooltips

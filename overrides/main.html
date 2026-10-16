@@ -35,11 +35,14 @@
 {#
   Statystyki odwiedzin bez cookies (Cloudflare Web Analytics). Skrypt
   dołączamy tylko wtedy, gdy w mkdocs.yml jest ustawiony token.
+  "spa": false — każda podstrona ładuje się normalnie (bez navigation.instant),
+  więc liczymy tylko prawdziwe wczytania stron. Tryb SPA liczył każde
+  przewinięcie (history.replaceState) jako odsłonę — nie włączać ponownie.
 #}
 {% block analytics %}
   {{ super() }}
   {% if config.extra.cf_web_analytics_token %}
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ config.extra.cf_web_analytics_token }}"}'></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ config.extra.cf_web_analytics_token }}", "spa": false}'></script>
   {% endif %}
 {% endblock %}
 
