@@ -2305,3 +2305,66 @@ html body .md-content .md-typeset .grid.cards img.lks-partner-logo--wide{height:
 .md-footer-meta .lks-partners-foot img.lks-pf-wide{height:14px}
 @media screen and (min-width:76.25em){.md-footer-meta .lks-partners-foot{gap:1rem;margin-right:.3rem}.md-copyright__highlight .lks-foot{gap:0 .85rem}}
 @media screen and (max-width:44.9375em){.md-footer-meta .lks-partners-foot img.lks-pf-wide{height:16px}}
+
+/* ═══════════════════════════════════════════════════════════════
+   PROGRAMY WSPARCIA — KLUB PRO
+   Baner programu (bez powiększania), ramka ze źródłami finansowania
+   i galeria: jedno szerokie zdjęcie + kwadratowe miniatury, które
+   po kliknięciu otwierają pełne zdjęcie (glightbox, wspólna galeria).
+   ═══════════════════════════════════════════════════════════════ */
+.md-typeset img.lks-kp-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--lks-r);
+  margin: 0.4rem 0 1.4rem;
+}
+.md-typeset .lks-kp-note {
+  background: var(--lks-surface);
+  border: 1px solid var(--lks-border);
+  border-left: 4px solid var(--lks-red);
+  border-radius: var(--lks-r-sm);
+  padding: 0.9rem 1.1rem;
+  margin: 0 0 1.2rem;
+}
+.md-typeset .lks-kp-note p { margin: 0; }
+.md-typeset .lks-kp-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0.8rem 0 1.6rem;
+}
+.md-typeset .lks-kp-gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--lks-r-sm);
+  aspect-ratio: 1 / 1;
+  background: var(--lks-surface-2);
+}
+.md-typeset .lks-kp-gallery a.lks-kp-gallery__wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 2 / 1;
+}
+.md-typeset .lks-kp-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.25s ease;
+}
+.md-typeset .lks-kp-gallery a:hover img,
+.md-typeset .lks-kp-gallery a:focus-visible img { transform: scale(1.04); }
+.md-typeset .lks-kp-gallery a:focus-visible {
+  outline: 3px solid var(--lks-red-text);
+  outline-offset: 2px;
+}
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .lks-kp-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .lks-kp-gallery img { transition: none; }
+}
