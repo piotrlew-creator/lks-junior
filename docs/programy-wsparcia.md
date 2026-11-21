@@ -79,6 +79,3 @@ Dofinansowanie z programu wspiera codzienne szkolenie naszych drużyn młodzież
   <a class="glightbox" href="../assets/klub-pro-8.webp" data-gallery="klub-pro" data-title="Zawodnicy na treningu, w tle rollup programu KLUB PRO"><img class="no-lightbox" src="../assets/klub-pro-8-min.webp" width="600" height="600" alt="Zawodnicy na treningu, w tle rollup programu KLUB PRO" loading="lazy"></a>
   <a class="glightbox" href="../assets/klub-pro-9.webp" data-gallery="klub-pro" data-title="Rozgrzewka rzutowa, w tle baner i rollupy programu KLUB PRO"><img class="no-lightbox" src="../assets/klub-pro-9-min.webp" width="600" height="600" alt="Rozgrzewka rzutowa, w tle baner i rollupy programu KLUB PRO" loading="lazy"></a>
 </div>
-
-[Nasze drużyny](druzyny/index.md){ .md-button .md-button--primary }
-[Dołącz do naszego Klubu](dolacz.md){ .md-button }
