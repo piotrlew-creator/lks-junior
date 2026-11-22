@@ -23,7 +23,7 @@ drużyny, każdą z własnym trenerem.
 </a>
 
 <a class="lks-group" href="u11/">
-  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u11.webp" alt=""></span>
+  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u11-nowy.webp" alt=""></span>
   <span class="lks-group__name">U11</span>
   <span class="lks-group__coach">A.&nbsp;Krzysztoń</span>
   <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2016&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
