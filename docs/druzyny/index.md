@@ -44,7 +44,7 @@ drużyny, każdą z własnym trenerem.
 </a>
 
 <a class="lks-group" href="u14/">
-  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u14.webp" alt=""></span>
+  <span class="lks-group__media"><img class="no-lightbox" src="../assets/kafel-u14-nowy.webp" alt=""></span>
   <span class="lks-group__name">U14</span>
   <span class="lks-group__coach">M.&nbsp;Rudziński</span>
   <span class="lks-group__age">chłopcy urodzeni w&nbsp;<span class="lks-nw">2013&nbsp;roku</span> <span class="lks-nw">i&nbsp;młodsi</span></span>
