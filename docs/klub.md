@@ -52,6 +52,10 @@ znajdziesz też w numerze telefonu naszego biura: 733&nbsp;34&nbsp;**1908**.
 <p markdown>Seniorska drużyna **ŁKS CoolPack Łódź** walczy w 1. lidze o awans do PGE Basket Ligi, czyli ekstraklasy. Wspieramy seniorów i kibicujemy im. Wierzymy, że nasi młodzieżowcy będą kiedyś walczyć na parkietach ekstraklasy w barwach ŁKS CoolPack Łódź. [Więcej o drużynie](lks-coolpack.md)</p>
 </div>
 
+Skład, terminarz, wyniki i bilety na mecze znajdziesz na nowej stronie drużyny.
+
+[:material-open-in-new: Przejdź na lkscoolpacklodz.pl](https://lkscoolpacklodz.pl/){ .md-button .md-button--primary target=_blank rel="noopener" }
+
 ## :material-whistle-outline: Kadra trenerska
 
 Każdą drużynę i grupę naborową prowadzi jeden trener. Sprawy drużyn i zapisy obsługują

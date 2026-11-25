@@ -2368,3 +2368,11 @@ html body .md-content .md-typeset .grid.cards img.lks-partner-logo--wide{height:
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .lks-kp-gallery img { transition: none; }
 }
+
+/* Start, sekcja 1. ligi: zdanie i szeroki przycisk do strony
+   lkscoolpacklodz.pl nad dwoma przyciskami (Poznaj drużynę, Aktualności). */
+.lks-pro .lks-pro__site { margin: -0.4rem 0 1rem; font-size: 0.82rem; line-height: 1.55; color: var(--md-default-fg-color--light); }
+.lks-pro__btns .lks-pro__btn-site { grid-column: 1 / -1; }
+@media screen and (max-width: 44.9375em) {
+  .lks-pro .lks-pro__site { grid-column: 1 / -1; margin: 0 0 0.9rem; }
+}

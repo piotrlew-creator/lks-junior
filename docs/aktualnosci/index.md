@@ -34,8 +34,10 @@ najnowsze posty Klubu i aktualności drużyny ŁKS CoolPack z 1. ligi.
 
 Kibicujemy seniorom [ŁKS CoolPack Łódź](../lks-coolpack.md), którzy walczą
 w 1. lidze o awans do PGE Basket Ligi. Poniżej posty z profilu drużyny na
-Facebooku. Aktualny skład, terminarz i wyniki znajdziesz na
-[oficjalnej stronie 1. Ligi Mężczyzn](https://1lm.pzkosz.pl/druzyny/d/14303/lks-coolpack-lodz.html){ target=_blank rel="noopener" }.
+Facebooku. Skład, terminarz, wyniki, aktualności i bilety na mecze znajdziesz
+na nowej stronie drużyny.
+
+[:material-open-in-new: Przejdź na lkscoolpacklodz.pl](https://lkscoolpacklodz.pl/){ .md-button .md-button--primary target=_blank rel="noopener" }
 
 <div class="lks-fb" data-href="https://www.facebook.com/lkscoolpack" data-height="720" data-title="Najnowsze posty ŁKS CoolPack z Facebooka">
   <div class="lks-fb__slot">

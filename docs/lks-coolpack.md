@@ -13,6 +13,15 @@ description: >-
 <p markdown>Seniorska drużyna **ŁKS CoolPack Łódź** gra w **1. lidze** i walczy o awans do **PGE Basket Ligi**, czyli ekstraklasy.</p>
 </div>
 
+## :material-web: Strona drużyny { #strona-druzyny }
+
+ŁKS CoolPack Łódź ma nową stronę internetową: **lkscoolpacklodz.pl**. Znajdziesz
+na niej skład i sztab, terminarz, wyniki, tabelę, aktualności i bilety na mecze
+domowe. Strona jest dostępna po polsku i po angielsku.
+
+[:material-open-in-new: Przejdź na lkscoolpacklodz.pl](https://lkscoolpacklodz.pl/){ .md-button .md-button--primary target=_blank rel="noopener" }
+[:material-open-in-new: ŁKS CoolPack Łódź na stronie 1. Ligi](https://1lm.pzkosz.pl/druzyny/d/14303/lks-coolpack-lodz.html){ .md-button target=_blank rel="noopener" }
+
 ## :material-heart-outline: Wspieramy i kibicujemy
 
 Wspieramy seniorów ŁKS CoolPack i kibicujemy im przez cały sezon. Ich walka
@@ -24,13 +33,6 @@ po 2. ligę.
 Wierzymy, że nasi młodzieżowcy będą kiedyś walczyć na parkietach ekstraklasy
 w barwach **ŁKS CoolPack Łódź**. Każdy trening w naszym Klubie to krok w tę
 stronę.
-
-## :material-clipboard-list-outline: Skład, terminarz i wyniki
-
-Aktualny skład, terminarz, wyniki i wszystkie inne informacje o drużynie
-znajdziesz na oficjalnej stronie 1. Ligi Mężczyzn.
-
-[:material-open-in-new: ŁKS CoolPack Łódź na stronie 1. Ligi](https://1lm.pzkosz.pl/druzyny/d/14303/lks-coolpack-lodz.html){ .md-button .md-button--primary target=_blank rel="noopener" }
 
 ## :material-newspaper-variant-outline: Aktualności z 1. ligi
 

@@ -97,7 +97,7 @@ not_in_nav: |
   /prywatnosc.md
 
 extra_css:
-  - stylesheets/extra.css?v=75
+  - stylesheets/extra.css?v=76
 
 extra_javascript:
   - javascripts/extra.js?v=17
